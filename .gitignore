@@ -1,0 +1,8 @@
+node_modules/
+/test-results/
+/playwright-report/
+/playwright/.cache/
+allure-report/
+allure-results/
+cucumber-report.json
+src/.auth
