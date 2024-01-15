@@ -6,8 +6,11 @@ import { Logger } from '../logger';
 import { HttpMethod } from '../request/http-method';
 import RequestContext from '../request/request-context';
 import { getCode } from './web-apps';
+import * as crypto from 'crypto';
+import * as fs from 'fs';
 
-const TOKEN_FILE_PATH = path.join(__dirname, '/token/token.txt')
+const TOKEN_FILE_PATH = path.join(__dirname, '/token/en_token.txt')
+const SECRET_KEY_PATH = path.join(__dirname, '/token/secret_key.txt')
 
 let client_id = process.env.CLIENT_ID_1 ?? ""
 let client_secret = process.env.CLIENT_SECRET_1 ?? ""
@@ -36,7 +39,8 @@ export default class GetToken extends RequestContext {
         const jsonData = await response.json();
         const token: string = jsonData.access_token;
         const expires_in: string = (await converExpiration(jsonData.expires_in)).toString();
-        const data = token + '\n' + expires_in;
+        const data: string = token + '\n' + expires_in;
+
         writeFileSync(TOKEN_FILE_PATH, data, {
             flag: 'w',
         });
@@ -57,7 +61,7 @@ export async function getToken() {
 }
 
 const readToken = async () => {
-    return readFileSync(TOKEN_FILE_PATH).toString('utf-8').split('\n')[0];
+    return (readFileSync(TOKEN_FILE_PATH).toString('utf-8')).split('\n')[0];
 }
 
 const isTokenExpired = async () => {
@@ -81,3 +85,37 @@ const generateBasicAuthHeader = async (username: string, password: string): Prom
     const encodedCredentials = credentialsBytes.toString('base64');
     return "Basic " + encodedCredentials;
 }
+
+function getSecretKey() {
+    if (fs.existsSync(SECRET_KEY_PATH)) {
+        const key = fs.readFileSync(SECRET_KEY_PATH, 'utf-8');
+        const jsonKey = JSON.parse(key);
+        return jsonKey;
+    }
+
+    const secretKey = crypto.randomBytes(32);
+    let iv = Buffer.alloc(16);
+    const data = {
+        key: secretKey,
+        iv: iv
+    }
+    fs.writeFileSync(SECRET_KEY_PATH, JSON.stringify(data, null, 2));
+    return data;
+}
+
+function encrypt(text: string): string {
+    const jsonKey = JSON.parse(getSecretKey());
+    const cipher = crypto.createDecipheriv('aes-256-cbc', jsonKey.key, jsonKey.iv);
+    let encrypted = cipher.update(text, 'utf-8', 'hex');
+    encrypted += cipher.final('hex');
+    return encrypted;
+}
+
+function decrypt(encryptedText: string): string {
+    const jsonKey = JSON.parse(getSecretKey());
+    const decipher = crypto.createDecipheriv('aes-256-cbc', jsonKey.key, jsonKey.iv);
+    let decrypted = decipher.update(encryptedText, 'hex', 'utf-8');
+    decrypted += decipher.final('utf-8');
+    return decrypted;
+}
+

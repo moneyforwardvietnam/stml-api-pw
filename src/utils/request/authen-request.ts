@@ -1,7 +1,6 @@
 import { getToken } from '../authenticator/secure-token';
 import RequestContext from './request-context';
 
-
 export default class AuthenRequest extends RequestContext {
     constructor() {
         super(process.env.BASE_URI);
@@ -12,8 +11,8 @@ export default class AuthenRequest extends RequestContext {
             'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json'
         }
-        await this.setHeader(headers)
-        const context = await this.initialize()
+        await this.setHeader(headers);
+        const context = await this.initialize();
         return context;
     }
 }

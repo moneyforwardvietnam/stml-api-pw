@@ -1,13 +1,22 @@
-import fs from 'fs';
-import path from 'path';
-
-export const createAllureEnvironmentFile = () => {
-  const reportFolder = path.resolve(process.cwd(), process.env.ALLURE_RESULTS_FOLDER);
-  const environmentContent = Object.entries(process.env).reduce(
-    (previousValue, [variableName, value]) => `${previousValue}\n${variableName}=${value}`,
-    ''
-  );
-
-  fs.mkdirSync(reportFolder, { recursive: true });
-  fs.writeFileSync(`${reportFolder}/environment.properties`, environmentContent, 'utf-8');
-};
+export default defineConfig({
+  reporter: [
+    ["line"],
+    [
+      "allure-playwright",
+      {
+        detail: true,
+        outputFolder: "allure-results",
+        suiteTitle: true,
+        categories: [
+          {
+            name: "Outdated tests",
+            messageRegex: ".*FileNotFound.*",
+          },
+        ],
+        environmentInfo: {
+          framework: "playwright",
+        },
+      },
+    ],
+  ],
+});

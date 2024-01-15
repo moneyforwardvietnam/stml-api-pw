@@ -1,12 +1,14 @@
 import { APIRequestContext, APIResponse, request } from '@playwright/test';
 import { allure } from "allure-playwright";
 import { HttpMethod } from './http-method';
+import { ScenarioContext } from '../../tests/context/scenario-context';
 require('dotenv').config()
 
 export default class RequestContext {
     public context!: APIRequestContext;
     public baseURL;
     public headers: any;
+    public sharedData = ScenarioContext.getInstance();
 
     constructor(baseURL: any) {
         this.baseURL = baseURL;
@@ -24,40 +26,62 @@ export default class RequestContext {
         this.context = context;
     }
 
+    // async requestSender<T = unknown>(method: HttpMethod, path: string, options?: { data?: T, form?: any, params?: any }, header?: any): Promise<APIResponse> {
+    //     const response = await this.request(method, path, options, header);
+    //     allure.logStep("Response: " + response.json());
+    //     return response;
+    // }
+
     async requestSender<T = unknown>(method: HttpMethod, path: string, options?: { data?: T, form?: any, params?: any }, header?: any): Promise<APIResponse> {
+        let response;
+        const headers = header ? header : this.headers;
         switch (method) {
             case HttpMethod.GET:
-                await allure.label("REQUEST", method + " " + this.baseURL);
-                return await this.context.get(path, {
+                response = await this.context.get(path, {
                     params: options?.params,
-                    headers: header ? header : this.headers
+                    headers: headers
                 })
+                break;
             case HttpMethod.POST:
                 if (options === undefined) {
-                    return await this.context.post(path, {
-                        headers: header ? header : this.headers
+                    response = await this.context.post(path, {
+                        headers: headers
                     })
                 } else {
-                    return await this.context.post(path, {
+                    response = await this.context.post(path, {
                         data: options.data,
                         form: options.form,
-                        headers: header ? header : this.headers
+                        headers: headers
                     })
                 }
+                break;
             case HttpMethod.PUT: ;
                 if (options === undefined) {
-                    return await this.context.put(path, {
-                        headers: header ? header : this.headers
+                    response = await this.context.put(path, {
+                        headers: headers
                     })
                 } else {
-                    return await this.context.put(path, {
+                    response = await this.context.put(path, {
                         data: options.data,
-                        headers: header ? header : this.headers
+                        headers: headers
                     })
                 }
+                break;
             case HttpMethod.DELETE:
-                return this.context.delete(path);
+                response = this.context.delete(path);
+                break;
             default: throw new Error('Method not implemented');
         }
+
+        try {
+            allure.logStep("Headers: " + JSON.stringify(headers))
+            if (options) {
+                allure.logStep("Options: " + JSON.stringify(options));
+            }
+            allure.logStep("Request: " + JSON.stringify(response));
+        } catch { }
+
+
+        return response;
     }
 }
