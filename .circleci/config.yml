@@ -1,0 +1,172 @@
+version: 2.1
+
+orbs:
+  slack: circleci/slack@4.12.5
+commands:
+  notify-slack:
+    parameters:
+      title:
+        type: string
+        default: "title"
+      branch_name:
+        type: string
+        default: "Triggered manually"
+      test_suite:
+        type: string
+        default: ""
+    steps:
+      - run:
+          name: Detecting job status (PASS)
+          command: echo "STATUS='#36A64F'" >> $BASH_ENV
+          when: on_success
+      - run:
+          name: Detecting job status (FAIL)
+          command: echo "STATUS='#D9534F'" >> $BASH_ENV
+          when: on_fail
+      - run:
+          name: Rechecking color based on failed number
+          command: |
+                if [ "$FAILED" == "0" ]; then
+                      echo "STATUS='#36A64F'" >> $BASH_ENV
+                else
+                      echo "STATUS='#D9534F'" >> $BASH_ENV
+                fi
+          when: on_fail
+      - slack/notify:
+          channel: C067094ULTC
+          custom: |
+            {
+              "attachments": [
+                {
+                  "color": "${STATUS}",
+                  "blocks": [
+                    {
+                      "type": "section",
+                      "text": {
+                        "type": "mrkdwn",
+                        "text": "<${CIRCLE_BUILD_URL}|*<< parameters.title >>*>"
+                      },
+                      "fields": [
+                        {
+                          "type": "mrkdwn",
+                          "text": "*Repository:* `${CIRCLE_PROJECT_REPONAME}`"
+                        },
+                        {
+                          "type": "mrkdwn",
+                          "text": "*Branch:* `${CIRCLE_BRANCH}`"
+                        },
+                        {
+                          "type": "mrkdwn",
+                          "text": "*Test Suite:* `<< parameters.test_suite >>`"
+                        },
+                        {
+                          "type": "mrkdwn",
+                          "text": "*Dev Branch:* `<< parameters.branch_name >>`"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "section",
+                      "text": {
+                        "type": "mrkdwn",
+                        "text": "*Summary Results:*"
+                      },
+                      "fields": [
+                        {
+                          "type": "mrkdwn",
+                          "text": "*Test Cases:* `${TEST_CASES}`"
+                        },
+                        {
+                          "type": "mrkdwn",
+                          "text": "*Passed:* `${PASSED}`"
+                        },
+                        {
+                          "type": "mrkdwn",
+                          "text": "*Failed:* `${FAILED}`"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "actions",
+                      "elements": [
+                        {
+                          "type": "button",
+                          "text": {
+                            "type": "plain_text",
+                            "text": "View Details Report :serenity_logo: ",
+                            "emoji": true
+                          },
+                          "url": "https://test-report.mfvn.dev/${CIRCLE_PROJECT_REPONAME}_${CIRCLE_BRANCH}_${CIRCLE_BUILD_NUM}"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          event: always
+
+parameters:
+  branch_name:
+    type: string
+    default: "Triggered manually"
+  slack:
+    type: boolean
+    default: true
+jobs: 
+  pw-automation-test:
+    machine: true
+    resource_class: moneyforwardvietnam/qa-runner
+    steps:
+      - node/install
+      - checkout
+      - run: node --version
+      - run: npm i -D @playwright/test
+      - run: npx playwright install
+      - run: npx playwright install chrome
+      - run:
+          name: 'Run playwright automation test'
+          command: 'npm run test'
+      - run:
+          name: "Setup s3 buckets var"
+          when: always
+          command: echo 'export S3_STATIC_BUCKET="test-report.mfvn.dev"' >> "$BASH_ENV"
+      - run:
+          name: Copy reports result to s3
+          when: always
+          command: |
+            aws s3 sync test-results/ s3://${S3_STATIC_BUCKET}/${CIRCLE_PROJECT_REPONAME}_${CIRCLE_BRANCH}_${CIRCLE_BUILD_NUM}
+      - run:
+          name: View Logs URL
+          when: always
+          command: echo "https://${S3_STATIC_BUCKET}/${CIRCLE_PROJECT_REPONAME}_${CIRCLE_BRANCH}_${CIRCLE_BUILD_NUM}"
+      - run:
+          name: Extract Test summary info
+          when: always
+          command: |
+            TEST_CASES=$(jq '.summary.tests.value' test-results/report.json )
+            PASSED=$(jq '.summary.passed.value' test-results/report.json )
+            FAILED=$(jq '.summary.failed.value' test-results/report.json)
+            echo "TEST_CASES='$TEST_CASES'" >> $BASH_ENV
+            echo "PASSED='$PASSED'" >> $BASH_ENV
+            echo "FAILED='$FAILED'" >> $BASH_ENV
+      - store_artifacts:
+          path: test-results/report.html
+      - when:
+          condition: << pipeline.parameters.slack >>
+          steps:
+            - notify-slack:
+                title: "[IV] API Automation Test Run"
+                branch_name: "<< pipeline.parameters.branch_name >>"
+                test_suite: "<< pipeline.parameters.testSuite >>"
+      
+workflows:
+  pw-workflow:
+    jobs:
+      - pw-automation-test:
+          context:
+            - mfv-notif-slack
+          filters:
+            branches:
+              only:
+                - dev

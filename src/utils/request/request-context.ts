@@ -1,7 +1,8 @@
-import { APIRequestContext, APIResponse, request } from '@playwright/test';
-import { allure } from "allure-playwright";
-import { HttpMethod } from './http-method';
-import { ScenarioContext } from '../../tests/context/scenario-context';
+import {APIRequestContext, APIResponse, request} from '@playwright/test';
+import {allure} from "allure-playwright";
+import {HttpMethod} from './http-method';
+import {ScenarioContext} from '../../tests/context/scenario-context';
+
 require('dotenv').config()
 
 export default class RequestContext {
@@ -19,11 +20,10 @@ export default class RequestContext {
     }
 
     async initialize() {
-        const context = await request.newContext({
+        this.context = await request.newContext({
             baseURL: this.baseURL,
             extraHTTPHeaders: this.headers
-        })
-        this.context = context;
+        });
     }
 
     // async requestSender<T = unknown>(method: HttpMethod, path: string, options?: { data?: T, form?: any, params?: any }, header?: any): Promise<APIResponse> {
@@ -74,11 +74,11 @@ export default class RequestContext {
         }
 
         try {
-            allure.logStep("Headers: " + JSON.stringify(headers))
+            await allure.logStep("Headers: " + JSON.stringify(headers))
             if (options) {
-                allure.logStep("Options: " + JSON.stringify(options));
+                await allure.logStep("Options: " + JSON.stringify(options));
             }
-            allure.logStep("Request: " + JSON.stringify(response));
+            await allure.logStep("Request: " + JSON.stringify(response));
         } catch { }
 
 

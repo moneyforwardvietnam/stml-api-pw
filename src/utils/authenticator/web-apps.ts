@@ -1,17 +1,17 @@
-import { chromium } from '@playwright/test';
-import { Logger } from '../logger';
+import {chromium} from '@playwright/test';
+import {Logger} from '../logger';
 
 export async function getCode(clientId: string, username: string, password: string): Promise<string | null> {
     const browser = await chromium.launch({
-        headless: true,
+        headless: false,
     });
     const page = await browser.newPage();
     const URL: string = `https://api.biz.test.mfw.work/authorize?client_id=${clientId}&redirect_uri=https%3A%2F%2Finvoice-stg1.ebisubook.com%2Fapi%2Foauth2_redirect&response_type=code&scope=mfc%2Finvoice%2Fdata.write`;
     await page.goto(URL);
 
-    await page.locator("[name='mfid_user[email]']").type(username);
+    await page.locator("[name='mfid_user[email]']").fill(username);
     await page.locator("#submitto").click();
-    await page.locator("[name='mfid_user[password]']").type(password);
+    await page.locator("[name='mfid_user[password]']").fill(password);
     await page.locator("#submitto").click();
     await page.locator("form button.btn-primary").click();
     await page.locator("form input.btn-primary").click();

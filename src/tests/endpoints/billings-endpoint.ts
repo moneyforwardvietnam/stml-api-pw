@@ -1,13 +1,13 @@
-import { Random, RandomType } from "../../utils/random";
-import AuthenRequest from "../../utils/request/authen-request";
-import { HttpMethod } from "../../utils/request/http-method";
-import { AppId } from "./app-id.enum";
+import {Random, RandomType} from "../../utils/random";
+import AuthedRequest from "../../utils/request/authed-request";
+import {HttpMethod} from "../../utils/request/http-method";
+import {AppId} from "./app-id.enum";
 
 
 const BILLINGS_EP = '/api/v3/billings'
 const ITEMS_EP='api/v3/items'
 
-export default class BillingsEndpoint extends AuthenRequest {
+export default class BillingsEndpoint extends AuthedRequest {
 
   get = async () => {
     await this.initContext();
@@ -64,9 +64,7 @@ export default class BillingsEndpoint extends AuthenRequest {
   deleteById = async (item_id:any) => {
     await this.initContext();
     const path = `${BILLINGS_EP}/${item_id}`
-
-    const response = await this.requestSender(HttpMethod.DELETE,path);
-    return response;
+    return await this.requestSender(HttpMethod.DELETE, path);
   }
 
   delete = async () => {
@@ -80,8 +78,6 @@ export default class BillingsEndpoint extends AuthenRequest {
     await this.initContext();
     const sharedData = await this.sharedData;
     const path = `${ITEMS_EP}/${sharedData.getContext(AppId.APP_ITEM_ID)}`;
-
-    const response = await this.requestSender(HttpMethod.DELETE,path);
-    return response;
+    return await this.requestSender(HttpMethod.DELETE, path);
   }
 }

@@ -1,11 +1,11 @@
-import { Random, RandomType } from "../../utils/random";
-import AuthenRequest from "../../utils/request/authen-request";
-import { HttpMethod } from "../../utils/request/http-method";
-import { AppId } from "./app-id.enum";
+import {Random, RandomType} from "../../utils/random";
+import AuthedRequest from "../../utils/request/authed-request";
+import {HttpMethod} from "../../utils/request/http-method";
+import {AppId} from "./app-id.enum";
 
 const PARTNERS_EP = '/api/v3/partners'
 
-export default class PartnerEndpoint extends AuthenRequest {
+export default class PartnerEndpoint extends AuthedRequest {
   create = async () => {
     await this.initContext();
     const sharedData = await this.sharedData;
@@ -32,17 +32,13 @@ export default class PartnerEndpoint extends AuthenRequest {
       "page": 1,
       "per_page": 1
     }
-
-    const response = await this.requestSender(HttpMethod.GET, path, { params: params });
-    return response;
+    return await this.requestSender(HttpMethod.GET, path, {params: params});
   }
 
   delete = async () => {
     await this.initContext();
     const sharedData = await this.sharedData;
     const path = `${PARTNERS_EP}/${sharedData.getContext(AppId.APP_PARTNER_ID)}`;
-
-    const response = await this.requestSender(HttpMethod.DELETE,path);
-    return response;
+    return await this.requestSender(HttpMethod.DELETE, path);
   }
 }

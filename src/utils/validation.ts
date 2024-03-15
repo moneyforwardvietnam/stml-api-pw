@@ -1,6 +1,6 @@
-import Ajv, { AnySchemaObject } from 'ajv';
-import { expect } from 'playwright/test';
-import { Logger } from './logger';
+import Ajv, {AnySchemaObject} from 'ajv';
+import {expect} from 'playwright/test';
+import {Logger} from './logger';
 
 export function validateApiResponse(
   responseBody: Response,
@@ -30,8 +30,8 @@ export async function expectResponse(
     if (expectedData.hasOwnProperty(key)) {
       let expected = expectedData[key];
       let value = responseBody[key];
-      let messsage: string = `${key} expected as ${expected}`
-      Logger.info(messsage);
+      let message: string = `${key} expected as ${expected}`
+      Logger.info(message);
       expect(value).toBe(expected);
     }
   }

@@ -1,4 +1,4 @@
-import { defineConfig, devices } from '@playwright/test';
+import {defineConfig} from '@playwright/test';
 // import { env } from './config/env';
 require('dotenv').config();
 
@@ -16,16 +16,26 @@ export default defineConfig({
   },
   testDir: './src/tests',
   /* Run tests in files in parallel */
-  fullyParallel: false,
+  fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
   retries: process.env.CI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 1 : undefined,
+  workers: process.env.CI ? 5 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [
     ["line"],
+    ['list'],
+    [
+      'monocart-reporter',
+      {
+        name: 'Playwright API Test Report',
+        outputFile: './test-results/report.html',
+        trend: './test-results/report.json'
+      }
+    ],
+    ["playwright-testrail-reporter"],
     [
       "allure-playwright",
       {

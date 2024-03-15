@@ -1,4 +1,4 @@
-import { TestContext } from "./test-context";
+import {TestContext} from "./test-context";
 
 export class ScenarioContext {
     private testContext;

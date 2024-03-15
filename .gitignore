@@ -6,3 +6,4 @@ allure-report/
 allure-results/
 cucumber-report.json
 src/.auth
+/.idea/
