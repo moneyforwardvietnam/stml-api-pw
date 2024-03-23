@@ -139,14 +139,14 @@ jobs:
           name: Extract Test summary info
           when: always
           command: |
-            TEST_CASES=$(jq '.summary.tests.value' test-results/report.json )
-            PASSED=$(jq '.summary.passed.value' test-results/report.json )
-            FAILED=$(jq '.summary.failed.value' test-results/report.json)
+            TEST_CASES=$(jq '.summary.tests.value' test-results/index.json )
+            PASSED=$(jq '.summary.passed.value' test-results/index.json )
+            FAILED=$(jq '.summary.failed.value' test-results/index.json)
             echo "TEST_CASES='$TEST_CASES'" >> $BASH_ENV
             echo "PASSED='$PASSED'" >> $BASH_ENV
             echo "FAILED='$FAILED'" >> $BASH_ENV
       - store_artifacts:
-          path: test-results/report.html
+          path: test-results/index.html
       - when:
           condition: << pipeline.parameters.slack >>
           steps:
