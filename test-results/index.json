@@ -1,0 +1,1709 @@
+{
+    "name": "Playwright API Test Report",
+    "date": 1711211100587,
+    "dateH": "3/23/2024, 11:25:00 PM",
+    "duration": 32286,
+    "durationH": "32.3s",
+    "cwd": "/Users/mfv-computer-0172/Documents/pw-ts-api",
+    "outputFile": "/Users/mfv-computer-0172/Documents/pw-ts-api/test-results/index.html",
+    "outputDir": "/Users/mfv-computer-0172/Documents/pw-ts-api/test-results",
+    "metadata": {
+        "actualWorkers": 1
+    },
+    "system": {
+        "cpu": {
+            "color": "#117DBB",
+            "count": 8,
+            "model": "Apple M1 Pro",
+            "speed": 24
+        },
+        "mem": {
+            "color": "#8B12AE",
+            "total": 17179869184
+        },
+        "arch": "arm64",
+        "platform": "darwin",
+        "release": "23.1.0",
+        "type": "Darwin",
+        "version": "Darwin Kernel Version 23.1.0: Mon Oct  9 21:27:24 PDT 2023; root:xnu-10002.41.9~6/RELEASE_ARM64_T6000",
+        "uptime": 2258505,
+        "hostname": "mfv-computer-0172",
+        "pid": 37772,
+        "node": "16.9.1",
+        "v8": "9.3.345.16-node.12",
+        "timestampStart": 1711211100587,
+        "ticks": [
+            {
+                "cpu": {
+                    "percent": 43.91
+                },
+                "mem": {
+                    "free": 115015680
+                },
+                "timestamp": 1711211104097
+            },
+            {
+                "cpu": {
+                    "percent": 34.98
+                },
+                "mem": {
+                    "free": 57147392
+                },
+                "timestamp": 1711211106100
+            },
+            {
+                "cpu": {
+                    "percent": 40.65
+                },
+                "mem": {
+                    "free": 67403776
+                },
+                "timestamp": 1711211108103
+            },
+            {
+                "cpu": {
+                    "percent": 30.04
+                },
+                "mem": {
+                    "free": 74743808
+                },
+                "timestamp": 1711211110104
+            },
+            {
+                "cpu": {
+                    "percent": 35.44
+                },
+                "mem": {
+                    "free": 60358656
+                },
+                "timestamp": 1711211112107
+            },
+            {
+                "cpu": {
+                    "percent": 28.55
+                },
+                "mem": {
+                    "free": 70680576
+                },
+                "timestamp": 1711211114110
+            },
+            {
+                "cpu": {
+                    "percent": 32.08
+                },
+                "mem": {
+                    "free": 47677440
+                },
+                "timestamp": 1711211116119
+            },
+            {
+                "cpu": {
+                    "percent": 26.38
+                },
+                "mem": {
+                    "free": 62783488
+                },
+                "timestamp": 1711211118121
+            },
+            {
+                "cpu": {
+                    "percent": 23.63
+                },
+                "mem": {
+                    "free": 68435968
+                },
+                "timestamp": 1711211120126
+            },
+            {
+                "cpu": {
+                    "percent": 41.3
+                },
+                "mem": {
+                    "free": 70533120
+                },
+                "timestamp": 1711211122129
+            },
+            {
+                "cpu": {
+                    "percent": 23.29
+                },
+                "mem": {
+                    "free": 62619648
+                },
+                "timestamp": 1711211124137
+            },
+            {
+                "cpu": {
+                    "percent": 31.46
+                },
+                "mem": {
+                    "free": 99827712
+                },
+                "timestamp": 1711211126143
+            },
+            {
+                "cpu": {
+                    "percent": 44.37
+                },
+                "mem": {
+                    "free": 63012864
+                },
+                "timestamp": 1711211128145
+            },
+            {
+                "cpu": {
+                    "percent": 26.49
+                },
+                "mem": {
+                    "free": 76759040
+                },
+                "timestamp": 1711211130162
+            },
+            {
+                "cpu": {
+                    "percent": 21.33
+                },
+                "mem": {
+                    "free": 124862464
+                },
+                "timestamp": 1711211132164
+            },
+            {
+                "cpu": {
+                    "percent": 17.74
+                },
+                "mem": {
+                    "free": 119537664
+                },
+                "timestamp": 1711211132869
+            }
+        ],
+        "workers": 4,
+        "jobs": [
+            {
+                "caseId": "7d92e21c6beb624fb972",
+                "parallelIndex": 0,
+                "workerIndex": 0,
+                "timestamp": 1711211104686,
+                "duration": 1514
+            },
+            {
+                "caseId": "d6d991c8f39d29ff6be3",
+                "parallelIndex": 0,
+                "workerIndex": 0,
+                "timestamp": 1711211106205,
+                "duration": 1229
+            },
+            {
+                "caseId": "3b33bb499858f41fbed6",
+                "parallelIndex": 0,
+                "workerIndex": 1,
+                "timestamp": 1711211109278,
+                "duration": 1301
+            },
+            {
+                "caseId": "63b5f7b70e29b848dc77",
+                "parallelIndex": 0,
+                "workerIndex": 1,
+                "timestamp": 1711211110581,
+                "duration": 1120
+            },
+            {
+                "caseId": "ef402abb565094b4d77f",
+                "parallelIndex": 0,
+                "workerIndex": 1,
+                "timestamp": 1711211111704,
+                "duration": 4688
+            },
+            {
+                "caseId": "5923bc24fa9e946b7b7c",
+                "parallelIndex": 0,
+                "workerIndex": 1,
+                "timestamp": 1711211116394,
+                "duration": 2973
+            },
+            {
+                "caseId": "855c00ae90ad87218e44",
+                "parallelIndex": 0,
+                "workerIndex": 1,
+                "timestamp": 1711211119369,
+                "duration": 5165
+            },
+            {
+                "caseId": "c69b21d3476c4608c02c",
+                "parallelIndex": 0,
+                "workerIndex": 1,
+                "timestamp": 1711211124559,
+                "duration": 7255
+            }
+        ],
+        "cwd": "/Users/mfv-computer-0172/Documents/pw-ts-api",
+        "configFile": "playwright.config.ts",
+        "playwright": "1.40.1",
+        "monocart": "2.4.4",
+        "testDir": "src/tests",
+        "outputFile": "test-results/index.html",
+        "outputDir": "test-results",
+        "timestampEnd": 1711211132873
+    },
+    "artifacts": [],
+    "trends": [
+        {
+            "date": 1711209824358,
+            "duration": 22581,
+            "tests": 8,
+            "passed": 0,
+            "flaky": 0,
+            "skipped": 0,
+            "failed": 8,
+            "steps": 66,
+            "suites": 1,
+            "projects": 1,
+            "files": 1,
+            "describes": 0,
+            "shards": 0,
+            "retries": 0,
+            "errors": 8,
+            "logs": 9,
+            "attachments": 0,
+            "artifacts": 0
+        },
+        {
+            "date": 1711209880273,
+            "duration": 24770,
+            "tests": 8,
+            "passed": 0,
+            "flaky": 0,
+            "skipped": 0,
+            "failed": 8,
+            "steps": 66,
+            "suites": 1,
+            "projects": 1,
+            "files": 1,
+            "describes": 0,
+            "shards": 0,
+            "retries": 0,
+            "errors": 8,
+            "logs": 9,
+            "attachments": 0,
+            "artifacts": 0
+        },
+        {
+            "date": 1711209917426,
+            "duration": 22449,
+            "tests": 8,
+            "passed": 0,
+            "flaky": 0,
+            "skipped": 2,
+            "failed": 6,
+            "steps": 61,
+            "suites": 1,
+            "projects": 1,
+            "files": 1,
+            "describes": 0,
+            "shards": 0,
+            "retries": 0,
+            "errors": 6,
+            "logs": 8,
+            "attachments": 0,
+            "artifacts": 0
+        },
+        {
+            "date": 1711209944282,
+            "duration": 21014,
+            "tests": 8,
+            "passed": 4,
+            "flaky": 0,
+            "skipped": 0,
+            "failed": 4,
+            "steps": 83,
+            "suites": 1,
+            "projects": 1,
+            "files": 1,
+            "describes": 0,
+            "shards": 0,
+            "retries": 0,
+            "errors": 4,
+            "logs": 20,
+            "attachments": 0,
+            "artifacts": 0
+        },
+        {
+            "date": 1711209973772,
+            "duration": 22241,
+            "tests": 8,
+            "passed": 0,
+            "flaky": 0,
+            "skipped": 0,
+            "failed": 8,
+            "steps": 66,
+            "suites": 1,
+            "projects": 1,
+            "files": 1,
+            "describes": 0,
+            "shards": 0,
+            "retries": 0,
+            "errors": 8,
+            "logs": 9,
+            "attachments": 0,
+            "artifacts": 0
+        },
+        {
+            "date": 1711210036419,
+            "duration": 44522,
+            "tests": 8,
+            "passed": 7,
+            "flaky": 0,
+            "skipped": 0,
+            "failed": 1,
+            "steps": 123,
+            "suites": 1,
+            "projects": 1,
+            "files": 1,
+            "describes": 0,
+            "shards": 0,
+            "retries": 0,
+            "errors": 1,
+            "logs": 26,
+            "attachments": 0,
+            "artifacts": 0
+        }
+    ],
+    "columns": [
+        {
+            "id": "caseType",
+            "name": "",
+            "width": 36,
+            "sortable": false,
+            "align": "center",
+            "formatter": "iconCaseType",
+            "detailed": false
+        },
+        {
+            "id": "title",
+            "name": "Title",
+            "searchable": true,
+            "width": 350,
+            "maxWidth": 1230,
+            "detailed": false
+        },
+        {
+            "id": "type",
+            "name": "Type",
+            "width": 50,
+            "sortable": false,
+            "align": "center",
+            "formatter": "iconType",
+            "detailed": false
+        },
+        {
+            "id": "duration",
+            "name": "Duration",
+            "align": "right",
+            "sortAsc": false,
+            "formatter": "duration",
+            "detailed": false
+        },
+        {
+            "id": "errors",
+            "name": "Errors",
+            "width": 60,
+            "align": "center",
+            "comparer": "errors",
+            "formatter": "errors",
+            "detailed": false
+        },
+        {
+            "id": "logs",
+            "name": "Logs",
+            "width": 60,
+            "align": "center",
+            "comparer": "logs",
+            "formatter": "logs",
+            "detailed": false
+        },
+        {
+            "id": "annotations",
+            "name": "Annotations",
+            "width": 100,
+            "markdown": true,
+            "searchable": true,
+            "comparer": "annotations",
+            "formatter": "annotations",
+            "detailed": false
+        },
+        {
+            "id": "attachments",
+            "name": "Attachments",
+            "width": 100,
+            "align": "center",
+            "formatter": "attachments",
+            "detailed": false
+        },
+        {
+            "id": "status",
+            "name": "Status",
+            "align": "center",
+            "detailed": false
+        },
+        {
+            "id": "expectedStatus",
+            "name": "Expected",
+            "align": "center",
+            "detailed": false
+        },
+        {
+            "id": "outcome",
+            "name": "Outcome",
+            "align": "center",
+            "width": 85,
+            "detailed": false
+        },
+        {
+            "id": "retry",
+            "name": "Retry",
+            "align": "center",
+            "width": 50,
+            "detailed": false
+        },
+        {
+            "id": "location",
+            "name": "Location",
+            "classMap": "mcr-location",
+            "width": 200,
+            "maxWidth": 1981,
+            "detailed": false
+        }
+    ],
+    "rows": [
+        {
+            "id": "nb5yq08d9sp9h7uach9l",
+            "title": "project",
+            "type": "suite",
+            "suiteType": "project",
+            "caseNum": 8,
+            "subs": [
+                {
+                    "id": "650198eedc56790c217a",
+                    "title": "scripts/invoice-flow.spec.ts",
+                    "type": "suite",
+                    "suiteType": "file",
+                    "caseNum": 8,
+                    "subs": [
+                        {
+                            "id": "7d92e21c6beb624fb972",
+                            "title": "C55306: Verify token - get office - status code",
+                            "type": "case",
+                            "caseType": "passed",
+                            "ok": true,
+                            "outcome": "expected",
+                            "expectedStatus": "passed",
+                            "location": "src/tests/scripts/invoice-flow.spec.ts:17:5",
+                            "logs": [
+                                "[23:25:04.699] [INFO] Using token 0\n"
+                            ],
+                            "timestamps": [
+                                1711211104686,
+                                1711211106200
+                            ],
+                            "duration": 1514,
+                            "timeout": 60000,
+                            "retry": 0,
+                            "status": "passed",
+                            "stepNum": 7,
+                            "stepFailed": 0,
+                            "stepSubs": false,
+                            "subs": [
+                                {
+                                    "id": "gc07w0p6704vzdtbswds",
+                                    "title": "Before Hooks",
+                                    "type": "step",
+                                    "stepType": "hook",
+                                    "duration": 11,
+                                    "location": ""
+                                },
+                                {
+                                    "id": "wov4vrrfluoye4i2zhmj",
+                                    "title": "apiRequest.newContext",
+                                    "type": "step",
+                                    "stepType": "pw:api",
+                                    "duration": 43,
+                                    "location": "src/utils/request/request-context.ts:23:38"
+                                },
+                                {
+                                    "id": "d2ezif88dp4nx7cbaf41",
+                                    "title": "apiRequestContext.get(/api/v3/office)",
+                                    "type": "step",
+                                    "stepType": "pw:api",
+                                    "duration": 1444,
+                                    "location": "src/utils/request/request-context.ts:40:47"
+                                },
+                                {
+                                    "id": "1sd0t33qq77wy8mwcpzv",
+                                    "title": "Headers: {\"Authorization\":\"Bearer 2Gc3ZdfDDElu6582jIFe9BNOsYrCJj0Xl7t9Ue4kSXU\",\"Content-Type\":\"application/json\"}",
+                                    "type": "step",
+                                    "stepType": "test.step",
+                                    "duration": 4,
+                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
+                                },
+                                {
+                                    "id": "kcpviw4w30milx3qrja4",
+                                    "title": "Request: {\"_initializer\":{\"fetchUid\":\"bc162cac144affcb20f579b6803be16c\",\"url\":\"https://invoice-stg1.ebisubook.com/api/v3/office\",\"status\":200,\"statusText\":\"OK\",\"headers\":[{\"name\":\"Date\",\"value\":\"Sat, 23 Mar 2024 16:25:06 GMT\"},{\"name\":\"Content-Type\",\"value\":\"application/json; charset=utf-8\"},{\"name\":\"Transfer-Encoding\",\"value\":\"chunked\"},{\"name\":\"Connection\",\"value\":\"close\"},{\"name\":\"X-Frame-Options\",\"value\":\"SAMEORIGIN\"},{\"name\":\"X-XSS-Protection\",\"value\":\"0\"},{\"name\":\"X-Content-Type-Options\",\"value\":\"nosniff\"},{\"name\":\"X-Permitted-Cross-Domain-Policies\",\"value\":\"none\"},{\"name\":\"Referrer-Policy\",\"value\":\"strict-origin-when-cross-origin\"},{\"name\":\"ETag\",\"value\":\"W/\\\"176447941e8b9b351e2b8717426f75a9\\\"\"},{\"name\":\"Cache-Control\",\"value\":\"max-age=0, private, must-revalidate\"},{\"name\":\"X-Request-Id\",\"value\":\"91b4a27e57a218cc9f54c5aed0bf4b5e\"},{\"name\":\"X-Runtime\",\"value\":\"0.892846\"},{\"name\":\"Strict-Transport-Security\",\"value\":\"max-age=15724800; includeSubDomains\"},{\"name\":\"X-DuCloud-Ingress\",\"value\":\"true\"},{\"name\":\"X-Robots-Tag\",\"value\":\"noindex\"},{\"name\":\"CF-Cache-Status\",\"value\":\"DYNAMIC\"},{\"name\":\"Server\",\"value\":\"cloudflare\"},{\"name\":\"CF-RAY\",\"value\":\"868fc67e7ce75640-SIN\"},{\"name\":\"Content-Encoding\",\"value\":\"gzip\"}]},\"_headers\":{\"_headersArray\":[{\"name\":\"Date\",\"value\":\"Sat, 23 Mar 2024 16:25:06 GMT\"},{\"name\":\"Content-Type\",\"value\":\"application/json; charset=utf-8\"},{\"name\":\"Transfer-Encoding\",\"value\":\"chunked\"},{\"name\":\"Connection\",\"value\":\"close\"},{\"name\":\"X-Frame-Options\",\"value\":\"SAMEORIGIN\"},{\"name\":\"X-XSS-Protection\",\"value\":\"0\"},{\"name\":\"X-Content-Type-Options\",\"value\":\"nosniff\"},{\"name\":\"X-Permitted-Cross-Domain-Policies\",\"value\":\"none\"},{\"name\":\"Referrer-Policy\",\"value\":\"strict-origin-when-cross-origin\"},{\"name\":\"ETag\",\"value\":\"W/\\\"176447941e8b9b351e2b8717426f75a9\\\"\"},{\"name\":\"Cache-Control\",\"value\":\"max-age=0, private, must-revalidate\"},{\"name\":\"X-Request-Id\",\"value\":\"91b4a27e57a218cc9f54c5aed0bf4b5e\"},{\"name\":\"X-Runtime\",\"value\":\"0.892846\"},{\"name\":\"Strict-Transport-Security\",\"value\":\"max-age=15724800; includeSubDomains\"},{\"name\":\"X-DuCloud-Ingress\",\"value\":\"true\"},{\"name\":\"X-Robots-Tag\",\"value\":\"noindex\"},{\"name\":\"CF-Cache-Status\",\"value\":\"DYNAMIC\"},{\"name\":\"Server\",\"value\":\"cloudflare\"},{\"name\":\"CF-RAY\",\"value\":\"868fc67e7ce75640-SIN\"},{\"name\":\"Content-Encoding\",\"value\":\"gzip\"}],\"_headersMap\":{\"_map\":{}}},\"_request\":{\"_type\":\"APIRequestContext\",\"_guid\":\"request-context@f290914d35bb413b30f83efc1c95f8cb\"}}",
+                                    "type": "step",
+                                    "stepType": "test.step",
+                                    "duration": 0,
+                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
+                                },
+                                {
+                                    "id": "kvntqfyxli9myoilijql",
+                                    "title": "expect.toBe",
+                                    "type": "step",
+                                    "stepType": "expect",
+                                    "duration": 1,
+                                    "location": "src/tests/scripts/invoice-flow.spec.ts:20:31"
+                                },
+                                {
+                                    "id": "geqalcgguz8puk34l0m2",
+                                    "title": "After Hooks",
+                                    "type": "step",
+                                    "stepType": "hook",
+                                    "duration": 1,
+                                    "location": ""
+                                }
+                            ]
+                        },
+                        {
+                            "id": "d6d991c8f39d29ff6be3",
+                            "title": "C55307: Status code - Get billings - accepted - valid info - is 200",
+                            "type": "case",
+                            "caseType": "failed",
+                            "ok": false,
+                            "outcome": "unexpected",
+                            "expectedStatus": "passed",
+                            "location": "src/tests/scripts/invoice-flow.spec.ts:23:5",
+                            "logs": [
+                                "[23:25:06.207] [INFO] Using token 0\n",
+                                "[23:25:07.426] [INFO] validate the JSON schema\n",
+                                "\u001b[31m[23:25:07.426] [ERROR] data/data/5/items/0/excise must be boolean, data/data/5/items/1/excise must be boolean, data/data/6/items/0/excise must be boolean, data/data/6/items/1/excise must be boolean, data/data/7/items/0/excise must be boolean, data/data/7/items/1/excise must be boolean, data/data/8/items/0/excise must be boolean, data/data/8/items/1/excise must be boolean, data/data/9/items/0/excise must be boolean, data/data/9/items/1/excise must be boolean, data/data/10/items/0/excise must be boolean, data/data/10/items/1/excise must be boolean, data/data/11/items/0/excise must be boolean, data/data/11/items/1/excise must be boolean, data/data/12/items/0/excise must be boolean, data/data/12/items/1/excise must be boolean, data/data/13/items/0/excise must be boolean, data/data/13/items/1/excise must be boolean, data/data/14/items/0/excise must be boolean, data/data/14/items/1/excise must be boolean, data/data/15/items/0/name must be string, data/data/15/items/0/code must be string, data/data/15/items/0/excise must be boolean, data/data/16/items/0/name must be string, data/data/16/items/0/code must be string, data/data/16/items/0/excise must be boolean, data/data/17/items/0/name must be string, data/data/17/items/0/code must be string, data/data/17/items/0/excise must be boolean, data/data/18/items/0/name must be string, data/data/18/items/0/code must be string, data/data/18/items/0/excise must be boolean, data/data/19/items/0/name must be string, data/data/19/items/0/code must be string, data/data/19/items/0/excise must be boolean\n\u001b[39m"
+                            ],
+                            "timestamps": [
+                                1711211106205,
+                                1711211107434
+                            ],
+                            "duration": 1229,
+                            "timeout": 60000,
+                            "retry": 0,
+                            "status": "failed",
+                            "stepNum": 10,
+                            "stepFailed": 1,
+                            "stepSubs": false,
+                            "subs": [
+                                {
+                                    "id": "6ympxtet0sbf2zblx67i",
+                                    "title": "Before Hooks",
+                                    "type": "step",
+                                    "stepType": "hook",
+                                    "duration": 7,
+                                    "location": ""
+                                },
+                                {
+                                    "id": "3snx74wd8040anzalyl6",
+                                    "title": "apiRequest.newContext",
+                                    "type": "step",
+                                    "stepType": "pw:api",
+                                    "duration": 3,
+                                    "location": "src/utils/request/request-context.ts:23:38"
+                                },
+                                {
+                                    "id": "j038l4uysa2vcilqjuni",
+                                    "title": "apiRequestContext.get(/api/v3/billings)",
+                                    "type": "step",
+                                    "stepType": "pw:api",
+                                    "duration": 1164,
+                                    "location": "src/utils/request/request-context.ts:40:47"
+                                },
+                                {
+                                    "id": "etx96zwibf2qatl54ozf",
+                                    "title": "Headers: {\"Authorization\":\"Bearer 2Gc3ZdfDDElu6582jIFe9BNOsYrCJj0Xl7t9Ue4kSXU\",\"Content-Type\":\"application/json\"}",
+                                    "type": "step",
+                                    "stepType": "test.step",
+                                    "duration": 1,
+                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
+                                },
+                                {
+                                    "id": "vzqfquom8bp34whe3gwe",
+                                    "title": "Options: {\"params\":{\"page\":1,\"per_page\":20}}",
+                                    "type": "step",
+                                    "stepType": "test.step",
+                                    "duration": 0,
+                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
+                                },
+                                {
+                                    "id": "43z5fo6i8282m86fi0jx",
+                                    "title": "Request: {\"_initializer\":{\"fetchUid\":\"7282b249e4adabd884a20414b7b889ee\",\"url\":\"https://invoice-stg1.ebisubook.com/api/v3/billings?page=1&per_page=20\",\"status\":200,\"statusText\":\"OK\",\"headers\":[{\"name\":\"Date\",\"value\":\"Sat, 23 Mar 2024 16:25:07 GMT\"},{\"name\":\"Content-Type\",\"value\":\"application/json; charset=utf-8\"},{\"name\":\"Transfer-Encoding\",\"value\":\"chunked\"},{\"name\":\"Connection\",\"value\":\"close\"},{\"name\":\"X-Frame-Options\",\"value\":\"SAMEORIGIN\"},{\"name\":\"X-XSS-Protection\",\"value\":\"0\"},{\"name\":\"X-Content-Type-Options\",\"value\":\"nosniff\"},{\"name\":\"X-Permitted-Cross-Domain-Policies\",\"value\":\"none\"},{\"name\":\"Referrer-Policy\",\"value\":\"strict-origin-when-cross-origin\"},{\"name\":\"ETag\",\"value\":\"W/\\\"4f05571a5b17753d0b8f3c71ff198a63\\\"\"},{\"name\":\"Cache-Control\",\"value\":\"max-age=0, private, must-revalidate\"},{\"name\":\"X-Request-Id\",\"value\":\"5489da0b9e9d7b3ed98d0e1f8faf753d\"},{\"name\":\"X-Runtime\",\"value\":\"0.521979\"},{\"name\":\"Strict-Transport-Security\",\"value\":\"max-age=15724800; includeSubDomains\"},{\"name\":\"X-DuCloud-Ingress\",\"value\":\"true\"},{\"name\":\"X-Robots-Tag\",\"value\":\"noindex\"},{\"name\":\"CF-Cache-Status\",\"value\":\"DYNAMIC\"},{\"name\":\"Server\",\"value\":\"cloudflare\"},{\"name\":\"CF-RAY\",\"value\":\"868fc686ec533fa7-SIN\"},{\"name\":\"Content-Encoding\",\"value\":\"gzip\"}]},\"_headers\":{\"_headersArray\":[{\"name\":\"Date\",\"value\":\"Sat, 23 Mar 2024 16:25:07 GMT\"},{\"name\":\"Content-Type\",\"value\":\"application/json; charset=utf-8\"},{\"name\":\"Transfer-Encoding\",\"value\":\"chunked\"},{\"name\":\"Connection\",\"value\":\"close\"},{\"name\":\"X-Frame-Options\",\"value\":\"SAMEORIGIN\"},{\"name\":\"X-XSS-Protection\",\"value\":\"0\"},{\"name\":\"X-Content-Type-Options\",\"value\":\"nosniff\"},{\"name\":\"X-Permitted-Cross-Domain-Policies\",\"value\":\"none\"},{\"name\":\"Referrer-Policy\",\"value\":\"strict-origin-when-cross-origin\"},{\"name\":\"ETag\",\"value\":\"W/\\\"4f05571a5b17753d0b8f3c71ff198a63\\\"\"},{\"name\":\"Cache-Control\",\"value\":\"max-age=0, private, must-revalidate\"},{\"name\":\"X-Request-Id\",\"value\":\"5489da0b9e9d7b3ed98d0e1f8faf753d\"},{\"name\":\"X-Runtime\",\"value\":\"0.521979\"},{\"name\":\"Strict-Transport-Security\",\"value\":\"max-age=15724800; includeSubDomains\"},{\"name\":\"X-DuCloud-Ingress\",\"value\":\"true\"},{\"name\":\"X-Robots-Tag\",\"value\":\"noindex\"},{\"name\":\"CF-Cache-Status\",\"value\":\"DYNAMIC\"},{\"name\":\"Server\",\"value\":\"cloudflare\"},{\"name\":\"CF-RAY\",\"value\":\"868fc686ec533fa7-SIN\"},{\"name\":\"Content-Encoding\",\"value\":\"gzip\"}],\"_headersMap\":{\"_map\":{}}},\"_request\":{\"_type\":\"APIRequestContext\",\"_guid\":\"request-context@0ae92edefb0a8e7f640e1a7aa6a8fa75\"}}",
+                                    "type": "step",
+                                    "stepType": "test.step",
+                                    "duration": 0,
+                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
+                                },
+                                {
+                                    "id": "2awb3mepysh0gn1wsdjf",
+                                    "title": "expect.toBe",
+                                    "type": "step",
+                                    "stepType": "expect",
+                                    "duration": 0,
+                                    "location": "src/tests/scripts/invoice-flow.spec.ts:26:31"
+                                },
+                                {
+                                    "id": "cb7ave04w1yu0c27hiuk",
+                                    "title": "apiResponse.json",
+                                    "type": "step",
+                                    "stepType": "pw:api",
+                                    "duration": 1,
+                                    "location": "src/tests/scripts/invoice-flow.spec.ts:27:41"
+                                },
+                                {
+                                    "id": "4nehgqtgvkzqxgejbgks",
+                                    "title": "expect.toBeTruthy",
+                                    "type": "step",
+                                    "stepType": "expect",
+                                    "duration": 1,
+                                    "location": "src/utils/validation.ts:17:19",
+                                    "errors": [
+                                        "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n\u001b[0m \u001b[90m 15 |\u001b[39m     \u001b[33mLogger\u001b[39m\u001b[33m.\u001b[39merror(ajv\u001b[33m.\u001b[39merrorsText(validate\u001b[33m.\u001b[39merrors))\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 16 |\u001b[39m   }\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 |\u001b[39m   expect(isValid)\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\n    at validateApiResponse (/Users/mfv-computer-0172/Documents/pw-ts-api/src/utils/validation.ts:17:19)\n    at /Users/mfv-computer-0172/Documents/pw-ts-api/src/tests/scripts/invoice-flow.spec.ts:28:24"
+                                    ],
+                                    "errorNum": 1
+                                },
+                                {
+                                    "id": "mevx8n0eor5bz576nnro",
+                                    "title": "After Hooks",
+                                    "type": "step",
+                                    "stepType": "hook",
+                                    "duration": 1,
+                                    "location": ""
+                                }
+                            ],
+                            "errorNum": 1,
+                            "errorId": "4nehgqtgvkzqxgejbgks"
+                        },
+                        {
+                            "id": "3b33bb499858f41fbed6",
+                            "title": "C55308: Status code - Create partner - valid values - is 201",
+                            "type": "case",
+                            "caseType": "passed",
+                            "ok": true,
+                            "outcome": "expected",
+                            "expectedStatus": "passed",
+                            "location": "src/tests/scripts/invoice-flow.spec.ts:31:5",
+                            "logs": [
+                                "[23:25:09.292] [INFO] Using token 0\n",
+                                "[23:25:10.530] [INFO] code expected as rhaYzRglcT\n",
+                                "[23:25:10.532] [INFO] name expected as Auto test rhaYzRglcT\n",
+                                "[23:25:10.533] [INFO] name_kana expected as rhaYzRglcT\n",
+                                "[23:25:10.534] [INFO] name_suffix expected as 御中\n",
+                                "[23:25:10.535] [INFO] memo expected as rhaYzRglcT\n",
+                                "[23:25:10.578] [INFO] validate the JSON schema\n"
+                            ],
+                            "timestamps": [
+                                1711211109278,
+                                1711211110579
+                            ],
+                            "duration": 1301,
+                            "timeout": 60000,
+                            "retry": 0,
+                            "status": "passed",
+                            "stepNum": 16,
+                            "stepFailed": 0,
+                            "stepSubs": false,
+                            "subs": [
+                                {
+                                    "id": "8gzkyed1h83vxhbtxnal",
+                                    "title": "Before Hooks",
+                                    "type": "step",
+                                    "stepType": "hook",
+                                    "duration": 13,
+                                    "location": ""
+                                },
+                                {
+                                    "id": "qbhcimmhx6jhgvq09jsz",
+                                    "title": "apiRequest.newContext",
+                                    "type": "step",
+                                    "stepType": "pw:api",
+                                    "duration": 24,
+                                    "location": "src/utils/request/request-context.ts:23:38"
+                                },
+                                {
+                                    "id": "op3bgu16zqyp72n95jj9",
+                                    "title": "apiRequestContext.post(/api/v3/partners)",
+                                    "type": "step",
+                                    "stepType": "pw:api",
+                                    "duration": 1188,
+                                    "location": "src/utils/request/request-context.ts:51:51"
+                                },
+                                {
+                                    "id": "oglziru1z7hkyxi3m75j",
+                                    "title": "Headers: {\"Authorization\":\"Bearer 2Gc3ZdfDDElu6582jIFe9BNOsYrCJj0Xl7t9Ue4kSXU\",\"Content-Type\":\"application/json\"}",
+                                    "type": "step",
+                                    "stepType": "test.step",
+                                    "duration": 8,
+                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
+                                },
+                                {
+                                    "id": "08w049eccbvz3ijjwjx7",
+                                    "title": "Options: {\"data\":{\"code\":\"rhaYzRglcT\",\"name\":\"Auto test rhaYzRglcT\",\"name_kana\":\"rhaYzRglcT\",\"name_suffix\":\"御中\",\"memo\":\"rhaYzRglcT\"}}",
+                                    "type": "step",
+                                    "stepType": "test.step",
+                                    "duration": 1,
+                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
+                                },
+                                {
+                                    "id": "hj698vb24tga0r78j1dw",
+                                    "title": "Request: {\"_initializer\":{\"fetchUid\":\"6a758c5e15dcfd3f27008991eff188b9\",\"url\":\"https://invoice-stg1.ebisubook.com/api/v3/partners\",\"status\":201,\"statusText\":\"Created\",\"headers\":[{\"name\":\"Date\",\"value\":\"Sat, 23 Mar 2024 16:25:10 GMT\"},{\"name\":\"Content-Type\",\"value\":\"application/json; charset=utf-8\"},{\"name\":\"Transfer-Encoding\",\"value\":\"chunked\"},{\"name\":\"Connection\",\"value\":\"close\"},{\"name\":\"X-Frame-Options\",\"value\":\"SAMEORIGIN\"},{\"name\":\"X-XSS-Protection\",\"value\":\"0\"},{\"name\":\"X-Content-Type-Options\",\"value\":\"nosniff\"},{\"name\":\"X-Permitted-Cross-Domain-Policies\",\"value\":\"none\"},{\"name\":\"Referrer-Policy\",\"value\":\"strict-origin-when-cross-origin\"},{\"name\":\"ETag\",\"value\":\"W/\\\"efba3a7bd2b8cfab1c058ff81589c2a5\\\"\"},{\"name\":\"Cache-Control\",\"value\":\"max-age=0, private, must-revalidate\"},{\"name\":\"X-Request-Id\",\"value\":\"dd3f1819c3445841c4e5802d9c9f7ff2\"},{\"name\":\"X-Runtime\",\"value\":\"0.632552\"},{\"name\":\"Strict-Transport-Security\",\"value\":\"max-age=15724800; includeSubDomains\"},{\"name\":\"X-DuCloud-Ingress\",\"value\":\"true\"},{\"name\":\"X-Robots-Tag\",\"value\":\"noindex\"},{\"name\":\"CF-Cache-Status\",\"value\":\"DYNAMIC\"},{\"name\":\"Server\",\"value\":\"cloudflare\"},{\"name\":\"CF-RAY\",\"value\":\"868fc69a7e7e49a8-SIN\"}]},\"_headers\":{\"_headersArray\":[{\"name\":\"Date\",\"value\":\"Sat, 23 Mar 2024 16:25:10 GMT\"},{\"name\":\"Content-Type\",\"value\":\"application/json; charset=utf-8\"},{\"name\":\"Transfer-Encoding\",\"value\":\"chunked\"},{\"name\":\"Connection\",\"value\":\"close\"},{\"name\":\"X-Frame-Options\",\"value\":\"SAMEORIGIN\"},{\"name\":\"X-XSS-Protection\",\"value\":\"0\"},{\"name\":\"X-Content-Type-Options\",\"value\":\"nosniff\"},{\"name\":\"X-Permitted-Cross-Domain-Policies\",\"value\":\"none\"},{\"name\":\"Referrer-Policy\",\"value\":\"strict-origin-when-cross-origin\"},{\"name\":\"ETag\",\"value\":\"W/\\\"efba3a7bd2b8cfab1c058ff81589c2a5\\\"\"},{\"name\":\"Cache-Control\",\"value\":\"max-age=0, private, must-revalidate\"},{\"name\":\"X-Request-Id\",\"value\":\"dd3f1819c3445841c4e5802d9c9f7ff2\"},{\"name\":\"X-Runtime\",\"value\":\"0.632552\"},{\"name\":\"Strict-Transport-Security\",\"value\":\"max-age=15724800; includeSubDomains\"},{\"name\":\"X-DuCloud-Ingress\",\"value\":\"true\"},{\"name\":\"X-Robots-Tag\",\"value\":\"noindex\"},{\"name\":\"CF-Cache-Status\",\"value\":\"DYNAMIC\"},{\"name\":\"Server\",\"value\":\"cloudflare\"},{\"name\":\"CF-RAY\",\"value\":\"868fc69a7e7e49a8-SIN\"}],\"_headersMap\":{\"_map\":{}}},\"_request\":{\"_type\":\"APIRequestContext\",\"_guid\":\"request-context@66a481ba57346e0866fbc344c6109ad2\"}}",
+                                    "type": "step",
+                                    "stepType": "test.step",
+                                    "duration": 1,
+                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
+                                },
+                                {
+                                    "id": "rbo62ebwnpo9u519emp8",
+                                    "title": "apiResponse.json",
+                                    "type": "step",
+                                    "stepType": "pw:api",
+                                    "duration": 3,
+                                    "location": "src/tests/endpoints/partner-enpoint.ts:22:65"
+                                },
+                                {
+                                    "id": "poxfqyqfqr8e5t15tv02",
+                                    "title": "expect.toBe",
+                                    "type": "step",
+                                    "stepType": "expect",
+                                    "duration": 1,
+                                    "location": "src/tests/scripts/invoice-flow.spec.ts:34:31"
+                                },
+                                {
+                                    "id": "eqqyyqdqrgo1rno9spka",
+                                    "title": "apiResponse.json",
+                                    "type": "step",
+                                    "stepType": "pw:api",
+                                    "duration": 2,
+                                    "location": "src/tests/scripts/invoice-flow.spec.ts:35:41"
+                                },
+                                {
+                                    "id": "lhc549s5hi4ai0nwzlzv",
+                                    "title": "expect.toBe",
+                                    "type": "step",
+                                    "stepType": "expect",
+                                    "duration": 1,
+                                    "location": "src/utils/validation.ts:35:21",
+                                    "count": 5
+                                },
+                                {
+                                    "id": "nfm83nt6dgwizhg1fhit",
+                                    "title": "expect.toBeTruthy",
+                                    "type": "step",
+                                    "stepType": "expect",
+                                    "duration": 0,
+                                    "location": "src/utils/validation.ts:17:19"
+                                },
+                                {
+                                    "id": "nco8xleeg6mets1yz1qr",
+                                    "title": "After Hooks",
+                                    "type": "step",
+                                    "stepType": "hook",
+                                    "duration": 1,
+                                    "location": ""
+                                }
+                            ]
+                        },
+                        {
+                            "id": "63b5f7b70e29b848dc77",
+                            "title": "C55309: Status code - Get partner id - is 200",
+                            "type": "case",
+                            "caseType": "passed",
+                            "ok": true,
+                            "outcome": "expected",
+                            "expectedStatus": "passed",
+                            "location": "src/tests/scripts/invoice-flow.spec.ts:50:5",
+                            "logs": [
+                                "[23:25:10.586] [INFO] Using token 0\n",
+                                "[23:25:11.700] [INFO] validate the JSON schema\n"
+                            ],
+                            "timestamps": [
+                                1711211110581,
+                                1711211111701
+                            ],
+                            "duration": 1120,
+                            "timeout": 60000,
+                            "retry": 0,
+                            "status": "passed",
+                            "stepNum": 10,
+                            "stepFailed": 0,
+                            "stepSubs": false,
+                            "subs": [
+                                {
+                                    "id": "xzidmsdib4cvv5ldahue",
+                                    "title": "Before Hooks",
+                                    "type": "step",
+                                    "stepType": "hook",
+                                    "duration": 4,
+                                    "location": ""
+                                },
+                                {
+                                    "id": "1cmdy4uri5diczxxuqyv",
+                                    "title": "apiRequest.newContext",
+                                    "type": "step",
+                                    "stepType": "pw:api",
+                                    "duration": 0,
+                                    "location": "src/utils/request/request-context.ts:23:38"
+                                },
+                                {
+                                    "id": "o7amxpkhe6g4i3gdgxq6",
+                                    "title": "apiRequestContext.get(/api/v3/partners/JNka1SllFaLHaIkX8i_8uw)",
+                                    "type": "step",
+                                    "stepType": "pw:api",
+                                    "duration": 1099,
+                                    "location": "src/utils/request/request-context.ts:40:47"
+                                },
+                                {
+                                    "id": "libkt5zl9ns8qm1qf1zx",
+                                    "title": "Headers: {\"Authorization\":\"Bearer 2Gc3ZdfDDElu6582jIFe9BNOsYrCJj0Xl7t9Ue4kSXU\",\"Content-Type\":\"application/json\"}",
+                                    "type": "step",
+                                    "stepType": "test.step",
+                                    "duration": 1,
+                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
+                                },
+                                {
+                                    "id": "37gvkx98y4vurgilo9u8",
+                                    "title": "Options: {\"params\":{\"page\":1,\"per_page\":1}}",
+                                    "type": "step",
+                                    "stepType": "test.step",
+                                    "duration": 0,
+                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
+                                },
+                                {
+                                    "id": "uka2qw29n0dnuwlxe8mv",
+                                    "title": "Request: {\"_initializer\":{\"fetchUid\":\"e0bede7b3527d7fd2ee3ef86fc7f0236\",\"url\":\"https://invoice-stg1.ebisubook.com/api/v3/partners/JNka1SllFaLHaIkX8i_8uw?page=1&per_page=1\",\"status\":200,\"statusText\":\"OK\",\"headers\":[{\"name\":\"Date\",\"value\":\"Sat, 23 Mar 2024 16:25:11 GMT\"},{\"name\":\"Content-Type\",\"value\":\"application/json; charset=utf-8\"},{\"name\":\"Transfer-Encoding\",\"value\":\"chunked\"},{\"name\":\"Connection\",\"value\":\"close\"},{\"name\":\"X-Frame-Options\",\"value\":\"SAMEORIGIN\"},{\"name\":\"X-XSS-Protection\",\"value\":\"0\"},{\"name\":\"X-Content-Type-Options\",\"value\":\"nosniff\"},{\"name\":\"X-Permitted-Cross-Domain-Policies\",\"value\":\"none\"},{\"name\":\"Referrer-Policy\",\"value\":\"strict-origin-when-cross-origin\"},{\"name\":\"ETag\",\"value\":\"W/\\\"efba3a7bd2b8cfab1c058ff81589c2a5\\\"\"},{\"name\":\"Cache-Control\",\"value\":\"max-age=0, private, must-revalidate\"},{\"name\":\"X-Request-Id\",\"value\":\"057befc30a31707050d7122ee6443df8\"},{\"name\":\"X-Runtime\",\"value\":\"0.631784\"},{\"name\":\"Strict-Transport-Security\",\"value\":\"max-age=15724800; includeSubDomains\"},{\"name\":\"X-DuCloud-Ingress\",\"value\":\"true\"},{\"name\":\"X-Robots-Tag\",\"value\":\"noindex\"},{\"name\":\"CF-Cache-Status\",\"value\":\"DYNAMIC\"},{\"name\":\"Server\",\"value\":\"cloudflare\"},{\"name\":\"CF-RAY\",\"value\":\"868fc6a249c381f2-SIN\"},{\"name\":\"Content-Encoding\",\"value\":\"gzip\"}]},\"_headers\":{\"_headersArray\":[{\"name\":\"Date\",\"value\":\"Sat, 23 Mar 2024 16:25:11 GMT\"},{\"name\":\"Content-Type\",\"value\":\"application/json; charset=utf-8\"},{\"name\":\"Transfer-Encoding\",\"value\":\"chunked\"},{\"name\":\"Connection\",\"value\":\"close\"},{\"name\":\"X-Frame-Options\",\"value\":\"SAMEORIGIN\"},{\"name\":\"X-XSS-Protection\",\"value\":\"0\"},{\"name\":\"X-Content-Type-Options\",\"value\":\"nosniff\"},{\"name\":\"X-Permitted-Cross-Domain-Policies\",\"value\":\"none\"},{\"name\":\"Referrer-Policy\",\"value\":\"strict-origin-when-cross-origin\"},{\"name\":\"ETag\",\"value\":\"W/\\\"efba3a7bd2b8cfab1c058ff81589c2a5\\\"\"},{\"name\":\"Cache-Control\",\"value\":\"max-age=0, private, must-revalidate\"},{\"name\":\"X-Request-Id\",\"value\":\"057befc30a31707050d7122ee6443df8\"},{\"name\":\"X-Runtime\",\"value\":\"0.631784\"},{\"name\":\"Strict-Transport-Security\",\"value\":\"max-age=15724800; includeSubDomains\"},{\"name\":\"X-DuCloud-Ingress\",\"value\":\"true\"},{\"name\":\"X-Robots-Tag\",\"value\":\"noindex\"},{\"name\":\"CF-Cache-Status\",\"value\":\"DYNAMIC\"},{\"name\":\"Server\",\"value\":\"cloudflare\"},{\"name\":\"CF-RAY\",\"value\":\"868fc6a249c381f2-SIN\"},{\"name\":\"Content-Encoding\",\"value\":\"gzip\"}],\"_headersMap\":{\"_map\":{}}},\"_request\":{\"_type\":\"APIRequestContext\",\"_guid\":\"request-context@68b4259f95040f71788adef1aa17cab0\"}}",
+                                    "type": "step",
+                                    "stepType": "test.step",
+                                    "duration": 1,
+                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
+                                },
+                                {
+                                    "id": "w72x9dv0vzbwrmjkku8d",
+                                    "title": "expect.toBe",
+                                    "type": "step",
+                                    "stepType": "expect",
+                                    "duration": 0,
+                                    "location": "src/tests/scripts/invoice-flow.spec.ts:53:31"
+                                },
+                                {
+                                    "id": "hllmhdbr3hsb65dl3ckd",
+                                    "title": "apiResponse.json",
+                                    "type": "step",
+                                    "stepType": "pw:api",
+                                    "duration": 1,
+                                    "location": "src/tests/scripts/invoice-flow.spec.ts:54:40"
+                                },
+                                {
+                                    "id": "hn7llk1jeir6ut6qja8v",
+                                    "title": "expect.toBeTruthy",
+                                    "type": "step",
+                                    "stepType": "expect",
+                                    "duration": 0,
+                                    "location": "src/utils/validation.ts:17:19"
+                                },
+                                {
+                                    "id": "1ab7n2fo7bh4jbtnw2te",
+                                    "title": "After Hooks",
+                                    "type": "step",
+                                    "stepType": "hook",
+                                    "duration": 0,
+                                    "location": ""
+                                }
+                            ]
+                        },
+                        {
+                            "id": "ef402abb565094b4d77f",
+                            "title": "C55310: Status code - Create billing - Department id - accepted - valid id - is 201",
+                            "type": "case",
+                            "caseType": "passed",
+                            "ok": true,
+                            "outcome": "expected",
+                            "expectedStatus": "passed",
+                            "location": "src/tests/scripts/invoice-flow.spec.ts:57:5",
+                            "logs": [
+                                "[23:25:11.709] [INFO] Using token 0\n",
+                                "[23:25:13.087] [INFO] Using token 0\n",
+                                "[23:25:16.391] [INFO] validate the JSON schema\n"
+                            ],
+                            "timestamps": [
+                                1711211111704,
+                                1711211116392
+                            ],
+                            "duration": 4688,
+                            "timeout": 60000,
+                            "retry": 0,
+                            "status": "passed",
+                            "stepNum": 19,
+                            "stepFailed": 0,
+                            "stepSubs": false,
+                            "subs": [
+                                {
+                                    "id": "zc6gwg2wj186eewgpfnf",
+                                    "title": "Before Hooks",
+                                    "type": "step",
+                                    "stepType": "hook",
+                                    "duration": 5,
+                                    "location": ""
+                                },
+                                {
+                                    "id": "pwkx2lv0jotuw2ebv8l2",
+                                    "title": "apiRequest.newContext",
+                                    "type": "step",
+                                    "stepType": "pw:api",
+                                    "duration": 0,
+                                    "location": "src/utils/request/request-context.ts:23:38"
+                                },
+                                {
+                                    "id": "rub5ecu1ano2377ye3ea",
+                                    "title": "apiRequestContext.post(/api/v3/partners/JNka1SllFaLHaIkX8i_8uw/departments)",
+                                    "type": "step",
+                                    "stepType": "pw:api",
+                                    "duration": 1354,
+                                    "location": "src/utils/request/request-context.ts:51:51"
+                                },
+                                {
+                                    "id": "x2qet35iqbv8pct3775g",
+                                    "title": "Headers: {\"Authorization\":\"Bearer 2Gc3ZdfDDElu6582jIFe9BNOsYrCJj0Xl7t9Ue4kSXU\",\"Content-Type\":\"application/json\"}",
+                                    "type": "step",
+                                    "stepType": "test.step",
+                                    "duration": 2,
+                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
+                                },
+                                {
+                                    "id": "tt5cz7k6arjqfxhbt31j",
+                                    "title": "Options: {\"data\":{\"zip\":\"211-6838\",\"tel\":\"1967187\",\"prefecture\":\"山形県\",\"address1\":\"1481 5th Avenue\",\"address2\":\"92407 Main Avenue\",\"person_name\":\"Kara\",\"person_title\":\"Gilberto\",\"person_dept\":\"Garrick\",\"office_member_name\":\"Salvador\",\"email\":\"Cade95@yahoo.com\",\"cc_emails\":\"Eliezer_Cummings65@yahoo.com\"}}",
+                                    "type": "step",
+                                    "stepType": "test.step",
+                                    "duration": 1,
+                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
+                                },
+                                {
+                                    "id": "pbr2c88fh4di6kb6l4nf",
+                                    "title": "Request: {\"_initializer\":{\"fetchUid\":\"d596a45cc47f7ff63b7bd7f5faae4abb\",\"url\":\"https://invoice-stg1.ebisubook.com/api/v3/partners/JNka1SllFaLHaIkX8i_8uw/departments\",\"status\":201,\"statusText\":\"Created\",\"headers\":[{\"name\":\"Date\",\"value\":\"Sat, 23 Mar 2024 16:25:13 GMT\"},{\"name\":\"Content-Type\",\"value\":\"application/json; charset=utf-8\"},{\"name\":\"Transfer-Encoding\",\"value\":\"chunked\"},{\"name\":\"Connection\",\"value\":\"close\"},{\"name\":\"X-Frame-Options\",\"value\":\"SAMEORIGIN\"},{\"name\":\"X-XSS-Protection\",\"value\":\"0\"},{\"name\":\"X-Content-Type-Options\",\"value\":\"nosniff\"},{\"name\":\"X-Permitted-Cross-Domain-Policies\",\"value\":\"none\"},{\"name\":\"Referrer-Policy\",\"value\":\"strict-origin-when-cross-origin\"},{\"name\":\"ETag\",\"value\":\"W/\\\"ae18821a079b575fe7f44e00f3fc7be0\\\"\"},{\"name\":\"Cache-Control\",\"value\":\"max-age=0, private, must-revalidate\"},{\"name\":\"X-Request-Id\",\"value\":\"a831a7f1636a7670f19ca48793acdb01\"},{\"name\":\"X-Runtime\",\"value\":\"0.821276\"},{\"name\":\"Strict-Transport-Security\",\"value\":\"max-age=15724800; includeSubDomains\"},{\"name\":\"X-DuCloud-Ingress\",\"value\":\"true\"},{\"name\":\"X-Robots-Tag\",\"value\":\"noindex\"},{\"name\":\"CF-Cache-Status\",\"value\":\"DYNAMIC\"},{\"name\":\"Server\",\"value\":\"cloudflare\"},{\"name\":\"CF-RAY\",\"value\":\"868fc6a968534a65-SIN\"}]},\"_headers\":{\"_headersArray\":[{\"name\":\"Date\",\"value\":\"Sat, 23 Mar 2024 16:25:13 GMT\"},{\"name\":\"Content-Type\",\"value\":\"application/json; charset=utf-8\"},{\"name\":\"Transfer-Encoding\",\"value\":\"chunked\"},{\"name\":\"Connection\",\"value\":\"close\"},{\"name\":\"X-Frame-Options\",\"value\":\"SAMEORIGIN\"},{\"name\":\"X-XSS-Protection\",\"value\":\"0\"},{\"name\":\"X-Content-Type-Options\",\"value\":\"nosniff\"},{\"name\":\"X-Permitted-Cross-Domain-Policies\",\"value\":\"none\"},{\"name\":\"Referrer-Policy\",\"value\":\"strict-origin-when-cross-origin\"},{\"name\":\"ETag\",\"value\":\"W/\\\"ae18821a079b575fe7f44e00f3fc7be0\\\"\"},{\"name\":\"Cache-Control\",\"value\":\"max-age=0, private, must-revalidate\"},{\"name\":\"X-Request-Id\",\"value\":\"a831a7f1636a7670f19ca48793acdb01\"},{\"name\":\"X-Runtime\",\"value\":\"0.821276\"},{\"name\":\"Strict-Transport-Security\",\"value\":\"max-age=15724800; includeSubDomains\"},{\"name\":\"X-DuCloud-Ingress\",\"value\":\"true\"},{\"name\":\"X-Robots-Tag\",\"value\":\"noindex\"},{\"name\":\"CF-Cache-Status\",\"value\":\"DYNAMIC\"},{\"name\":\"Server\",\"value\":\"cloudflare\"},{\"name\":\"CF-RAY\",\"value\":\"868fc6a968534a65-SIN\"}],\"_headersMap\":{\"_map\":{}}},\"_request\":{\"_type\":\"APIRequestContext\",\"_guid\":\"request-context@9f5cc02b1d47045eea7d28cd93b0d60c\"}}",
+                                    "type": "step",
+                                    "stepType": "test.step",
+                                    "duration": 1,
+                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
+                                },
+                                {
+                                    "id": "kcm74fqcs2dfrraoitm5",
+                                    "title": "apiResponse.json",
+                                    "type": "step",
+                                    "stepType": "pw:api",
+                                    "duration": 9,
+                                    "location": "src/tests/endpoints/department-enpoint.ts:30:68"
+                                },
+                                {
+                                    "id": "wydfgk0zzmbqicujfxk1",
+                                    "title": "expect.toBe",
+                                    "type": "step",
+                                    "stepType": "expect",
+                                    "duration": 0,
+                                    "location": "src/tests/scripts/invoice-flow.spec.ts:60:37"
+                                },
+                                {
+                                    "id": "tb7ssmmhzfezo8457w8s",
+                                    "title": "apiRequest.newContext",
+                                    "type": "step",
+                                    "stepType": "pw:api",
+                                    "duration": 2,
+                                    "location": "src/utils/request/request-context.ts:23:38"
+                                },
+                                {
+                                    "id": "5lq8l8mp39yfp7ef8g59",
+                                    "title": "apiRequestContext.post(/api/v3/billings)",
+                                    "type": "step",
+                                    "stepType": "pw:api",
+                                    "duration": 3257,
+                                    "location": "src/utils/request/request-context.ts:51:51"
+                                },
+                                {
+                                    "id": "ipb0lyt7elb5vg6650ny",
+                                    "title": "Headers: {\"Authorization\":\"Bearer 2Gc3ZdfDDElu6582jIFe9BNOsYrCJj0Xl7t9Ue4kSXU\",\"Content-Type\":\"application/json\"}",
+                                    "type": "step",
+                                    "stepType": "test.step",
+                                    "duration": 1,
+                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
+                                },
+                                {
+                                    "id": "u0z7g592ckxqp2wia0sq",
+                                    "title": "Options: {\"data\":{\"department_id\":\"by0ZleocP9D8BK9ppJb57A\",\"billing_date\":\"2024/01/01\",\"due_date\":\"2024/01/10\",\"title\":\"api-V3 create billing\"}}",
+                                    "type": "step",
+                                    "stepType": "test.step",
+                                    "duration": 1,
+                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
+                                },
+                                {
+                                    "id": "6t0538d2j8aal6yvz2x9",
+                                    "title": "Request: {\"_initializer\":{\"fetchUid\":\"bbf891bc4a8266d2f9b6c35039a55dcb\",\"url\":\"https://invoice-stg1.ebisubook.com/api/v3/billings\",\"status\":201,\"statusText\":\"Created\",\"headers\":[{\"name\":\"Date\",\"value\":\"Sat, 23 Mar 2024 16:25:16 GMT\"},{\"name\":\"Content-Type\",\"value\":\"application/json; charset=utf-8\"},{\"name\":\"Transfer-Encoding\",\"value\":\"chunked\"},{\"name\":\"Connection\",\"value\":\"close\"},{\"name\":\"X-Frame-Options\",\"value\":\"SAMEORIGIN\"},{\"name\":\"X-XSS-Protection\",\"value\":\"0\"},{\"name\":\"X-Content-Type-Options\",\"value\":\"nosniff\"},{\"name\":\"X-Permitted-Cross-Domain-Policies\",\"value\":\"none\"},{\"name\":\"Referrer-Policy\",\"value\":\"strict-origin-when-cross-origin\"},{\"name\":\"ETag\",\"value\":\"W/\\\"f9117c4d269de0a785b10250505a902f\\\"\"},{\"name\":\"Cache-Control\",\"value\":\"max-age=0, private, must-revalidate\"},{\"name\":\"X-Request-Id\",\"value\":\"3dbe431d6fd0ea8e452c97f8d29a3e1d\"},{\"name\":\"X-Runtime\",\"value\":\"2.728418\"},{\"name\":\"Strict-Transport-Security\",\"value\":\"max-age=15724800; includeSubDomains\"},{\"name\":\"X-DuCloud-Ingress\",\"value\":\"true\"},{\"name\":\"X-Robots-Tag\",\"value\":\"noindex\"},{\"name\":\"CF-Cache-Status\",\"value\":\"DYNAMIC\"},{\"name\":\"Server\",\"value\":\"cloudflare\"},{\"name\":\"CF-RAY\",\"value\":\"868fc6b22abe3dee-SIN\"}]},\"_headers\":{\"_headersArray\":[{\"name\":\"Date\",\"value\":\"Sat, 23 Mar 2024 16:25:16 GMT\"},{\"name\":\"Content-Type\",\"value\":\"application/json; charset=utf-8\"},{\"name\":\"Transfer-Encoding\",\"value\":\"chunked\"},{\"name\":\"Connection\",\"value\":\"close\"},{\"name\":\"X-Frame-Options\",\"value\":\"SAMEORIGIN\"},{\"name\":\"X-XSS-Protection\",\"value\":\"0\"},{\"name\":\"X-Content-Type-Options\",\"value\":\"nosniff\"},{\"name\":\"X-Permitted-Cross-Domain-Policies\",\"value\":\"none\"},{\"name\":\"Referrer-Policy\",\"value\":\"strict-origin-when-cross-origin\"},{\"name\":\"ETag\",\"value\":\"W/\\\"f9117c4d269de0a785b10250505a902f\\\"\"},{\"name\":\"Cache-Control\",\"value\":\"max-age=0, private, must-revalidate\"},{\"name\":\"X-Request-Id\",\"value\":\"3dbe431d6fd0ea8e452c97f8d29a3e1d\"},{\"name\":\"X-Runtime\",\"value\":\"2.728418\"},{\"name\":\"Strict-Transport-Security\",\"value\":\"max-age=15724800; includeSubDomains\"},{\"name\":\"X-DuCloud-Ingress\",\"value\":\"true\"},{\"name\":\"X-Robots-Tag\",\"value\":\"noindex\"},{\"name\":\"CF-Cache-Status\",\"value\":\"DYNAMIC\"},{\"name\":\"Server\",\"value\":\"cloudflare\"},{\"name\":\"CF-RAY\",\"value\":\"868fc6b22abe3dee-SIN\"}],\"_headersMap\":{\"_map\":{}}},\"_request\":{\"_type\":\"APIRequestContext\",\"_guid\":\"request-context@bebf687fb400742121198925bf039e8d\"}}",
+                                    "type": "step",
+                                    "stepType": "test.step",
+                                    "duration": 1,
+                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
+                                },
+                                {
+                                    "id": "1uocd1uso6u4s2j428fx",
+                                    "title": "apiResponse.json",
+                                    "type": "step",
+                                    "stepType": "pw:api",
+                                    "duration": 24,
+                                    "location": "src/tests/endpoints/billings-endpoint.ts:30:65"
+                                },
+                                {
+                                    "id": "6lblw4epmkhrwgd24dcm",
+                                    "title": "expect.toBe",
+                                    "type": "step",
+                                    "stepType": "expect",
+                                    "duration": 1,
+                                    "location": "src/tests/scripts/invoice-flow.spec.ts:63:31"
+                                },
+                                {
+                                    "id": "uw0knkuhx1u8yv4118zb",
+                                    "title": "apiResponse.json",
+                                    "type": "step",
+                                    "stepType": "pw:api",
+                                    "duration": 1,
+                                    "location": "src/tests/scripts/invoice-flow.spec.ts:65:41"
+                                },
+                                {
+                                    "id": "caark8a1l3cn1z4j2w11",
+                                    "title": "expect.toBe",
+                                    "type": "step",
+                                    "stepType": "expect",
+                                    "duration": 0,
+                                    "location": "src/tests/scripts/invoice-flow.spec.ts:66:40"
+                                },
+                                {
+                                    "id": "exmnxo3scsgj46jn7s9y",
+                                    "title": "expect.toBeTruthy",
+                                    "type": "step",
+                                    "stepType": "expect",
+                                    "duration": 1,
+                                    "location": "src/utils/validation.ts:17:19"
+                                },
+                                {
+                                    "id": "dhfmq30q2cdjewojnqsb",
+                                    "title": "After Hooks",
+                                    "type": "step",
+                                    "stepType": "hook",
+                                    "duration": 0,
+                                    "location": ""
+                                }
+                            ]
+                        },
+                        {
+                            "id": "5923bc24fa9e946b7b7c",
+                            "title": "C55311: Status code - Create billing - Department id - accepted - valid id - is 201",
+                            "type": "case",
+                            "caseType": "passed",
+                            "ok": true,
+                            "outcome": "expected",
+                            "expectedStatus": "passed",
+                            "location": "src/tests/scripts/invoice-flow.spec.ts:70:5",
+                            "logs": [
+                                "[23:25:16.396] [INFO] Using token 0\n",
+                                "[23:25:19.364] [INFO] validate the JSON schema\n"
+                            ],
+                            "timestamps": [
+                                1711211116394,
+                                1711211119367
+                            ],
+                            "duration": 2973,
+                            "timeout": 60000,
+                            "retry": 0,
+                            "status": "passed",
+                            "stepNum": 11,
+                            "stepFailed": 0,
+                            "stepSubs": false,
+                            "subs": [
+                                {
+                                    "id": "z3c26jwlext46fj1lwwq",
+                                    "title": "Before Hooks",
+                                    "type": "step",
+                                    "stepType": "hook",
+                                    "duration": 3,
+                                    "location": ""
+                                },
+                                {
+                                    "id": "fhlojq049xgl7lrz2gk1",
+                                    "title": "apiRequest.newContext",
+                                    "type": "step",
+                                    "stepType": "pw:api",
+                                    "duration": 1,
+                                    "location": "src/utils/request/request-context.ts:23:38"
+                                },
+                                {
+                                    "id": "sak7pcvggn23gr9dxpqs",
+                                    "title": "apiRequestContext.post(/api/v3/billings)",
+                                    "type": "step",
+                                    "stepType": "pw:api",
+                                    "duration": 2927,
+                                    "location": "src/utils/request/request-context.ts:51:51"
+                                },
+                                {
+                                    "id": "m65u0ckgd3yix7j2crnx",
+                                    "title": "Headers: {\"Authorization\":\"Bearer 2Gc3ZdfDDElu6582jIFe9BNOsYrCJj0Xl7t9Ue4kSXU\",\"Content-Type\":\"application/json\"}",
+                                    "type": "step",
+                                    "stepType": "test.step",
+                                    "duration": 1,
+                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
+                                },
+                                {
+                                    "id": "rtuqcp4yqy3g74p2f4ky",
+                                    "title": "Options: {\"data\":{\"department_id\":\"by0ZleocP9D8BK9ppJb57A\",\"title\":\"create billing_EyWdVcwHCd\",\"memo\":\"memo_EyWdVcwHCd\",\"payment_condition\":\"payment_condition_EyWdVcwHCd\",\"billing_date\":\"2022/12/09\",\"due_date\":\"2022/12/10\",\"sales_date\":\"2022/12/09\",\"billing_number\":\"billing num_EyWdVcwHCd\",\"note\":\"note_EyWdVcwHCd\",\"document_name\":\"doc name_EyWdVcwHCd\",\"tag_names\":[\"tag_EyWdVcwHCd\"],\"items\":[{\"name\":\"item 003\",\"unit_price\":\"10\",\"unit\":\"\",\"quantity\":\"491516\",\"excise\":\"untaxable\"},{\"name\":\"product 111\",\"unit_price\":\"5\",\"unit\":\"\",\"quantity\":\"980117\",\"excise\":\"untaxable\"}]}}",
+                                    "type": "step",
+                                    "stepType": "test.step",
+                                    "duration": 6,
+                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
+                                },
+                                {
+                                    "id": "9n8cts2lestpk9m1j79r",
+                                    "title": "Request: {\"_initializer\":{\"fetchUid\":\"a863884f7fc5a4b490a9a2b637f3d46d\",\"url\":\"https://invoice-stg1.ebisubook.com/api/v3/billings\",\"status\":201,\"statusText\":\"Created\",\"headers\":[{\"name\":\"Date\",\"value\":\"Sat, 23 Mar 2024 16:25:19 GMT\"},{\"name\":\"Content-Type\",\"value\":\"application/json; charset=utf-8\"},{\"name\":\"Transfer-Encoding\",\"value\":\"chunked\"},{\"name\":\"Connection\",\"value\":\"close\"},{\"name\":\"X-Frame-Options\",\"value\":\"SAMEORIGIN\"},{\"name\":\"X-XSS-Protection\",\"value\":\"0\"},{\"name\":\"X-Content-Type-Options\",\"value\":\"nosniff\"},{\"name\":\"X-Permitted-Cross-Domain-Policies\",\"value\":\"none\"},{\"name\":\"Referrer-Policy\",\"value\":\"strict-origin-when-cross-origin\"},{\"name\":\"ETag\",\"value\":\"W/\\\"fce53fa4a482bd6d08e41558c5710544\\\"\"},{\"name\":\"Cache-Control\",\"value\":\"max-age=0, private, must-revalidate\"},{\"name\":\"X-Request-Id\",\"value\":\"2667a556e953418a4ae5983794ef466c\"},{\"name\":\"X-Runtime\",\"value\":\"2.411269\"},{\"name\":\"Strict-Transport-Security\",\"value\":\"max-age=15724800; includeSubDomains\"},{\"name\":\"X-DuCloud-Ingress\",\"value\":\"true\"},{\"name\":\"X-Robots-Tag\",\"value\":\"noindex\"},{\"name\":\"CF-Cache-Status\",\"value\":\"DYNAMIC\"},{\"name\":\"Server\",\"value\":\"cloudflare\"},{\"name\":\"CF-RAY\",\"value\":\"868fc6c6a9b6494b-SIN\"}]},\"_headers\":{\"_headersArray\":[{\"name\":\"Date\",\"value\":\"Sat, 23 Mar 2024 16:25:19 GMT\"},{\"name\":\"Content-Type\",\"value\":\"application/json; charset=utf-8\"},{\"name\":\"Transfer-Encoding\",\"value\":\"chunked\"},{\"name\":\"Connection\",\"value\":\"close\"},{\"name\":\"X-Frame-Options\",\"value\":\"SAMEORIGIN\"},{\"name\":\"X-XSS-Protection\",\"value\":\"0\"},{\"name\":\"X-Content-Type-Options\",\"value\":\"nosniff\"},{\"name\":\"X-Permitted-Cross-Domain-Policies\",\"value\":\"none\"},{\"name\":\"Referrer-Policy\",\"value\":\"strict-origin-when-cross-origin\"},{\"name\":\"ETag\",\"value\":\"W/\\\"fce53fa4a482bd6d08e41558c5710544\\\"\"},{\"name\":\"Cache-Control\",\"value\":\"max-age=0, private, must-revalidate\"},{\"name\":\"X-Request-Id\",\"value\":\"2667a556e953418a4ae5983794ef466c\"},{\"name\":\"X-Runtime\",\"value\":\"2.411269\"},{\"name\":\"Strict-Transport-Security\",\"value\":\"max-age=15724800; includeSubDomains\"},{\"name\":\"X-DuCloud-Ingress\",\"value\":\"true\"},{\"name\":\"X-Robots-Tag\",\"value\":\"noindex\"},{\"name\":\"CF-Cache-Status\",\"value\":\"DYNAMIC\"},{\"name\":\"Server\",\"value\":\"cloudflare\"},{\"name\":\"CF-RAY\",\"value\":\"868fc6c6a9b6494b-SIN\"}],\"_headersMap\":{\"_map\":{}}},\"_request\":{\"_type\":\"APIRequestContext\",\"_guid\":\"request-context@786111c1cc488915cd812b97564e140f\"}}",
+                                    "type": "step",
+                                    "stepType": "test.step",
+                                    "duration": 2,
+                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
+                                },
+                                {
+                                    "id": "ebjl5zmodhsu1dbhfjpt",
+                                    "title": "apiResponse.json",
+                                    "type": "step",
+                                    "stepType": "pw:api",
+                                    "duration": 2,
+                                    "location": "src/tests/endpoints/billings-endpoint.ts:39:65"
+                                },
+                                {
+                                    "id": "rs4wzoxd6ir93ekdq7mi",
+                                    "title": "expect.toBe",
+                                    "type": "step",
+                                    "stepType": "expect",
+                                    "duration": 0,
+                                    "location": "src/tests/scripts/invoice-flow.spec.ts:108:31"
+                                },
+                                {
+                                    "id": "zqwkoaa54om4s5mfdi1c",
+                                    "title": "apiResponse.json",
+                                    "type": "step",
+                                    "stepType": "pw:api",
+                                    "duration": 8,
+                                    "location": "src/tests/scripts/invoice-flow.spec.ts:109:41"
+                                },
+                                {
+                                    "id": "alb3kzk2oqf764oxz507",
+                                    "title": "expect.toBeTruthy",
+                                    "type": "step",
+                                    "stepType": "expect",
+                                    "duration": 0,
+                                    "location": "src/utils/validation.ts:17:19"
+                                },
+                                {
+                                    "id": "rqqafti9fu0ry96br1zh",
+                                    "title": "After Hooks",
+                                    "type": "step",
+                                    "stepType": "hook",
+                                    "duration": 1,
+                                    "location": ""
+                                }
+                            ]
+                        },
+                        {
+                            "id": "855c00ae90ad87218e44",
+                            "title": "C55312: Status code - Attach an Item into a Billing - Item id - accepted - valid item id - is 201",
+                            "type": "case",
+                            "caseType": "passed",
+                            "ok": true,
+                            "outcome": "expected",
+                            "expectedStatus": "passed",
+                            "location": "src/tests/scripts/invoice-flow.spec.ts:113:5",
+                            "logs": [
+                                "[23:25:19.372] [INFO] Using token 0\n",
+                                "[23:25:20.462] [INFO] Using token 0\n"
+                            ],
+                            "timestamps": [
+                                1711211119369,
+                                1711211124534
+                            ],
+                            "duration": 5165,
+                            "timeout": 60000,
+                            "retry": 0,
+                            "status": "passed",
+                            "stepNum": 16,
+                            "stepFailed": 0,
+                            "stepSubs": false,
+                            "subs": [
+                                {
+                                    "id": "jx7w0hsvyefddtqxsfhh",
+                                    "title": "Before Hooks",
+                                    "type": "step",
+                                    "stepType": "hook",
+                                    "duration": 4,
+                                    "location": ""
+                                },
+                                {
+                                    "id": "mb0zf24hg9mck9xitros",
+                                    "title": "apiRequest.newContext",
+                                    "type": "step",
+                                    "stepType": "pw:api",
+                                    "duration": 4,
+                                    "location": "src/utils/request/request-context.ts:23:38"
+                                },
+                                {
+                                    "id": "9k6g8buoxfou57eu72bf",
+                                    "title": "apiRequestContext.post(api/v3/items)",
+                                    "type": "step",
+                                    "stepType": "pw:api",
+                                    "duration": 1059,
+                                    "location": "src/utils/request/request-context.ts:51:51"
+                                },
+                                {
+                                    "id": "594nu2ox8q1n1wuv1q02",
+                                    "title": "Headers: {\"Authorization\":\"Bearer 2Gc3ZdfDDElu6582jIFe9BNOsYrCJj0Xl7t9Ue4kSXU\",\"Content-Type\":\"application/json\"}",
+                                    "type": "step",
+                                    "stepType": "test.step",
+                                    "duration": 2,
+                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
+                                },
+                                {
+                                    "id": "8kc1pjlfcenminlmm3v9",
+                                    "title": "Options: {\"data\":{\"name\":\"name_nDjIRxEwVh\",\"code\":\"code_nDjIRxEwVh\",\"detail\":\"detail_nDjIRxEwVh\",\"unit\":\"unit_nDjIRxEwVh\",\"price\":\"10000\",\"quantity\":\"999.9\",\"is_deduct_withholding_tax\":true,\"excise\":\"eight_percent_as_reduced_tax_rate\"}}",
+                                    "type": "step",
+                                    "stepType": "test.step",
+                                    "duration": 1,
+                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
+                                },
+                                {
+                                    "id": "c5aoyvryk50efmqwej01",
+                                    "title": "Request: {\"_initializer\":{\"fetchUid\":\"3dd95d33e1ed9f5ad83da2ec907d8051\",\"url\":\"https://invoice-stg1.ebisubook.com/api/v3/items\",\"status\":201,\"statusText\":\"Created\",\"headers\":[{\"name\":\"Date\",\"value\":\"Sat, 23 Mar 2024 16:25:20 GMT\"},{\"name\":\"Content-Type\",\"value\":\"application/json; charset=utf-8\"},{\"name\":\"Transfer-Encoding\",\"value\":\"chunked\"},{\"name\":\"Connection\",\"value\":\"close\"},{\"name\":\"X-Frame-Options\",\"value\":\"SAMEORIGIN\"},{\"name\":\"X-XSS-Protection\",\"value\":\"0\"},{\"name\":\"X-Content-Type-Options\",\"value\":\"nosniff\"},{\"name\":\"X-Permitted-Cross-Domain-Policies\",\"value\":\"none\"},{\"name\":\"Referrer-Policy\",\"value\":\"strict-origin-when-cross-origin\"},{\"name\":\"ETag\",\"value\":\"W/\\\"508d8eaf8204fde4f9ee8e4f8998a65a\\\"\"},{\"name\":\"Cache-Control\",\"value\":\"max-age=0, private, must-revalidate\"},{\"name\":\"X-Request-Id\",\"value\":\"71b338ee2ed4b60e30da1bf9a6a3471d\"},{\"name\":\"X-Runtime\",\"value\":\"0.578851\"},{\"name\":\"Strict-Transport-Security\",\"value\":\"max-age=15724800; includeSubDomains\"},{\"name\":\"X-DuCloud-Ingress\",\"value\":\"true\"},{\"name\":\"X-Robots-Tag\",\"value\":\"noindex\"},{\"name\":\"CF-Cache-Status\",\"value\":\"DYNAMIC\"},{\"name\":\"Server\",\"value\":\"cloudflare\"},{\"name\":\"CF-RAY\",\"value\":\"868fc6d95ce55fd2-SIN\"}]},\"_headers\":{\"_headersArray\":[{\"name\":\"Date\",\"value\":\"Sat, 23 Mar 2024 16:25:20 GMT\"},{\"name\":\"Content-Type\",\"value\":\"application/json; charset=utf-8\"},{\"name\":\"Transfer-Encoding\",\"value\":\"chunked\"},{\"name\":\"Connection\",\"value\":\"close\"},{\"name\":\"X-Frame-Options\",\"value\":\"SAMEORIGIN\"},{\"name\":\"X-XSS-Protection\",\"value\":\"0\"},{\"name\":\"X-Content-Type-Options\",\"value\":\"nosniff\"},{\"name\":\"X-Permitted-Cross-Domain-Policies\",\"value\":\"none\"},{\"name\":\"Referrer-Policy\",\"value\":\"strict-origin-when-cross-origin\"},{\"name\":\"ETag\",\"value\":\"W/\\\"508d8eaf8204fde4f9ee8e4f8998a65a\\\"\"},{\"name\":\"Cache-Control\",\"value\":\"max-age=0, private, must-revalidate\"},{\"name\":\"X-Request-Id\",\"value\":\"71b338ee2ed4b60e30da1bf9a6a3471d\"},{\"name\":\"X-Runtime\",\"value\":\"0.578851\"},{\"name\":\"Strict-Transport-Security\",\"value\":\"max-age=15724800; includeSubDomains\"},{\"name\":\"X-DuCloud-Ingress\",\"value\":\"true\"},{\"name\":\"X-Robots-Tag\",\"value\":\"noindex\"},{\"name\":\"CF-Cache-Status\",\"value\":\"DYNAMIC\"},{\"name\":\"Server\",\"value\":\"cloudflare\"},{\"name\":\"CF-RAY\",\"value\":\"868fc6d95ce55fd2-SIN\"}],\"_headersMap\":{\"_map\":{}}},\"_request\":{\"_type\":\"APIRequestContext\",\"_guid\":\"request-context@2fbfc72b6ec2176f62699040abb5776d\"}}",
+                                    "type": "step",
+                                    "stepType": "test.step",
+                                    "duration": 0,
+                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
+                                },
+                                {
+                                    "id": "guw6hgph74uni7md0hf8",
+                                    "title": "apiResponse.json",
+                                    "type": "step",
+                                    "stepType": "pw:api",
+                                    "duration": 21,
+                                    "location": "src/tests/endpoints/billings-endpoint.ts:60:62"
+                                },
+                                {
+                                    "id": "u7azlhp74lp74oxsx9eo",
+                                    "title": "expect.toBe",
+                                    "type": "step",
+                                    "stepType": "expect",
+                                    "duration": 0,
+                                    "location": "src/tests/scripts/invoice-flow.spec.ts:116:31"
+                                },
+                                {
+                                    "id": "zzetzpmnz7c7yilw1854",
+                                    "title": "apiRequest.newContext",
+                                    "type": "step",
+                                    "stepType": "pw:api",
+                                    "duration": 1,
+                                    "location": "src/utils/request/request-context.ts:23:38"
+                                },
+                                {
+                                    "id": "bs6kt0rpc3q60tpiz81z",
+                                    "title": "apiRequestContext.post(/api/v3/billings/fWzHfCNoefC9iQ8vn_o_nw/items)",
+                                    "type": "step",
+                                    "stepType": "pw:api",
+                                    "duration": 4051,
+                                    "location": "src/utils/request/request-context.ts:51:51"
+                                },
+                                {
+                                    "id": "zqhwu79x2tr2h17p14y4",
+                                    "title": "Headers: {\"Authorization\":\"Bearer 2Gc3ZdfDDElu6582jIFe9BNOsYrCJj0Xl7t9Ue4kSXU\",\"Content-Type\":\"application/json\"}",
+                                    "type": "step",
+                                    "stepType": "test.step",
+                                    "duration": 11,
+                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
+                                },
+                                {
+                                    "id": "21hjzdu3thnnnrxotzky",
+                                    "title": "Options: {\"data\":{\"item_id\":\"TfHZkReQlH3ABcBmxxXz3g\"}}",
+                                    "type": "step",
+                                    "stepType": "test.step",
+                                    "duration": 2,
+                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
+                                },
+                                {
+                                    "id": "5vxwn6pq802tughsevgd",
+                                    "title": "Request: {\"_initializer\":{\"fetchUid\":\"f3740b74bcc8477698d91a4e050295fe\",\"url\":\"https://invoice-stg1.ebisubook.com/api/v3/billings/fWzHfCNoefC9iQ8vn_o_nw/items\",\"status\":201,\"statusText\":\"Created\",\"headers\":[{\"name\":\"Date\",\"value\":\"Sat, 23 Mar 2024 16:25:24 GMT\"},{\"name\":\"Content-Type\",\"value\":\"application/json\"},{\"name\":\"Transfer-Encoding\",\"value\":\"chunked\"},{\"name\":\"Connection\",\"value\":\"close\"},{\"name\":\"X-Frame-Options\",\"value\":\"SAMEORIGIN\"},{\"name\":\"X-XSS-Protection\",\"value\":\"0\"},{\"name\":\"X-Content-Type-Options\",\"value\":\"nosniff\"},{\"name\":\"X-Permitted-Cross-Domain-Policies\",\"value\":\"none\"},{\"name\":\"Referrer-Policy\",\"value\":\"strict-origin-when-cross-origin\"},{\"name\":\"Cache-Control\",\"value\":\"no-cache\"},{\"name\":\"X-Request-Id\",\"value\":\"2dd607c24bad2f4d4e697cf83282c826\"},{\"name\":\"X-Runtime\",\"value\":\"3.522414\"},{\"name\":\"Strict-Transport-Security\",\"value\":\"max-age=15724800; includeSubDomains\"},{\"name\":\"X-DuCloud-Ingress\",\"value\":\"true\"},{\"name\":\"X-Robots-Tag\",\"value\":\"noindex\"},{\"name\":\"CF-Cache-Status\",\"value\":\"DYNAMIC\"},{\"name\":\"Server\",\"value\":\"cloudflare\"},{\"name\":\"CF-RAY\",\"value\":\"868fc6e06b534a11-SIN\"}]},\"_headers\":{\"_headersArray\":[{\"name\":\"Date\",\"value\":\"Sat, 23 Mar 2024 16:25:24 GMT\"},{\"name\":\"Content-Type\",\"value\":\"application/json\"},{\"name\":\"Transfer-Encoding\",\"value\":\"chunked\"},{\"name\":\"Connection\",\"value\":\"close\"},{\"name\":\"X-Frame-Options\",\"value\":\"SAMEORIGIN\"},{\"name\":\"X-XSS-Protection\",\"value\":\"0\"},{\"name\":\"X-Content-Type-Options\",\"value\":\"nosniff\"},{\"name\":\"X-Permitted-Cross-Domain-Policies\",\"value\":\"none\"},{\"name\":\"Referrer-Policy\",\"value\":\"strict-origin-when-cross-origin\"},{\"name\":\"Cache-Control\",\"value\":\"no-cache\"},{\"name\":\"X-Request-Id\",\"value\":\"2dd607c24bad2f4d4e697cf83282c826\"},{\"name\":\"X-Runtime\",\"value\":\"3.522414\"},{\"name\":\"Strict-Transport-Security\",\"value\":\"max-age=15724800; includeSubDomains\"},{\"name\":\"X-DuCloud-Ingress\",\"value\":\"true\"},{\"name\":\"X-Robots-Tag\",\"value\":\"noindex\"},{\"name\":\"CF-Cache-Status\",\"value\":\"DYNAMIC\"},{\"name\":\"Server\",\"value\":\"cloudflare\"},{\"name\":\"CF-RAY\",\"value\":\"868fc6e06b534a11-SIN\"}],\"_headersMap\":{\"_map\":{}}},\"_request\":{\"_type\":\"APIRequestContext\",\"_guid\":\"request-context@c1cabd617d80dc3dde42be0dc57299f0\"}}",
+                                    "type": "step",
+                                    "stepType": "test.step",
+                                    "duration": 1,
+                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
+                                },
+                                {
+                                    "id": "2k5goozilsv30bf95i1q",
+                                    "title": "expect.toBe",
+                                    "type": "step",
+                                    "stepType": "expect",
+                                    "duration": 1,
+                                    "location": "src/tests/scripts/invoice-flow.spec.ts:126:32"
+                                },
+                                {
+                                    "id": "laqtfqg1w51595rppuym",
+                                    "title": "expect.toBe",
+                                    "type": "step",
+                                    "stepType": "expect",
+                                    "duration": 1,
+                                    "location": "src/tests/scripts/invoice-flow.spec.ts:127:36"
+                                },
+                                {
+                                    "id": "9besoncev6f2o402lp9z",
+                                    "title": "After Hooks",
+                                    "type": "step",
+                                    "stepType": "hook",
+                                    "duration": 2,
+                                    "location": ""
+                                }
+                            ]
+                        },
+                        {
+                            "id": "c69b21d3476c4608c02c",
+                            "title": "C55313: Clean test data - Delete Billing, Item, Department, Partner",
+                            "type": "case",
+                            "caseType": "passed",
+                            "ok": true,
+                            "outcome": "expected",
+                            "expectedStatus": "passed",
+                            "location": "src/tests/scripts/invoice-flow.spec.ts:130:5",
+                            "logs": [
+                                "[23:25:24.546] [INFO] Using token 0\n",
+                                "[23:25:24.549] [INFO] Using token 0\n",
+                                "[23:25:28.853] [INFO] Using token 0\n",
+                                "[23:25:30.143] [INFO] Using token 0\n",
+                                "[23:25:30.991] [INFO] Using token 0\n"
+                            ],
+                            "timestamps": [
+                                1711211124559,
+                                1711211131814
+                            ],
+                            "duration": 7255,
+                            "timeout": 60000,
+                            "retry": 0,
+                            "status": "passed",
+                            "stepNum": 23,
+                            "stepFailed": 0,
+                            "stepSubs": false,
+                            "subs": [
+                                {
+                                    "id": "g5oumlsk91oqepjruzik",
+                                    "title": "Before Hooks",
+                                    "type": "step",
+                                    "stepType": "hook",
+                                    "duration": 11,
+                                    "location": ""
+                                },
+                                {
+                                    "id": "qmkp3lzq0rl4c80zoi3n",
+                                    "title": "apiRequest.newContext",
+                                    "type": "step",
+                                    "stepType": "pw:api",
+                                    "duration": 4,
+                                    "location": "src/utils/request/request-context.ts:23:38",
+                                    "count": 2
+                                },
+                                {
+                                    "id": "tgsigzx5b58laj8kqkje",
+                                    "title": "apiRequestContext.delete(/api/v3/billings/fWzHfCNoefC9iQ8vn_o_nw)",
+                                    "type": "step",
+                                    "stepType": "pw:api",
+                                    "duration": 4299,
+                                    "location": "src/utils/request/request-context.ts:71:47"
+                                },
+                                {
+                                    "id": "awdwc4k0qgo6ce4t6n9d",
+                                    "title": "Headers: {\"Authorization\":\"Bearer 2Gc3ZdfDDElu6582jIFe9BNOsYrCJj0Xl7t9Ue4kSXU\",\"Content-Type\":\"application/json\"}",
+                                    "type": "step",
+                                    "stepType": "test.step",
+                                    "duration": 0,
+                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
+                                },
+                                {
+                                    "id": "796wnqqnav0mlaz30wrs",
+                                    "title": "Request: {}",
+                                    "type": "step",
+                                    "stepType": "test.step",
+                                    "duration": 1,
+                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
+                                },
+                                {
+                                    "id": "dc9q7y80u94via7kgop7",
+                                    "title": "expect.toBe",
+                                    "type": "step",
+                                    "stepType": "expect",
+                                    "duration": 1,
+                                    "location": "src/tests/scripts/invoice-flow.spec.ts:133:31"
+                                },
+                                {
+                                    "id": "vgo7lwq4nnfno7kurgbv",
+                                    "title": "apiRequest.newContext",
+                                    "type": "step",
+                                    "stepType": "pw:api",
+                                    "duration": 4,
+                                    "location": "src/utils/request/request-context.ts:23:38"
+                                },
+                                {
+                                    "id": "6bm09rrx8ik6ylkz6kik",
+                                    "title": "apiRequestContext.delete(api/v3/items/TfHZkReQlH3ABcBmxxXz3g)",
+                                    "type": "step",
+                                    "stepType": "pw:api",
+                                    "duration": 1283,
+                                    "location": "src/utils/request/request-context.ts:71:47"
+                                },
+                                {
+                                    "id": "72ow5a3oxwsfyahq2bdi",
+                                    "title": "Headers: {\"Authorization\":\"Bearer 2Gc3ZdfDDElu6582jIFe9BNOsYrCJj0Xl7t9Ue4kSXU\",\"Content-Type\":\"application/json\"}",
+                                    "type": "step",
+                                    "stepType": "test.step",
+                                    "duration": 0,
+                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
+                                },
+                                {
+                                    "id": "5aargqm5m5e860wgcl60",
+                                    "title": "Request: {}",
+                                    "type": "step",
+                                    "stepType": "test.step",
+                                    "duration": 1,
+                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
+                                },
+                                {
+                                    "id": "i22xn4ivxwa95p4b500i",
+                                    "title": "expect.toBe",
+                                    "type": "step",
+                                    "stepType": "expect",
+                                    "duration": 0,
+                                    "location": "src/tests/scripts/invoice-flow.spec.ts:135:31"
+                                },
+                                {
+                                    "id": "81tefe0s7g07kykwjk5y",
+                                    "title": "apiRequest.newContext",
+                                    "type": "step",
+                                    "stepType": "pw:api",
+                                    "duration": 1,
+                                    "location": "src/utils/request/request-context.ts:23:38"
+                                },
+                                {
+                                    "id": "0j5iy3qstza3nuc71n1c",
+                                    "title": "apiRequestContext.delete(/api/v3/partners/JNka1SllFaLHaIkX8i_8uw/departments/by0ZleocP9D8BK9ppJb57A)",
+                                    "type": "step",
+                                    "stepType": "pw:api",
+                                    "duration": 842,
+                                    "location": "src/utils/request/request-context.ts:71:47"
+                                },
+                                {
+                                    "id": "n5wy259m8saiggqrazac",
+                                    "title": "Headers: {\"Authorization\":\"Bearer 2Gc3ZdfDDElu6582jIFe9BNOsYrCJj0Xl7t9Ue4kSXU\",\"Content-Type\":\"application/json\"}",
+                                    "type": "step",
+                                    "stepType": "test.step",
+                                    "duration": 0,
+                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
+                                },
+                                {
+                                    "id": "m5lf6ul8s37g16b0r24r",
+                                    "title": "Request: {}",
+                                    "type": "step",
+                                    "stepType": "test.step",
+                                    "duration": 0,
+                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
+                                },
+                                {
+                                    "id": "4b6x5q7bqatscn9mex23",
+                                    "title": "expect.toBe",
+                                    "type": "step",
+                                    "stepType": "expect",
+                                    "duration": 1,
+                                    "location": "src/tests/scripts/invoice-flow.spec.ts:140:31"
+                                },
+                                {
+                                    "id": "q1me43v65bq5avftis4p",
+                                    "title": "apiRequest.newContext",
+                                    "type": "step",
+                                    "stepType": "pw:api",
+                                    "duration": 2,
+                                    "location": "src/utils/request/request-context.ts:23:38"
+                                },
+                                {
+                                    "id": "tnkjw70n40ke0vyg5aiq",
+                                    "title": "apiRequestContext.delete(/api/v3/partners/JNka1SllFaLHaIkX8i_8uw)",
+                                    "type": "step",
+                                    "stepType": "pw:api",
+                                    "duration": 815,
+                                    "location": "src/utils/request/request-context.ts:71:47"
+                                },
+                                {
+                                    "id": "0niwbeucs52qytc6ic9z",
+                                    "title": "Headers: {\"Authorization\":\"Bearer 2Gc3ZdfDDElu6582jIFe9BNOsYrCJj0Xl7t9Ue4kSXU\",\"Content-Type\":\"application/json\"}",
+                                    "type": "step",
+                                    "stepType": "test.step",
+                                    "duration": 3,
+                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
+                                },
+                                {
+                                    "id": "el75dagtgu1mq8j53i8c",
+                                    "title": "Request: {}",
+                                    "type": "step",
+                                    "stepType": "test.step",
+                                    "duration": 1,
+                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
+                                },
+                                {
+                                    "id": "85b0glyy7wk01trzqn4p",
+                                    "title": "expect.toBe",
+                                    "type": "step",
+                                    "stepType": "expect",
+                                    "duration": 1,
+                                    "location": "src/tests/scripts/invoice-flow.spec.ts:144:31"
+                                },
+                                {
+                                    "id": "6t6fh5xphsn6ezcteidk",
+                                    "title": "After Hooks",
+                                    "type": "step",
+                                    "stepType": "hook",
+                                    "duration": 1,
+                                    "location": ""
+                                }
+                            ]
+                        }
+                    ],
+                    "location": "src/tests/scripts/invoice-flow.spec.ts:0:0"
+                }
+            ]
+        }
+    ],
+    "formatters": {},
+    "suiteTypes": [
+        "project",
+        "file",
+        "describe",
+        "shard"
+    ],
+    "caseTypes": [
+        "passed",
+        "flaky",
+        "skipped",
+        "failed"
+    ],
+    "traceViewerUrl": "https://trace.playwright.dev/?trace={traceUrl}",
+    "mermaid": null,
+    "tags": {},
+    "summary": {
+        "tests": {
+            "name": "Tests",
+            "value": 8,
+            "nav": true,
+            "id": "tests"
+        },
+        "passed": {
+            "name": "Passed",
+            "value": 7,
+            "color": "green",
+            "nav": true,
+            "id": "passed",
+            "percent": "87.5%"
+        },
+        "flaky": {
+            "name": "Flaky",
+            "value": 0,
+            "color": "orange",
+            "nav": true,
+            "id": "flaky",
+            "percent": "0.0%"
+        },
+        "skipped": {
+            "name": "Skipped",
+            "value": 0,
+            "color": "gray",
+            "nav": true,
+            "id": "skipped",
+            "percent": "0.0%"
+        },
+        "failed": {
+            "name": "Failed",
+            "value": 1,
+            "color": "#d00",
+            "nav": true,
+            "id": "failed",
+            "percent": "12.5%"
+        },
+        "steps": {
+            "name": "Steps",
+            "value": 107,
+            "id": "steps"
+        },
+        "suites": {
+            "name": "Suites",
+            "value": 1,
+            "id": "suites"
+        },
+        "projects": {
+            "name": "Projects",
+            "description": "Suite type is project",
+            "value": 1,
+            "id": "projects"
+        },
+        "files": {
+            "name": "Files",
+            "description": "Suite type is file",
+            "value": 1,
+            "id": "files"
+        },
+        "describes": {
+            "name": "Describes",
+            "description": "Suite type is describe",
+            "value": 0,
+            "id": "describes"
+        },
+        "shards": {
+            "name": "Shards",
+            "description": "Suite type is shard (only in shading mode)",
+            "value": 0,
+            "id": "shards"
+        },
+        "retries": {
+            "name": "Retries",
+            "value": 0,
+            "id": "retries"
+        },
+        "errors": {
+            "name": "Errors",
+            "value": 1,
+            "id": "errors"
+        },
+        "logs": {
+            "name": "Logs",
+            "value": 25,
+            "id": "logs"
+        },
+        "attachments": {
+            "name": "Attachments",
+            "value": 0,
+            "id": "attachments"
+        },
+        "artifacts": {
+            "name": "Artifacts",
+            "value": 0
+        }
+    },
+    "pieChart": {
+        "ns": "mcr-pie",
+        "width": 360,
+        "height": 150,
+        "margin": 10,
+        "svg": "<svg viewBox=\"0 0 360 150\" width=\"100%\" height=\"100%\" xmlns=\"http://www.w3.org/2000/svg\"><g class=\"mcr-pie-path-passed\"><path d=\"M75,75 L75,10 A65,65 0 1 1 29,29 z\" fill=\"green\" opacity=\"0.8\" /><animateTransform from=\"0,0\" to=\"0,0\" pos=\"3.8,9.2\" attributeName=\"transform\" type=\"translate\" dur=\"0.2s\" fill=\"freeze\" repeatCount=\"1\" restart=\"always\" /></g><g class=\"mcr-pie-path-flaky\"><path d=\"\" fill=\"orange\" opacity=\"0.8\" /><animateTransform from=\"0,0\" to=\"0,0\" pos=\"-7.1,-7.1\" attributeName=\"transform\" type=\"translate\" dur=\"0.2s\" fill=\"freeze\" repeatCount=\"1\" restart=\"always\" /></g><g class=\"mcr-pie-path-skipped\"><path d=\"\" fill=\"gray\" opacity=\"0.8\" /><animateTransform from=\"0,0\" to=\"0,0\" pos=\"-7.1,-7.1\" attributeName=\"transform\" type=\"translate\" dur=\"0.2s\" fill=\"freeze\" repeatCount=\"1\" restart=\"always\" /></g><g class=\"mcr-pie-path-failed\"><path d=\"M75,75 L29,29 A65,65 0 0 1 75,10 z\" fill=\"#d00\" opacity=\"0.8\" /><animateTransform from=\"0,0\" to=\"0,0\" pos=\"-3.8,-9.2\" attributeName=\"transform\" type=\"translate\" dur=\"0.2s\" fill=\"freeze\" repeatCount=\"1\" restart=\"always\" /></g><g transform=\"translate(160 10)\"><g class=\"mcr-pie-legend-passed\" transform=\"translate(0 0)\"><circle cx=\"10\" cy=\"16\" r=\"10\" fill=\"green\" opacity=\"0.8\" /><text x=\"30\" y=\"16\" alignment-baseline=\"middle\">Passed</text><text x=\"115\" y=\"16\" alignment-baseline=\"middle\" text-anchor=\"middle\">7</text><text x=\"190\" y=\"16\" alignment-baseline=\"middle\" text-anchor=\"end\">87.5%</text></g><g class=\"mcr-pie-legend-flaky\" transform=\"translate(0 32)\"><circle cx=\"10\" cy=\"16\" r=\"10\" fill=\"orange\" opacity=\"0.8\" /><text x=\"30\" y=\"16\" alignment-baseline=\"middle\">Flaky</text><text x=\"115\" y=\"16\" alignment-baseline=\"middle\" text-anchor=\"middle\">0</text><text x=\"190\" y=\"16\" alignment-baseline=\"middle\" text-anchor=\"end\">0.0%</text></g><g class=\"mcr-pie-legend-skipped\" transform=\"translate(0 64)\"><circle cx=\"10\" cy=\"16\" r=\"10\" fill=\"gray\" opacity=\"0.8\" /><text x=\"30\" y=\"16\" alignment-baseline=\"middle\">Skipped</text><text x=\"115\" y=\"16\" alignment-baseline=\"middle\" text-anchor=\"middle\">0</text><text x=\"190\" y=\"16\" alignment-baseline=\"middle\" text-anchor=\"end\">0.0%</text></g><g class=\"mcr-pie-legend-failed\" transform=\"translate(0 96)\"><circle cx=\"10\" cy=\"16\" r=\"10\" fill=\"#d00\" opacity=\"0.8\" /><text x=\"30\" y=\"16\" alignment-baseline=\"middle\">Failed</text><text x=\"115\" y=\"16\" alignment-baseline=\"middle\" text-anchor=\"middle\">1</text><text x=\"190\" y=\"16\" alignment-baseline=\"middle\" text-anchor=\"end\">12.5%</text></g></g></svg>"
+    }
+}
