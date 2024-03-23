@@ -31,7 +31,7 @@ export default defineConfig({
       'monocart-reporter',
       {
         name: 'Playwright API Test Report',
-        outputFile: './test-results/report.html',
+        outputFile: './test-results/index.html',
         trend: './test-results/report.json'
       }
     ],
