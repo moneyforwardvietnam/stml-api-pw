@@ -7,3 +7,4 @@ allure-results/
 cucumber-report.json
 src/.auth
 /.idea/
+/src/utils/authenticator/token/

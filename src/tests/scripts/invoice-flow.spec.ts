@@ -14,13 +14,13 @@ import AuthedRequest from "../../utils/request/authed-request";
 
 
 test.describe.configure({mode: 'default'});
-test('C55306: Verify token - get office - status code', async () => {
+test('C55306: @tc-01 Verify token - get office - status code', async () => {
     const instance = new OfficeEndpoint();
     const response = await instance.getOffice();
     expect(response.status()).toBe(200);
 });
 
-test('C55307: Status code - Get billings - accepted - valid info - is 200', async () => {
+test('C55307: @tc-02 Status code - Get billings - accepted - valid info - is 200', async () => {
     const instance = new BillingsEndpoint();
     const response = await instance.get();
     expect(response.status()).toBe(200);
@@ -28,7 +28,7 @@ test('C55307: Status code - Get billings - accepted - valid info - is 200', asyn
     validateApiResponse(responseBody, BILLINGS_INFO);
 });
 
-test('C55308: Status code - Create partner - valid values - is 201', async () => {
+test('C55308: @tc-03 Status code - Create partner - valid values - is 201', async () => {
     const instance = new PartnerEndpoint();
     const response = await instance.create();
     expect(response.status()).toBe(201);
@@ -47,14 +47,14 @@ test('C55308: Status code - Create partner - valid values - is 201', async () =>
     validateApiResponse(responseBody, PARTNER_INFO);
 });
 
-test('C55309: Status code - Get partner id - is 200', async () => {
+test('C55309: @tc-04 Status code - Get partner id - is 200', async () => {
     const instance = new PartnerEndpoint();
     const response = await instance.get();
     expect(response.status()).toBe(200);
     validateApiResponse(await response.json(), PARTNER_INFO);
 });
 
-test('C55310: Status code - Create billing - Department id - accepted - valid id - is 201', async () => {
+test('C55310: @tc-05 Status code - Create billing - Department id - accepted - valid id - is 201', async () => {
     const departmentInstance = new DepartmentEndpoint();
     const responseCreate = await departmentInstance.create();
     expect(responseCreate.status()).toBe(201);
@@ -67,7 +67,7 @@ test('C55310: Status code - Create billing - Department id - accepted - valid id
     validateApiResponse(responseBody, DEPARTMENT_INFO);
 });
 
-test('C55311: Status code - Create billing - Department id - accepted - valid id - is 201', async () => {
+test('C55311: @tc-06 Status code - Create billing - Department id - accepted - valid id - is 201', async () => {
     const billingInstance = new BillingsEndpoint();
 
     const random_StringID = Random.$(RandomType.STRING);
@@ -110,7 +110,7 @@ test('C55311: Status code - Create billing - Department id - accepted - valid id
     validateApiResponse(responseBody, CREATE_BILLINGS);
 });
 
-test('C55312: Status code - Attach an Item into a Billing - Item id - accepted - valid item id - is 201', async () => {
+test('C55312: @tc-07 Status code - Attach an Item into a Billing - Item id - accepted - valid item id - is 201', async () => {
     const billingInstance = new BillingsEndpoint();
     const response = await billingInstance.createItem();
     expect(response.status()).toBe(201);
@@ -127,7 +127,7 @@ test('C55312: Status code - Attach an Item into a Billing - Item id - accepted -
     expect(response2.statusText()).toBe('Created');
 });
 
-test('C55313: Clean test data - Delete Billing, Item, Department, Partner', async () => {
+test('C55313: @tc-08 Clean test data - Delete Billing, Item, Department, Partner', async () => {
     const billingInstance = new BillingsEndpoint();
     let response = await billingInstance.delete();
     expect(response.status()).toBe(204);
