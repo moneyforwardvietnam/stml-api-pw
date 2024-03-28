@@ -155,7 +155,7 @@ jobs:
       - when:
           condition:
             and:
-              - equal: [ 0, << pipeline.parameters.testRailRunId >> ]
+              - << pipeline.parameters.testRailRunId >>
               - equal: [ "All" , << pipeline.parameters.tagsName >> ]
           steps:
             - run:
@@ -164,7 +164,7 @@ jobs:
       - when:
           condition:
             and:
-              - << pipeline.parameters.testRailRunId >>
+              - equal: [ 0, << pipeline.parameters.testRailRunId >> ]
               - equal: [ "All" , << pipeline.parameters.tagsName >> ]
           steps:
             - run:
