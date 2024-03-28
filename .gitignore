@@ -1,5 +1,5 @@
 node_modules/
-/test-results/
+test-results/
 /playwright-report/
 /playwright/.cache/
 allure-report/
@@ -7,4 +7,4 @@ allure-results/
 cucumber-report.json
 src/.auth
 /.idea/
-/src/utils/authenticator/token/
+src/utils/authenticator/token/
