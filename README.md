@@ -1,3 +1,19 @@
+**Test Execution and Reporting**
+
+To execute your tests, use the following command:
+
+```sh
+$ npm run test
+```
+- with specified tags:
+```sh
+$ npx playwright test --grep "@tc-01|@tc-03"
+```
+After running your tests, you can generate and view HTML reports with the following command:
+```sh
+$ npx monocart show-report test-results/index.html
+```
+
 🔍 **Slack summary report: qa-auto-pw-api**
 
 🚀 *Branch:* dev
