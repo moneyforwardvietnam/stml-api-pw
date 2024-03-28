@@ -13,6 +13,10 @@ export async function getCode(clientId: string, username: string, password: stri
     await page.locator("#submitto").click();
     await page.locator("[name='mfid_user[password]']").fill(password);
     await page.locator("#submitto").click();
+    let bio = page.locator("img[alt='sign-in with passkeys'] ~ a");
+    if (await bio.isVisible({timeout: 2})){
+        await bio.click();
+    }
     await page.locator("form button.btn-primary").click();
     await page.locator("form input.btn-primary").click();
     await waitForURLContains(page, '/oauth2_redirect?', 60000);

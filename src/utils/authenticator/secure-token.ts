@@ -70,7 +70,7 @@ export async function getToken(id: string) {
 }
 
 const readToken = async (id: string) => {
-    Logger.info(`Using token ${id}`)
+    Logger.info(`Request is using token #${id}`)
     return (readFileSync(getTokenFilePath(id)).toString('utf-8')).split('\n')[0];
 }
 
