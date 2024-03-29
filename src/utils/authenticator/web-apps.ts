@@ -1,12 +1,13 @@
-import {chromium} from '@playwright/test';
-import {Logger} from '../logger';
+import { chromium } from '@playwright/test';
+import { Logger } from '../logger';
 
 export async function getCode(clientId: string, username: string, password: string): Promise<string | null> {
     const browser = await chromium.launch({
-        headless: true,
+        headless: false,
     });
     const page = await browser.newPage();
-    const URL: string = `https://api.biz.test.mfw.work/authorize?client_id=${clientId}&redirect_uri=https%3A%2F%2Finvoice-stg1.ebisubook.com%2Fapi%2Foauth2_redirect&response_type=code&scope=mfc%2Finvoice%2Fdata.write`;
+    const redirect_uri = process.env.REDIRECT_URI;
+    const URL: string = `https://api.biz.test.mfw.work/authorize?client_id=${clientId}&redirect_uri=${redirect_uri}&response_type=code&scope=mfc/contract/contract.read mfc/contract/contract.write`;
     await page.goto(URL);
 
     await page.locator("[name='mfid_user[email]']").fill(username);
@@ -14,16 +15,18 @@ export async function getCode(clientId: string, username: string, password: stri
     await page.locator("[name='mfid_user[password]']").fill(password);
     await page.locator("#submitto").click();
     let bio = page.locator("img[alt='sign-in with passkeys'] ~ a");
-    if (await bio.isVisible({timeout: 2})){
+    if (await bio.isVisible({ timeout: 2 })) {
         await bio.click();
     }
-    await page.locator("form button.btn-primary").click();
+    await page.locator("//tr/td[text()='9382-9420']").click();
+    await page.locator("button.btn-primary").click();
     await page.locator("form input.btn-primary").click();
-    await waitForURLContains(page, '/oauth2_redirect?', 60000);
+    await waitForURLContains(page, 'callback?code=', 60000);
     let url = page.url();
     await browser.close();
     return await extractCode(url);
 }
+
 
 async function extractCode(url: string): Promise<string | null> {
     try {

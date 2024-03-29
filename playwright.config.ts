@@ -1,4 +1,4 @@
-import {defineConfig} from '@playwright/test';
+import { defineConfig } from '@playwright/test';
 // import { env } from './config/env';
 require('dotenv').config();
 

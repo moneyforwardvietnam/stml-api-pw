@@ -1,12 +1,12 @@
-import {Buffer} from 'buffer';
-import {readFileSync, writeFileSync} from 'fs';
+import { Buffer } from 'buffer';
+import { readFileSync, writeFileSync } from 'fs';
 import * as path from 'path';
-import {Logger} from '../logger';
-import {HttpMethod} from '../request/http-method';
+import { Logger } from '../logger';
+import { HttpMethod } from '../request/http-method';
 import RequestContext from '../request/request-context';
 import * as crypto from 'crypto';
-import {getCode} from './web-apps';
-import {credentials} from './credentials';
+import { getCode } from './web-apps';
+import { credentials } from './credentials';
 import * as dotenv from 'dotenv';
 import * as fs from 'fs';
 
@@ -30,9 +30,9 @@ class GetToken extends RequestContext {
             const form = {
                 'code': appCode,
                 'grant_type': 'authorization_code',
-                'redirect_uri': process.env.REDIRECT_URL
+                'redirect_uri': process.env.REDIRECT_URI
             }
-            const response = await this.requestSender(HttpMethod.POST, "/token", {form: form});
+            const response = await this.requestSender(HttpMethod.POST, "/token", { form: form });
             const jsonData = await response.json();
             const token: string = jsonData.access_token;
             const expires_in: string = (await convertExpiration(jsonData.expires_in)).toString();
@@ -110,7 +110,7 @@ function getTokenFilePath(id: any) {
 //     return iv.toString('hex') + encrypted;
 // }
 
-function decrypt(encryptedText: string, privateKeyHex:string): string {
+function decrypt(encryptedText: string, privateKeyHex: string): string {
     const key = Buffer.from(privateKeyHex, 'hex');
     const iv = Buffer.from(encryptedText.slice(0, 32), 'hex');
     const encryptedData = encryptedText.slice(32);

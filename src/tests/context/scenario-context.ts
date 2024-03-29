@@ -1,4 +1,4 @@
-import {TestContext} from "./test-context";
+import { TestContext } from "./test-context";
 
 export class ScenarioContext {
     private testContext;
@@ -15,7 +15,7 @@ export class ScenarioContext {
         return this.instance;
     }
 
-    public setContext(key: string, value: any): void{
+    public setContext(key: string, value: any): void {
         this.testContext.setData(key, value);
     }
 
@@ -23,7 +23,7 @@ export class ScenarioContext {
         return this.testContext.getData(key);
     }
 
-    public isContains(key: string): boolean{
+    public isContains(key: string): boolean {
         return this.testContext.isContains(key);
     }
 }
