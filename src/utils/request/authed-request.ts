@@ -1,11 +1,11 @@
-import {getToken} from '../authenticator/secure-token';
+import { getToken } from '../authenticator/secure-token';
 import RequestContext from './request-context';
-import {test} from "@playwright/test";
+import { test } from "@playwright/test";
 
 export default class AuthedRequest extends RequestContext {
     public id: number | string | undefined
     constructor() {
-        super(process.env.BASE_URI);
+        super(process.env.OPEN_API_HOST);
     }
 
     initContext = async (options?: { isTearDown?: boolean }) => {
@@ -24,7 +24,7 @@ export default class AuthedRequest extends RequestContext {
         return await this.initialize();
     }
 
-    setId = async (id: number|string) => {
+    setId = async (id: number | string) => {
         this.id = id
     }
 }

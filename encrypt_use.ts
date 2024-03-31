@@ -9,6 +9,6 @@ function encrypt(text: string, privateKeyHex: string): string {
     return iv.toString('hex') + encrypted;
 }
 
-console.log(encrypt("Brice@123", "1b9048ca93cc252aca1a35a48a5d99eae6181976a8cf702dc8313762671a1509"));
+console.log(encrypt("Brice@jp123", "1b9048ca93cc252aca1a35a48a5d99eae6181976a8cf702dc8313762671a1509"));
 
-//run - npx ts-node /Users/mfv-computer-0149/Documents/STML-Automation/qa-auto-pw-api/encrypt_use.ts
+//Run command "npx ts-node /Users/mfv-computer-0149/Documents/STML-Automation/qa-auto-pw-api/encrypt_use.ts"

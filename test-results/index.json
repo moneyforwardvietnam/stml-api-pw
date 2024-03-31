@@ -1,14 +1,14 @@
 {
     "name": "Playwright API Test Report",
-    "date": 1711625494238,
-    "dateH": "3/28/2024, 6:31:34 PM",
-    "duration": 35395,
-    "durationH": "35.4s",
+    "date": 1711892228304,
+    "dateH": "3/31/2024, 8:37:08 PM",
+    "duration": 2837,
+    "durationH": "2.8s",
     "cwd": "/Users/mfv-computer-0149/Documents/STML-Automation/qa-auto-pw-api",
     "outputFile": "/Users/mfv-computer-0149/Documents/STML-Automation/qa-auto-pw-api/test-results/index.html",
     "outputDir": "/Users/mfv-computer-0149/Documents/STML-Automation/qa-auto-pw-api/test-results",
     "metadata": {
-        "actualWorkers": 2
+        "actualWorkers": 1
     },
     "system": {
         "cpu": {
@@ -26,231 +26,40 @@
         "release": "23.3.0",
         "type": "Darwin",
         "version": "Darwin Kernel Version 23.3.0: Wed Dec 20 21:30:44 PST 2023; root:xnu-10002.81.5~7/RELEASE_ARM64_T6000",
-        "uptime": 675918,
+        "uptime": 193965,
         "hostname": "mfv-computer-0145",
-        "pid": 90424,
+        "pid": 37040,
         "node": "20.12.0",
         "v8": "11.3.244.8-node.19",
-        "timestampStart": 1711625494238,
+        "timestampStart": 1711892228304,
         "ticks": [
             {
                 "cpu": {
-                    "percent": 27.14
+                    "percent": 17.26
                 },
                 "mem": {
-                    "free": 92078080
+                    "free": 161333248
                 },
-                "timestamp": 1711625497626
+                "timestamp": 1711892230306
             },
             {
                 "cpu": {
-                    "percent": 49.74
+                    "percent": 13.42
                 },
                 "mem": {
-                    "free": 83361792
+                    "free": 176652288
                 },
-                "timestamp": 1711625499660
-            },
-            {
-                "cpu": {
-                    "percent": 46.88
-                },
-                "mem": {
-                    "free": 132218880
-                },
-                "timestamp": 1711625501663
-            },
-            {
-                "cpu": {
-                    "percent": 20.51
-                },
-                "mem": {
-                    "free": 163921920
-                },
-                "timestamp": 1711625503665
-            },
-            {
-                "cpu": {
-                    "percent": 21.86
-                },
-                "mem": {
-                    "free": 155811840
-                },
-                "timestamp": 1711625505670
-            },
-            {
-                "cpu": {
-                    "percent": 32.48
-                },
-                "mem": {
-                    "free": 102236160
-                },
-                "timestamp": 1711625507671
-            },
-            {
-                "cpu": {
-                    "percent": 19.39
-                },
-                "mem": {
-                    "free": 24870912
-                },
-                "timestamp": 1711625509674
-            },
-            {
-                "cpu": {
-                    "percent": 29.28
-                },
-                "mem": {
-                    "free": 143212544
-                },
-                "timestamp": 1711625511677
-            },
-            {
-                "cpu": {
-                    "percent": 19.27
-                },
-                "mem": {
-                    "free": 303202304
-                },
-                "timestamp": 1711625513678
-            },
-            {
-                "cpu": {
-                    "percent": 19.51
-                },
-                "mem": {
-                    "free": 106233856
-                },
-                "timestamp": 1711625515681
-            },
-            {
-                "cpu": {
-                    "percent": 19.86
-                },
-                "mem": {
-                    "free": 151093248
-                },
-                "timestamp": 1711625517683
-            },
-            {
-                "cpu": {
-                    "percent": 24.49
-                },
-                "mem": {
-                    "free": 122142720
-                },
-                "timestamp": 1711625519684
-            },
-            {
-                "cpu": {
-                    "percent": 32.78
-                },
-                "mem": {
-                    "free": 73875456
-                },
-                "timestamp": 1711625521686
-            },
-            {
-                "cpu": {
-                    "percent": 23.35
-                },
-                "mem": {
-                    "free": 104218624
-                },
-                "timestamp": 1711625523687
-            },
-            {
-                "cpu": {
-                    "percent": 26.43
-                },
-                "mem": {
-                    "free": 44744704
-                },
-                "timestamp": 1711625525690
-            },
-            {
-                "cpu": {
-                    "percent": 19.13
-                },
-                "mem": {
-                    "free": 97304576
-                },
-                "timestamp": 1711625527693
-            },
-            {
-                "cpu": {
-                    "percent": 24.67
-                },
-                "mem": {
-                    "free": 96550912
-                },
-                "timestamp": 1711625529629
+                "timestamp": 1711892231137
             }
         ],
         "workers": 5,
         "jobs": [
             {
-                "caseId": "886fc8aa3b1dc0a6f634",
+                "caseId": "904d017a5f2b22ab93e0",
                 "parallelIndex": 0,
                 "workerIndex": 0,
-                "timestamp": 1711625498162,
-                "duration": 14974
-            },
-            {
-                "caseId": "7e0310a93483a229245d",
-                "parallelIndex": 0,
-                "workerIndex": 2,
-                "timestamp": 1711625515473,
-                "duration": 558
-            },
-            {
-                "caseId": "2b99786b786c840e1807",
-                "parallelIndex": 0,
-                "workerIndex": 3,
-                "timestamp": 1711625517855,
-                "duration": 678
-            },
-            {
-                "caseId": "771e6baf81ed4a0c6285",
-                "parallelIndex": 0,
-                "workerIndex": 4,
-                "timestamp": 1711625520119,
-                "duration": 288
-            },
-            {
-                "caseId": "4c4f7f6ca5ba67a35372",
-                "parallelIndex": 0,
-                "workerIndex": 5,
-                "timestamp": 1711625522095,
-                "duration": 517
-            },
-            {
-                "caseId": "9bfae9e4b4aff0c9dee1",
-                "parallelIndex": 0,
-                "workerIndex": 6,
-                "timestamp": 1711625524196,
-                "duration": 412
-            },
-            {
-                "caseId": "742ee2cec7f95e2acb10",
-                "parallelIndex": 0,
-                "workerIndex": 7,
-                "timestamp": 1711625526478,
-                "duration": 220
-            },
-            {
-                "caseId": "66dcd8cfb08d28ec7fb3",
-                "parallelIndex": 0,
-                "workerIndex": 8,
-                "timestamp": 1711625528126,
-                "duration": 440
-            },
-            {
-                "caseId": "16157b5fedcff8557387",
-                "parallelIndex": 1,
-                "workerIndex": 1,
-                "timestamp": 1711625496967,
-                "duration": 37
+                "timestamp": 1711892229573,
+                "duration": 536
             }
         ],
         "cwd": "/Users/mfv-computer-0149/Documents/STML-Automation/qa-auto-pw-api",
@@ -260,7 +69,7 @@
         "testDir": "src/tests",
         "outputFile": "test-results/index.html",
         "outputDir": "test-results",
-        "timestampEnd": 1711625529633
+        "timestampEnd": 1711892231141
     },
     "artifacts": [],
     "trends": [],
@@ -372,945 +181,12 @@
     ],
     "rows": [
         {
-            "id": "jjnnx3asjiiccln93x1g",
+            "id": "2a2jajf8wormc8ht99zh",
             "title": "project",
             "type": "suite",
             "suiteType": "project",
-            "caseNum": 9,
+            "caseNum": 1,
             "subs": [
-                {
-                    "id": "650198eedc56790c217a",
-                    "title": "scripts/invoice-flow.spec.ts",
-                    "type": "suite",
-                    "suiteType": "file",
-                    "caseNum": 8,
-                    "subs": [
-                        {
-                            "id": "886fc8aa3b1dc0a6f634",
-                            "title": "C55306: @tc-01 Verify token - get office - status code",
-                            "type": "case",
-                            "caseType": "failed",
-                            "ok": false,
-                            "outcome": "unexpected",
-                            "expectedStatus": "passed",
-                            "location": "src/tests/scripts/invoice-flow.spec.ts:17:5",
-                            "logs": [
-                                "[18:31:38.172] [INFO] Token 0 is expired. Getting new token!\n",
-                                "[18:31:51.659] [INFO] App code is extracted successfully\n"
-                            ],
-                            "timestamps": [
-                                1711625498162,
-                                1711625513136
-                            ],
-                            "duration": 14974,
-                            "tags": [
-                                "@tc-01"
-                            ],
-                            "timeout": 60000,
-                            "retry": 0,
-                            "status": "failed",
-                            "stepNum": 26,
-                            "stepFailed": 1,
-                            "stepSubs": false,
-                            "subs": [
-                                {
-                                    "id": "7l97fhbvrrwemfqa3jgw",
-                                    "title": "Before Hooks",
-                                    "type": "step",
-                                    "stepType": "hook",
-                                    "duration": 8,
-                                    "location": ""
-                                },
-                                {
-                                    "id": "qyx0s8tae9fpnz5ax40v",
-                                    "title": "browserType.launch",
-                                    "type": "step",
-                                    "stepType": "pw:api",
-                                    "duration": 1080,
-                                    "location": "src/utils/authenticator/web-apps.ts:5:36"
-                                },
-                                {
-                                    "id": "dwr55q7157m2asqzxbhx",
-                                    "title": "browser.newPage",
-                                    "type": "step",
-                                    "stepType": "pw:api",
-                                    "duration": 1458,
-                                    "location": "src/utils/authenticator/web-apps.ts:8:32"
-                                },
-                                {
-                                    "id": "a4fq6biuh8g5znsxwk8q",
-                                    "title": "page.goto(https://api.biz.test.mfw.work/authorize?client_id=10907330081342&redirect_uri=https://contract.moneyforward.com/user/auth/suzaku/callback&response_type=code&scope=mfc/contract/contract.read mfc/contract/contract.write)",
-                                    "type": "step",
-                                    "stepType": "pw:api",
-                                    "duration": 2533,
-                                    "location": "src/utils/authenticator/web-apps.ts:11:16"
-                                },
-                                {
-                                    "id": "dty288ene9rvwr8xyql1",
-                                    "title": "locator.fill([name='mfid_user[email]'])",
-                                    "type": "step",
-                                    "stepType": "pw:api",
-                                    "duration": 39,
-                                    "location": "src/utils/authenticator/web-apps.ts:13:53"
-                                },
-                                {
-                                    "id": "b9qmtfv7fuxe1fp9i3e6",
-                                    "title": "locator.click(#submitto)",
-                                    "type": "step",
-                                    "stepType": "pw:api",
-                                    "duration": 592,
-                                    "location": "src/utils/authenticator/web-apps.ts:14:37"
-                                },
-                                {
-                                    "id": "mn5emcyocihjko7stgey",
-                                    "title": "locator.fill([name='mfid_user[password]'])",
-                                    "type": "step",
-                                    "stepType": "pw:api",
-                                    "duration": 70,
-                                    "location": "src/utils/authenticator/web-apps.ts:15:56"
-                                },
-                                {
-                                    "id": "i8uxsk6f4rbxmn0a3f0b",
-                                    "title": "locator.click(#submitto)",
-                                    "type": "step",
-                                    "stepType": "pw:api",
-                                    "duration": 3640,
-                                    "location": "src/utils/authenticator/web-apps.ts:16:37"
-                                },
-                                {
-                                    "id": "1m0at56j2rc8bwbzyc8w",
-                                    "title": "locator.isVisible(img[alt='sign-in with passkeys'] ~ a)",
-                                    "type": "step",
-                                    "stepType": "pw:api",
-                                    "duration": 16,
-                                    "location": "src/utils/authenticator/web-apps.ts:18:19"
-                                },
-                                {
-                                    "id": "3iuo09kkj8ezaeqhjbp5",
-                                    "title": "locator.click(img[alt='sign-in with passkeys'] ~ a)",
-                                    "type": "step",
-                                    "stepType": "pw:api",
-                                    "duration": 2037,
-                                    "location": "src/utils/authenticator/web-apps.ts:19:19"
-                                },
-                                {
-                                    "id": "wbvbz63lzqojsva53i1c",
-                                    "title": "locator.click(//tr/td[text()='9382-9420'])",
-                                    "type": "step",
-                                    "stepType": "pw:api",
-                                    "duration": 293,
-                                    "location": "src/utils/authenticator/web-apps.ts:21:55"
-                                },
-                                {
-                                    "id": "adki7u23nv1r5a09011s",
-                                    "title": "locator.click(button.btn-primary)",
-                                    "type": "step",
-                                    "stepType": "pw:api",
-                                    "duration": 348,
-                                    "location": "src/utils/authenticator/web-apps.ts:22:46"
-                                },
-                                {
-                                    "id": "pnghgvs9gx8tizhk9rs2",
-                                    "title": "locator.click(form input.btn-primary)",
-                                    "type": "step",
-                                    "stepType": "pw:api",
-                                    "duration": 1186,
-                                    "location": "src/utils/authenticator/web-apps.ts:23:50"
-                                },
-                                {
-                                    "id": "bxi30gfjawopfy7cdxfp",
-                                    "title": "browser.close",
-                                    "type": "step",
-                                    "stepType": "pw:api",
-                                    "duration": 174,
-                                    "location": "src/utils/authenticator/web-apps.ts:26:19"
-                                },
-                                {
-                                    "id": "n8vzeqb4xi3copnw0kgz",
-                                    "title": "apiRequest.newContext",
-                                    "type": "step",
-                                    "stepType": "pw:api",
-                                    "duration": 31,
-                                    "location": "src/utils/request/request-context.ts:23:38"
-                                },
-                                {
-                                    "id": "kuew72g4sblyssm5i0ev",
-                                    "title": "apiRequestContext.post(/token)",
-                                    "type": "step",
-                                    "stepType": "pw:api",
-                                    "duration": 610,
-                                    "location": "src/utils/request/request-context.ts:51:51"
-                                },
-                                {
-                                    "id": "eeltz2t5dd4295vpzx6l",
-                                    "title": "Headers: {\"Authorization\":\"Basic MTA5MDczMzAwODEzNDI6bEVFdTJtcVd5MktjTVd1SVJKX3RVQWs5WXRLOFBabE1vNnVhSFQwWGNWcmpDZU91QkR5ZVZrNVEtQzIxNUN0c2dJYmRxMjF2YWRqaDdsRmVuSkE4d2c=\",\"Content-Type\":\"application/x-www-form-urlencoded\"}",
-                                    "type": "step",
-                                    "stepType": "test.step",
-                                    "duration": 34,
-                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
-                                },
-                                {
-                                    "id": "dtxbqgy9qibfjte83udg",
-                                    "title": "Options: {\"form\":{\"code\":\"P_dTvg5d6o_Kz9FeaEJ7FXfezxxGBRkc9QkmzgpNi5o\",\"grant_type\":\"authorization_code\",\"redirect_uri\":\"https://contract.moneyforward.com/user/auth/suzaku/callback\"}}",
-                                    "type": "step",
-                                    "stepType": "test.step",
-                                    "duration": 0,
-                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
-                                },
-                                {
-                                    "id": "6k4fvu4olyy82vk6v122",
-                                    "title": "Request: {\"_initializer\":{\"fetchUid\":\"91b447196bd0b75e441d26d59c8a7831\",\"url\":\"https://api.biz.test.mfw.work/token\",\"status\":200,\"statusText\":\"OK\",\"headers\":[{\"name\":\"Date\",\"value\":\"Thu, 28 Mar 2024 11:31:52 GMT\"},{\"name\":\"Content-Type\",\"value\":\"application/json; charset=utf-8\"},{\"name\":\"Transfer-Encoding\",\"value\":\"chunked\"},{\"name\":\"Connection\",\"value\":\"close\"},{\"name\":\"Cache-Control\",\"value\":\"no-store\"},{\"name\":\"pragma\",\"value\":\"no-cache\"},{\"name\":\"x-frame-options\",\"value\":\"SAMEORIGIN\"},{\"name\":\"CF-Cache-Status\",\"value\":\"DYNAMIC\"},{\"name\":\"Server\",\"value\":\"cloudflare\"},{\"name\":\"CF-RAY\",\"value\":\"86b74bd99d3a8195-SIN\"},{\"name\":\"Content-Encoding\",\"value\":\"gzip\"}]},\"_headers\":{\"_headersArray\":[{\"name\":\"Date\",\"value\":\"Thu, 28 Mar 2024 11:31:52 GMT\"},{\"name\":\"Content-Type\",\"value\":\"application/json; charset=utf-8\"},{\"name\":\"Transfer-Encoding\",\"value\":\"chunked\"},{\"name\":\"Connection\",\"value\":\"close\"},{\"name\":\"Cache-Control\",\"value\":\"no-store\"},{\"name\":\"pragma\",\"value\":\"no-cache\"},{\"name\":\"x-frame-options\",\"value\":\"SAMEORIGIN\"},{\"name\":\"CF-Cache-Status\",\"value\":\"DYNAMIC\"},{\"name\":\"Server\",\"value\":\"cloudflare\"},{\"name\":\"CF-RAY\",\"value\":\"86b74bd99d3a8195-SIN\"},{\"name\":\"Content-Encoding\",\"value\":\"gzip\"}],\"_headersMap\":{\"_map\":{}}},\"_request\":{\"_type\":\"APIRequestContext\",\"_guid\":\"request-context@d62582ccb5db43a2bbe1f5114f4ad890\"}}",
-                                    "type": "step",
-                                    "stepType": "test.step",
-                                    "duration": 1,
-                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
-                                },
-                                {
-                                    "id": "8jolmwlnloivvwtkampo",
-                                    "title": "apiResponse.json",
-                                    "type": "step",
-                                    "stepType": "pw:api",
-                                    "duration": 1,
-                                    "location": "src/utils/authenticator/secure-token.ts:36:45"
-                                },
-                                {
-                                    "id": "fmjv6wymyqlc0b4zb9if",
-                                    "title": "apiRequest.newContext",
-                                    "type": "step",
-                                    "stepType": "pw:api",
-                                    "duration": 1,
-                                    "location": "src/utils/request/request-context.ts:23:38"
-                                },
-                                {
-                                    "id": "pgalvlmbvhn1895us6i8",
-                                    "title": "apiRequestContext.get(/api/v3/office)",
-                                    "type": "step",
-                                    "stepType": "pw:api",
-                                    "duration": 776,
-                                    "location": "src/utils/request/request-context.ts:40:47"
-                                },
-                                {
-                                    "id": "rxwt7g57cf88izfywd0r",
-                                    "title": "Headers: {\"Authorization\":\"Bearer fw-svws1SZSbaq1VOZCEb2dbZRu6Sjk49dS4HiWc-QQ\",\"Content-Type\":\"application/json\"}",
-                                    "type": "step",
-                                    "stepType": "test.step",
-                                    "duration": 1,
-                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
-                                },
-                                {
-                                    "id": "g94l08xdswoyaayht2r7",
-                                    "title": "Request: {\"_initializer\":{\"fetchUid\":\"e32528a0889db115fdc2b6d9eef620da\",\"url\":\"https://api.stampless.mfvn.dev/api/v3/office\",\"status\":404,\"statusText\":\"Not Found\",\"headers\":[{\"name\":\"Content-Type\",\"value\":\"text/plain\"},{\"name\":\"Content-Length\",\"value\":\"18\"},{\"name\":\"Connection\",\"value\":\"close\"},{\"name\":\"Date\",\"value\":\"Thu, 28 Mar 2024 11:31:53 GMT\"},{\"name\":\"Cache-Control\",\"value\":\"no-store\"},{\"name\":\"Content-Security-Policy\",\"value\":\"frame-ancestors 'none'\"},{\"name\":\"X-Content-Type-Options\",\"value\":\"nosniff\"},{\"name\":\"X-Frame-Options\",\"value\":\"DENY\"},{\"name\":\"X-Xss-Protection\",\"value\":\"1; mode=block\"},{\"name\":\"X-Cache\",\"value\":\"Error from cloudfront\"},{\"name\":\"Via\",\"value\":\"1.1 f55d9e952fc309b5d493e122ed644b9a.cloudfront.net (CloudFront)\"},{\"name\":\"X-Amz-Cf-Pop\",\"value\":\"SGN50-P2\"},{\"name\":\"X-Amz-Cf-Id\",\"value\":\"TPuC4XG8L-wGhKUaKwu7dJ9AQxYg8QjmEt0k8swz320i9tdERSm_uQ==\"}]},\"_headers\":{\"_headersArray\":[{\"name\":\"Content-Type\",\"value\":\"text/plain\"},{\"name\":\"Content-Length\",\"value\":\"18\"},{\"name\":\"Connection\",\"value\":\"close\"},{\"name\":\"Date\",\"value\":\"Thu, 28 Mar 2024 11:31:53 GMT\"},{\"name\":\"Cache-Control\",\"value\":\"no-store\"},{\"name\":\"Content-Security-Policy\",\"value\":\"frame-ancestors 'none'\"},{\"name\":\"X-Content-Type-Options\",\"value\":\"nosniff\"},{\"name\":\"X-Frame-Options\",\"value\":\"DENY\"},{\"name\":\"X-Xss-Protection\",\"value\":\"1; mode=block\"},{\"name\":\"X-Cache\",\"value\":\"Error from cloudfront\"},{\"name\":\"Via\",\"value\":\"1.1 f55d9e952fc309b5d493e122ed644b9a.cloudfront.net (CloudFront)\"},{\"name\":\"X-Amz-Cf-Pop\",\"value\":\"SGN50-P2\"},{\"name\":\"X-Amz-Cf-Id\",\"value\":\"TPuC4XG8L-wGhKUaKwu7dJ9AQxYg8QjmEt0k8swz320i9tdERSm_uQ==\"}],\"_headersMap\":{\"_map\":{}}},\"_request\":{\"_type\":\"APIRequestContext\",\"_guid\":\"request-context@c754e8a32936ce0e78465bd27cbb92f3\"}}",
-                                    "type": "step",
-                                    "stepType": "test.step",
-                                    "duration": 1,
-                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
-                                },
-                                {
-                                    "id": "qz5iq4z5ewkgmvl7gdz3",
-                                    "title": "expect.toBe",
-                                    "type": "step",
-                                    "stepType": "expect",
-                                    "duration": 6,
-                                    "location": "src/tests/scripts/invoice-flow.spec.ts:20:31",
-                                    "errors": [
-                                        "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m404\u001b[39m\n\n\u001b[0m \u001b[90m 18 |\u001b[39m     \u001b[36mconst\u001b[39m instance \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mOfficeEndpoint\u001b[39m()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 19 |\u001b[39m     \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m instance\u001b[33m.\u001b[39mgetOffice()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m     expect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBe(\u001b[35m200\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\n    at /Users/mfv-computer-0149/Documents/STML-Automation/qa-auto-pw-api/src/tests/scripts/invoice-flow.spec.ts:20:31"
-                                    ],
-                                    "errorNum": 1
-                                },
-                                {
-                                    "id": "4iesajr5hngdywk6steu",
-                                    "title": "After Hooks",
-                                    "type": "step",
-                                    "stepType": "hook",
-                                    "duration": 3,
-                                    "location": ""
-                                }
-                            ],
-                            "errorNum": 1,
-                            "errorId": "qz5iq4z5ewkgmvl7gdz3"
-                        },
-                        {
-                            "id": "7e0310a93483a229245d",
-                            "title": "C55307: @tc-02 Status code - Get billings - accepted - valid info - is 200",
-                            "type": "case",
-                            "caseType": "failed",
-                            "ok": false,
-                            "outcome": "unexpected",
-                            "expectedStatus": "passed",
-                            "location": "src/tests/scripts/invoice-flow.spec.ts:23:5",
-                            "logs": [
-                                "[18:31:55.481] [INFO] Request is using token #0\n"
-                            ],
-                            "timestamps": [
-                                1711625515473,
-                                1711625516031
-                            ],
-                            "duration": 558,
-                            "tags": [
-                                "@tc-02"
-                            ],
-                            "timeout": 60000,
-                            "retry": 0,
-                            "status": "failed",
-                            "stepNum": 8,
-                            "stepFailed": 1,
-                            "stepSubs": false,
-                            "subs": [
-                                {
-                                    "id": "z8oq3b6tdmkoupel5p1y",
-                                    "title": "Before Hooks",
-                                    "type": "step",
-                                    "stepType": "hook",
-                                    "duration": 6,
-                                    "location": ""
-                                },
-                                {
-                                    "id": "suyvqb3gwd6iyhvz7z58",
-                                    "title": "apiRequest.newContext",
-                                    "type": "step",
-                                    "stepType": "pw:api",
-                                    "duration": 15,
-                                    "location": "src/utils/request/request-context.ts:23:38"
-                                },
-                                {
-                                    "id": "xzd124er2l41pc761vql",
-                                    "title": "apiRequestContext.get(/api/v3/billings)",
-                                    "type": "step",
-                                    "stepType": "pw:api",
-                                    "duration": 481,
-                                    "location": "src/utils/request/request-context.ts:40:47"
-                                },
-                                {
-                                    "id": "5xyghed8j9imonoky1jj",
-                                    "title": "Headers: {\"Authorization\":\"Bearer fw-svws1SZSbaq1VOZCEb2dbZRu6Sjk49dS4HiWc-QQ\",\"Content-Type\":\"application/json\"}",
-                                    "type": "step",
-                                    "stepType": "test.step",
-                                    "duration": 35,
-                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
-                                },
-                                {
-                                    "id": "36cikg2vuxc5mv8s0ne7",
-                                    "title": "Options: {\"params\":{\"page\":1,\"per_page\":20}}",
-                                    "type": "step",
-                                    "stepType": "test.step",
-                                    "duration": 1,
-                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
-                                },
-                                {
-                                    "id": "0kt8dvldfkrmy95q042j",
-                                    "title": "Request: {\"_initializer\":{\"fetchUid\":\"ecb94c2ca93567f50360b555884966e3\",\"url\":\"https://api.stampless.mfvn.dev/api/v3/billings?page=1&per_page=20\",\"status\":404,\"statusText\":\"Not Found\",\"headers\":[{\"name\":\"Content-Type\",\"value\":\"text/plain\"},{\"name\":\"Content-Length\",\"value\":\"18\"},{\"name\":\"Connection\",\"value\":\"close\"},{\"name\":\"Date\",\"value\":\"Thu, 28 Mar 2024 11:31:55 GMT\"},{\"name\":\"Cache-Control\",\"value\":\"no-store\"},{\"name\":\"Content-Security-Policy\",\"value\":\"frame-ancestors 'none'\"},{\"name\":\"X-Content-Type-Options\",\"value\":\"nosniff\"},{\"name\":\"X-Frame-Options\",\"value\":\"DENY\"},{\"name\":\"X-Xss-Protection\",\"value\":\"1; mode=block\"},{\"name\":\"X-Cache\",\"value\":\"Error from cloudfront\"},{\"name\":\"Via\",\"value\":\"1.1 67fbd037a5520b9cb6d3054565b776b8.cloudfront.net (CloudFront)\"},{\"name\":\"X-Amz-Cf-Pop\",\"value\":\"SGN50-P2\"},{\"name\":\"X-Amz-Cf-Id\",\"value\":\"AkhuEQe4GVYwY9YlqXrC2_SjIG1daOd80TCJir_6x8eG9AatIBajvg==\"}]},\"_headers\":{\"_headersArray\":[{\"name\":\"Content-Type\",\"value\":\"text/plain\"},{\"name\":\"Content-Length\",\"value\":\"18\"},{\"name\":\"Connection\",\"value\":\"close\"},{\"name\":\"Date\",\"value\":\"Thu, 28 Mar 2024 11:31:55 GMT\"},{\"name\":\"Cache-Control\",\"value\":\"no-store\"},{\"name\":\"Content-Security-Policy\",\"value\":\"frame-ancestors 'none'\"},{\"name\":\"X-Content-Type-Options\",\"value\":\"nosniff\"},{\"name\":\"X-Frame-Options\",\"value\":\"DENY\"},{\"name\":\"X-Xss-Protection\",\"value\":\"1; mode=block\"},{\"name\":\"X-Cache\",\"value\":\"Error from cloudfront\"},{\"name\":\"Via\",\"value\":\"1.1 67fbd037a5520b9cb6d3054565b776b8.cloudfront.net (CloudFront)\"},{\"name\":\"X-Amz-Cf-Pop\",\"value\":\"SGN50-P2\"},{\"name\":\"X-Amz-Cf-Id\",\"value\":\"AkhuEQe4GVYwY9YlqXrC2_SjIG1daOd80TCJir_6x8eG9AatIBajvg==\"}],\"_headersMap\":{\"_map\":{}}},\"_request\":{\"_type\":\"APIRequestContext\",\"_guid\":\"request-context@bcaef385feb91bfd2c26c68fa402a14e\"}}",
-                                    "type": "step",
-                                    "stepType": "test.step",
-                                    "duration": 0,
-                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
-                                },
-                                {
-                                    "id": "j7rpwcxlje09t5rx92y6",
-                                    "title": "expect.toBe",
-                                    "type": "step",
-                                    "stepType": "expect",
-                                    "duration": 6,
-                                    "location": "src/tests/scripts/invoice-flow.spec.ts:26:31",
-                                    "errors": [
-                                        "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m404\u001b[39m\n\n\u001b[0m \u001b[90m 24 |\u001b[39m     \u001b[36mconst\u001b[39m instance \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mBillingsEndpoint\u001b[39m()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 25 |\u001b[39m     \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m instance\u001b[33m.\u001b[39m\u001b[36mget\u001b[39m()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 26 |\u001b[39m     expect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBe(\u001b[35m200\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\n    at /Users/mfv-computer-0149/Documents/STML-Automation/qa-auto-pw-api/src/tests/scripts/invoice-flow.spec.ts:26:31"
-                                    ],
-                                    "errorNum": 1
-                                },
-                                {
-                                    "id": "i47sadqx6qs3rc2x4t3q",
-                                    "title": "After Hooks",
-                                    "type": "step",
-                                    "stepType": "hook",
-                                    "duration": 1,
-                                    "location": ""
-                                }
-                            ],
-                            "errorNum": 1,
-                            "errorId": "j7rpwcxlje09t5rx92y6"
-                        },
-                        {
-                            "id": "2b99786b786c840e1807",
-                            "title": "C55308: @tc-03 Status code - Create partner - valid values - is 201",
-                            "type": "case",
-                            "caseType": "failed",
-                            "ok": false,
-                            "outcome": "unexpected",
-                            "expectedStatus": "passed",
-                            "location": "src/tests/scripts/invoice-flow.spec.ts:31:5",
-                            "logs": [
-                                "[18:31:57.863] [INFO] Request is using token #0\n"
-                            ],
-                            "timestamps": [
-                                1711625517855,
-                                1711625518533
-                            ],
-                            "duration": 678,
-                            "tags": [
-                                "@tc-03"
-                            ],
-                            "timeout": 60000,
-                            "errors": [
-                                "SyntaxError: Unexpected non-whitespace character after JSON at position 4\n\n\u001b[0m \u001b[90m 20 |\u001b[39m     }\u001b[0m\n\u001b[0m \u001b[90m 21 |\u001b[39m     \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mrequestSender(\u001b[33mHttpMethod\u001b[39m\u001b[33m.\u001b[39m\u001b[33mPOST\u001b[39m\u001b[33m,\u001b[39m \u001b[33mPARTNERS_EP\u001b[39m\u001b[33m,\u001b[39m { data\u001b[33m:\u001b[39m data })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m     sharedData\u001b[33m.\u001b[39msetContext(\u001b[33mAppId\u001b[39m\u001b[33m.\u001b[39m\u001b[33mAPP_PARTNER_ID\u001b[39m\u001b[33m,\u001b[39m (\u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson())\u001b[33m.\u001b[39mid)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\n    at PartnerEndpoint.create (/Users/mfv-computer-0149/Documents/STML-Automation/qa-auto-pw-api/src/tests/endpoints/partner-enpoint.ts:22:50)\n    at /Users/mfv-computer-0149/Documents/STML-Automation/qa-auto-pw-api/src/tests/scripts/invoice-flow.spec.ts:33:22"
-                            ],
-                            "retry": 0,
-                            "status": "failed",
-                            "stepNum": 8,
-                            "stepFailed": 0,
-                            "stepSubs": false,
-                            "subs": [
-                                {
-                                    "id": "hxxmlsf48pkyjrbf0yt1",
-                                    "title": "Before Hooks",
-                                    "type": "step",
-                                    "stepType": "hook",
-                                    "duration": 6,
-                                    "location": ""
-                                },
-                                {
-                                    "id": "pzhky347hmfy2h10kn21",
-                                    "title": "apiRequest.newContext",
-                                    "type": "step",
-                                    "stepType": "pw:api",
-                                    "duration": 17,
-                                    "location": "src/utils/request/request-context.ts:23:38"
-                                },
-                                {
-                                    "id": "ig69b4osxgyg5zf9dyk5",
-                                    "title": "apiRequestContext.post(/api/v3/partners)",
-                                    "type": "step",
-                                    "stepType": "pw:api",
-                                    "duration": 607,
-                                    "location": "src/utils/request/request-context.ts:51:51"
-                                },
-                                {
-                                    "id": "l5qedergeangfnk7ub95",
-                                    "title": "Headers: {\"Authorization\":\"Bearer fw-svws1SZSbaq1VOZCEb2dbZRu6Sjk49dS4HiWc-QQ\",\"Content-Type\":\"application/json\"}",
-                                    "type": "step",
-                                    "stepType": "test.step",
-                                    "duration": 30,
-                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
-                                },
-                                {
-                                    "id": "gw2jcdsyfdd61s9cfslr",
-                                    "title": "Options: {\"data\":{\"code\":\"PTORztGgDq\",\"name\":\"Auto test PTORztGgDq\",\"name_kana\":\"PTORztGgDq\",\"name_suffix\":\"御中\",\"memo\":\"PTORztGgDq\"}}",
-                                    "type": "step",
-                                    "stepType": "test.step",
-                                    "duration": 1,
-                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
-                                },
-                                {
-                                    "id": "yj96h3wbtanyl4a0revt",
-                                    "title": "Request: {\"_initializer\":{\"fetchUid\":\"579de86c17349388e74c299382222026\",\"url\":\"https://api.stampless.mfvn.dev/api/v3/partners\",\"status\":404,\"statusText\":\"Not Found\",\"headers\":[{\"name\":\"Content-Type\",\"value\":\"text/plain\"},{\"name\":\"Content-Length\",\"value\":\"18\"},{\"name\":\"Connection\",\"value\":\"close\"},{\"name\":\"Date\",\"value\":\"Thu, 28 Mar 2024 11:31:58 GMT\"},{\"name\":\"Cache-Control\",\"value\":\"no-store\"},{\"name\":\"Content-Security-Policy\",\"value\":\"frame-ancestors 'none'\"},{\"name\":\"X-Content-Type-Options\",\"value\":\"nosniff\"},{\"name\":\"X-Frame-Options\",\"value\":\"DENY\"},{\"name\":\"X-Xss-Protection\",\"value\":\"1; mode=block\"},{\"name\":\"X-Cache\",\"value\":\"Error from cloudfront\"},{\"name\":\"Via\",\"value\":\"1.1 8ca6d5baa22e4b3d4091be27452d0b32.cloudfront.net (CloudFront)\"},{\"name\":\"X-Amz-Cf-Pop\",\"value\":\"SGN50-P2\"},{\"name\":\"X-Amz-Cf-Id\",\"value\":\"4rm-0N3zwrkbJXRyzxE5skMAU9vjggJbKbWNUwamc5nW9lLF346i6w==\"}]},\"_headers\":{\"_headersArray\":[{\"name\":\"Content-Type\",\"value\":\"text/plain\"},{\"name\":\"Content-Length\",\"value\":\"18\"},{\"name\":\"Connection\",\"value\":\"close\"},{\"name\":\"Date\",\"value\":\"Thu, 28 Mar 2024 11:31:58 GMT\"},{\"name\":\"Cache-Control\",\"value\":\"no-store\"},{\"name\":\"Content-Security-Policy\",\"value\":\"frame-ancestors 'none'\"},{\"name\":\"X-Content-Type-Options\",\"value\":\"nosniff\"},{\"name\":\"X-Frame-Options\",\"value\":\"DENY\"},{\"name\":\"X-Xss-Protection\",\"value\":\"1; mode=block\"},{\"name\":\"X-Cache\",\"value\":\"Error from cloudfront\"},{\"name\":\"Via\",\"value\":\"1.1 8ca6d5baa22e4b3d4091be27452d0b32.cloudfront.net (CloudFront)\"},{\"name\":\"X-Amz-Cf-Pop\",\"value\":\"SGN50-P2\"},{\"name\":\"X-Amz-Cf-Id\",\"value\":\"4rm-0N3zwrkbJXRyzxE5skMAU9vjggJbKbWNUwamc5nW9lLF346i6w==\"}],\"_headersMap\":{\"_map\":{}}},\"_request\":{\"_type\":\"APIRequestContext\",\"_guid\":\"request-context@b4c11056a1ddaa00b7597f1752d72e37\"}}",
-                                    "type": "step",
-                                    "stepType": "test.step",
-                                    "duration": 1,
-                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
-                                },
-                                {
-                                    "id": "44hr4s9by1gk4g7jdnej",
-                                    "title": "apiResponse.json",
-                                    "type": "step",
-                                    "stepType": "pw:api",
-                                    "duration": 3,
-                                    "location": "src/tests/endpoints/partner-enpoint.ts:22:65"
-                                },
-                                {
-                                    "id": "xsuq6j8d5gx4eg8c3he7",
-                                    "title": "After Hooks",
-                                    "type": "step",
-                                    "stepType": "hook",
-                                    "duration": 2,
-                                    "location": ""
-                                }
-                            ],
-                            "errorNum": 1
-                        },
-                        {
-                            "id": "771e6baf81ed4a0c6285",
-                            "title": "C55309: @tc-04 Status code - Get partner id - is 200",
-                            "type": "case",
-                            "caseType": "failed",
-                            "ok": false,
-                            "outcome": "unexpected",
-                            "expectedStatus": "passed",
-                            "location": "src/tests/scripts/invoice-flow.spec.ts:50:5",
-                            "logs": [
-                                "[18:32:00.126] [INFO] Request is using token #0\n"
-                            ],
-                            "timestamps": [
-                                1711625520119,
-                                1711625520407
-                            ],
-                            "duration": 288,
-                            "tags": [
-                                "@tc-04"
-                            ],
-                            "timeout": 60000,
-                            "retry": 0,
-                            "status": "failed",
-                            "stepNum": 8,
-                            "stepFailed": 1,
-                            "stepSubs": false,
-                            "subs": [
-                                {
-                                    "id": "ywq94vg5mwjtg69dnupp",
-                                    "title": "Before Hooks",
-                                    "type": "step",
-                                    "stepType": "hook",
-                                    "duration": 6,
-                                    "location": ""
-                                },
-                                {
-                                    "id": "dncml7jhpd5nkn5vj7gk",
-                                    "title": "apiRequest.newContext",
-                                    "type": "step",
-                                    "stepType": "pw:api",
-                                    "duration": 21,
-                                    "location": "src/utils/request/request-context.ts:23:38"
-                                },
-                                {
-                                    "id": "si63so0wh6efyp2yyh0t",
-                                    "title": "apiRequestContext.get(/api/v3/partners/undefined)",
-                                    "type": "step",
-                                    "stepType": "pw:api",
-                                    "duration": 227,
-                                    "location": "src/utils/request/request-context.ts:40:47"
-                                },
-                                {
-                                    "id": "l51vhktn4f1hl0h2i25b",
-                                    "title": "Headers: {\"Authorization\":\"Bearer fw-svws1SZSbaq1VOZCEb2dbZRu6Sjk49dS4HiWc-QQ\",\"Content-Type\":\"application/json\"}",
-                                    "type": "step",
-                                    "stepType": "test.step",
-                                    "duration": 14,
-                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
-                                },
-                                {
-                                    "id": "cgcpgals4cimrs3mz2u4",
-                                    "title": "Options: {\"params\":{\"page\":1,\"per_page\":1}}",
-                                    "type": "step",
-                                    "stepType": "test.step",
-                                    "duration": 0,
-                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
-                                },
-                                {
-                                    "id": "kaxgo2afcl9ev93l69ho",
-                                    "title": "Request: {\"_initializer\":{\"fetchUid\":\"a11ebc31c903f68c8789d992065daec8\",\"url\":\"https://api.stampless.mfvn.dev/api/v3/partners/undefined?page=1&per_page=1\",\"status\":404,\"statusText\":\"Not Found\",\"headers\":[{\"name\":\"Content-Type\",\"value\":\"text/plain\"},{\"name\":\"Content-Length\",\"value\":\"18\"},{\"name\":\"Connection\",\"value\":\"close\"},{\"name\":\"Date\",\"value\":\"Thu, 28 Mar 2024 11:32:00 GMT\"},{\"name\":\"Cache-Control\",\"value\":\"no-store\"},{\"name\":\"Content-Security-Policy\",\"value\":\"frame-ancestors 'none'\"},{\"name\":\"X-Content-Type-Options\",\"value\":\"nosniff\"},{\"name\":\"X-Frame-Options\",\"value\":\"DENY\"},{\"name\":\"X-Xss-Protection\",\"value\":\"1; mode=block\"},{\"name\":\"X-Cache\",\"value\":\"Error from cloudfront\"},{\"name\":\"Via\",\"value\":\"1.1 6cb49631a8e61e9a3df8268d9a40a182.cloudfront.net (CloudFront)\"},{\"name\":\"X-Amz-Cf-Pop\",\"value\":\"SGN50-P2\"},{\"name\":\"X-Amz-Cf-Id\",\"value\":\"cDO3CfimsYpJUhmVXJURhzPGf2oYQM5TQhB8YkyFgWlUnkhi2l9VEg==\"}]},\"_headers\":{\"_headersArray\":[{\"name\":\"Content-Type\",\"value\":\"text/plain\"},{\"name\":\"Content-Length\",\"value\":\"18\"},{\"name\":\"Connection\",\"value\":\"close\"},{\"name\":\"Date\",\"value\":\"Thu, 28 Mar 2024 11:32:00 GMT\"},{\"name\":\"Cache-Control\",\"value\":\"no-store\"},{\"name\":\"Content-Security-Policy\",\"value\":\"frame-ancestors 'none'\"},{\"name\":\"X-Content-Type-Options\",\"value\":\"nosniff\"},{\"name\":\"X-Frame-Options\",\"value\":\"DENY\"},{\"name\":\"X-Xss-Protection\",\"value\":\"1; mode=block\"},{\"name\":\"X-Cache\",\"value\":\"Error from cloudfront\"},{\"name\":\"Via\",\"value\":\"1.1 6cb49631a8e61e9a3df8268d9a40a182.cloudfront.net (CloudFront)\"},{\"name\":\"X-Amz-Cf-Pop\",\"value\":\"SGN50-P2\"},{\"name\":\"X-Amz-Cf-Id\",\"value\":\"cDO3CfimsYpJUhmVXJURhzPGf2oYQM5TQhB8YkyFgWlUnkhi2l9VEg==\"}],\"_headersMap\":{\"_map\":{}}},\"_request\":{\"_type\":\"APIRequestContext\",\"_guid\":\"request-context@387194a01429bd1128a824b065d447f7\"}}",
-                                    "type": "step",
-                                    "stepType": "test.step",
-                                    "duration": 1,
-                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
-                                },
-                                {
-                                    "id": "qdaz21k46c7skfd31pix",
-                                    "title": "expect.toBe",
-                                    "type": "step",
-                                    "stepType": "expect",
-                                    "duration": 5,
-                                    "location": "src/tests/scripts/invoice-flow.spec.ts:53:31",
-                                    "errors": [
-                                        "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m404\u001b[39m\n\n\u001b[0m \u001b[90m 51 |\u001b[39m     \u001b[36mconst\u001b[39m instance \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mPartnerEndpoint\u001b[39m()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 52 |\u001b[39m     \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m instance\u001b[33m.\u001b[39m\u001b[36mget\u001b[39m()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 53 |\u001b[39m     expect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBe(\u001b[35m200\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\n    at /Users/mfv-computer-0149/Documents/STML-Automation/qa-auto-pw-api/src/tests/scripts/invoice-flow.spec.ts:53:31"
-                                    ],
-                                    "errorNum": 1
-                                },
-                                {
-                                    "id": "oeero9eitbdpjh2yju8l",
-                                    "title": "After Hooks",
-                                    "type": "step",
-                                    "stepType": "hook",
-                                    "duration": 1,
-                                    "location": ""
-                                }
-                            ],
-                            "errorNum": 1,
-                            "errorId": "qdaz21k46c7skfd31pix"
-                        },
-                        {
-                            "id": "4c4f7f6ca5ba67a35372",
-                            "title": "C55310: @tc-05 Status code - Create billing - Department id - accepted - valid id - is 201",
-                            "type": "case",
-                            "caseType": "failed",
-                            "ok": false,
-                            "outcome": "unexpected",
-                            "expectedStatus": "passed",
-                            "location": "src/tests/scripts/invoice-flow.spec.ts:57:5",
-                            "logs": [
-                                "[18:32:02.103] [INFO] Request is using token #0\n"
-                            ],
-                            "timestamps": [
-                                1711625522095,
-                                1711625522612
-                            ],
-                            "duration": 517,
-                            "tags": [
-                                "@tc-05"
-                            ],
-                            "timeout": 60000,
-                            "errors": [
-                                "SyntaxError: Unexpected non-whitespace character after JSON at position 4\n\n\u001b[0m \u001b[90m 28 |\u001b[39m     }\u001b[0m\n\u001b[0m \u001b[90m 29 |\u001b[39m     \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mrequestSender(\u001b[33mHttpMethod\u001b[39m\u001b[33m.\u001b[39m\u001b[33mPOST\u001b[39m\u001b[33m,\u001b[39m path\u001b[33m,\u001b[39m { data\u001b[33m:\u001b[39m data })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m     sharedData\u001b[33m.\u001b[39msetContext(\u001b[33mAppId\u001b[39m\u001b[33m.\u001b[39m\u001b[33mAPP_DEPARTMENT_ID\u001b[39m\u001b[33m,\u001b[39m (\u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson())\u001b[33m.\u001b[39mid)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\n    at DepartmentEndpoint.create (/Users/mfv-computer-0149/Documents/STML-Automation/qa-auto-pw-api/src/tests/endpoints/department-enpoint.ts:30:53)\n    at /Users/mfv-computer-0149/Documents/STML-Automation/qa-auto-pw-api/src/tests/scripts/invoice-flow.spec.ts:59:28"
-                            ],
-                            "retry": 0,
-                            "status": "failed",
-                            "stepNum": 8,
-                            "stepFailed": 0,
-                            "stepSubs": false,
-                            "subs": [
-                                {
-                                    "id": "vel2guog8tv1ise6uybh",
-                                    "title": "Before Hooks",
-                                    "type": "step",
-                                    "stepType": "hook",
-                                    "duration": 6,
-                                    "location": ""
-                                },
-                                {
-                                    "id": "ib45zz6wxjlzrpg98ogn",
-                                    "title": "apiRequest.newContext",
-                                    "type": "step",
-                                    "stepType": "pw:api",
-                                    "duration": 23,
-                                    "location": "src/utils/request/request-context.ts:23:38"
-                                },
-                                {
-                                    "id": "svn378ve4yx4w97cj8bh",
-                                    "title": "apiRequestContext.post(/api/v3/partners/undefined/departments)",
-                                    "type": "step",
-                                    "stepType": "pw:api",
-                                    "duration": 440,
-                                    "location": "src/utils/request/request-context.ts:51:51"
-                                },
-                                {
-                                    "id": "h19njkk9rosgkniydys4",
-                                    "title": "Headers: {\"Authorization\":\"Bearer fw-svws1SZSbaq1VOZCEb2dbZRu6Sjk49dS4HiWc-QQ\",\"Content-Type\":\"application/json\"}",
-                                    "type": "step",
-                                    "stepType": "test.step",
-                                    "duration": 34,
-                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
-                                },
-                                {
-                                    "id": "opa4a3fii11qpohac2zc",
-                                    "title": "Options: {\"data\":{\"zip\":\"706-5436\",\"tel\":\"7893232\",\"prefecture\":\"山形県\",\"address1\":\"2329 Coronation Avenue\",\"address2\":\"286 Wisoky Row\",\"person_name\":\"Hugh\",\"person_title\":\"Lorenza\",\"person_dept\":\"Vince\",\"office_member_name\":\"Annamarie\",\"email\":\"Arely_Daugherty@gmail.com\",\"cc_emails\":\"Aron88@hotmail.com\"}}",
-                                    "type": "step",
-                                    "stepType": "test.step",
-                                    "duration": 0,
-                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
-                                },
-                                {
-                                    "id": "4ucgegemtzm9mmthwb8x",
-                                    "title": "Request: {\"_initializer\":{\"fetchUid\":\"e38d76f1a0b6d3d0d1ac77af0fbd325e\",\"url\":\"https://api.stampless.mfvn.dev/api/v3/partners/undefined/departments\",\"status\":404,\"statusText\":\"Not Found\",\"headers\":[{\"name\":\"Content-Type\",\"value\":\"text/plain\"},{\"name\":\"Content-Length\",\"value\":\"18\"},{\"name\":\"Connection\",\"value\":\"close\"},{\"name\":\"Date\",\"value\":\"Thu, 28 Mar 2024 11:32:02 GMT\"},{\"name\":\"Cache-Control\",\"value\":\"no-store\"},{\"name\":\"Content-Security-Policy\",\"value\":\"frame-ancestors 'none'\"},{\"name\":\"X-Content-Type-Options\",\"value\":\"nosniff\"},{\"name\":\"X-Frame-Options\",\"value\":\"DENY\"},{\"name\":\"X-Xss-Protection\",\"value\":\"1; mode=block\"},{\"name\":\"X-Cache\",\"value\":\"Error from cloudfront\"},{\"name\":\"Via\",\"value\":\"1.1 002de56e7b3062c0f06a60060d0548f6.cloudfront.net (CloudFront)\"},{\"name\":\"X-Amz-Cf-Pop\",\"value\":\"SGN50-P2\"},{\"name\":\"X-Amz-Cf-Id\",\"value\":\"AzhjLDhfD-dubrlTApat5_fR5oAZhFum3oswEDNlZo7A91IxEqftBg==\"}]},\"_headers\":{\"_headersArray\":[{\"name\":\"Content-Type\",\"value\":\"text/plain\"},{\"name\":\"Content-Length\",\"value\":\"18\"},{\"name\":\"Connection\",\"value\":\"close\"},{\"name\":\"Date\",\"value\":\"Thu, 28 Mar 2024 11:32:02 GMT\"},{\"name\":\"Cache-Control\",\"value\":\"no-store\"},{\"name\":\"Content-Security-Policy\",\"value\":\"frame-ancestors 'none'\"},{\"name\":\"X-Content-Type-Options\",\"value\":\"nosniff\"},{\"name\":\"X-Frame-Options\",\"value\":\"DENY\"},{\"name\":\"X-Xss-Protection\",\"value\":\"1; mode=block\"},{\"name\":\"X-Cache\",\"value\":\"Error from cloudfront\"},{\"name\":\"Via\",\"value\":\"1.1 002de56e7b3062c0f06a60060d0548f6.cloudfront.net (CloudFront)\"},{\"name\":\"X-Amz-Cf-Pop\",\"value\":\"SGN50-P2\"},{\"name\":\"X-Amz-Cf-Id\",\"value\":\"AzhjLDhfD-dubrlTApat5_fR5oAZhFum3oswEDNlZo7A91IxEqftBg==\"}],\"_headersMap\":{\"_map\":{}}},\"_request\":{\"_type\":\"APIRequestContext\",\"_guid\":\"request-context@e3ec36ed5d33d7ece928df9bd650cc9d\"}}",
-                                    "type": "step",
-                                    "stepType": "test.step",
-                                    "duration": 0,
-                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
-                                },
-                                {
-                                    "id": "x82y7ur9jzs96tlh6ljc",
-                                    "title": "apiResponse.json",
-                                    "type": "step",
-                                    "stepType": "pw:api",
-                                    "duration": 2,
-                                    "location": "src/tests/endpoints/department-enpoint.ts:30:68"
-                                },
-                                {
-                                    "id": "c8beghl6h3rrgshqi2h8",
-                                    "title": "After Hooks",
-                                    "type": "step",
-                                    "stepType": "hook",
-                                    "duration": 1,
-                                    "location": ""
-                                }
-                            ],
-                            "errorNum": 1
-                        },
-                        {
-                            "id": "9bfae9e4b4aff0c9dee1",
-                            "title": "C55311: @tc-06 Status code - Create billing - Department id - accepted - valid id - is 201",
-                            "type": "case",
-                            "caseType": "failed",
-                            "ok": false,
-                            "outcome": "unexpected",
-                            "expectedStatus": "passed",
-                            "location": "src/tests/scripts/invoice-flow.spec.ts:70:5",
-                            "logs": [
-                                "[18:32:04.204] [INFO] Request is using token #0\n"
-                            ],
-                            "timestamps": [
-                                1711625524196,
-                                1711625524608
-                            ],
-                            "duration": 412,
-                            "tags": [
-                                "@tc-06"
-                            ],
-                            "timeout": 60000,
-                            "errors": [
-                                "SyntaxError: Unexpected non-whitespace character after JSON at position 4\n\n\u001b[0m \u001b[90m 37 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 38 |\u001b[39m     \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mrequestSender(\u001b[33mHttpMethod\u001b[39m\u001b[33m.\u001b[39m\u001b[33mPOST\u001b[39m\u001b[33m,\u001b[39m \u001b[33mBILLINGS_EP\u001b[39m\u001b[33m,\u001b[39m { data\u001b[33m:\u001b[39m data })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 39 |\u001b[39m     sharedData\u001b[33m.\u001b[39msetContext(\u001b[33mAppId\u001b[39m\u001b[33m.\u001b[39m\u001b[33mAPP_BILLING_ID\u001b[39m\u001b[33m,\u001b[39m (\u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson())\u001b[33m.\u001b[39mid)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\n    at BillingsEndpoint.createByData (/Users/mfv-computer-0149/Documents/STML-Automation/qa-auto-pw-api/src/tests/endpoints/billings-endpoint.ts:39:50)\n    at /Users/mfv-computer-0149/Documents/STML-Automation/qa-auto-pw-api/src/tests/scripts/invoice-flow.spec.ts:107:22"
-                            ],
-                            "retry": 0,
-                            "status": "failed",
-                            "stepNum": 8,
-                            "stepFailed": 0,
-                            "stepSubs": false,
-                            "subs": [
-                                {
-                                    "id": "2x6ykicxlllrd3zuyabb",
-                                    "title": "Before Hooks",
-                                    "type": "step",
-                                    "stepType": "hook",
-                                    "duration": 6,
-                                    "location": ""
-                                },
-                                {
-                                    "id": "lpvl2fzhbi4smpl181yp",
-                                    "title": "apiRequest.newContext",
-                                    "type": "step",
-                                    "stepType": "pw:api",
-                                    "duration": 27,
-                                    "location": "src/utils/request/request-context.ts:23:38"
-                                },
-                                {
-                                    "id": "58b81azfupai17oqm2ks",
-                                    "title": "apiRequestContext.post(/api/v3/billings)",
-                                    "type": "step",
-                                    "stepType": "pw:api",
-                                    "duration": 361,
-                                    "location": "src/utils/request/request-context.ts:51:51"
-                                },
-                                {
-                                    "id": "1bpnrmkyrj14ybfkno4w",
-                                    "title": "Headers: {\"Authorization\":\"Bearer fw-svws1SZSbaq1VOZCEb2dbZRu6Sjk49dS4HiWc-QQ\",\"Content-Type\":\"application/json\"}",
-                                    "type": "step",
-                                    "stepType": "test.step",
-                                    "duration": 2,
-                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
-                                },
-                                {
-                                    "id": "fhust3jsuyo1ncw4tlak",
-                                    "title": "Options: {\"data\":{\"title\":\"create billing_yaiqygikYY\",\"memo\":\"memo_yaiqygikYY\",\"payment_condition\":\"payment_condition_yaiqygikYY\",\"billing_date\":\"2022/12/09\",\"due_date\":\"2022/12/10\",\"sales_date\":\"2022/12/09\",\"billing_number\":\"billing num_yaiqygikYY\",\"note\":\"note_yaiqygikYY\",\"document_name\":\"doc name_yaiqygikYY\",\"tag_names\":[\"tag_yaiqygikYY\"],\"items\":[{\"name\":\"item 003\",\"unit_price\":\"10\",\"unit\":\"\",\"quantity\":\"074280\",\"excise\":\"untaxable\"},{\"name\":\"product 111\",\"unit_price\":\"5\",\"unit\":\"\",\"quantity\":\"826729\",\"excise\":\"untaxable\"}]}}",
-                                    "type": "step",
-                                    "stepType": "test.step",
-                                    "duration": 0,
-                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
-                                },
-                                {
-                                    "id": "g8ew9o5as7g0ztqry2e6",
-                                    "title": "Request: {\"_initializer\":{\"fetchUid\":\"782557bf1762f7feb21ec1541987712c\",\"url\":\"https://api.stampless.mfvn.dev/api/v3/billings\",\"status\":404,\"statusText\":\"Not Found\",\"headers\":[{\"name\":\"Content-Type\",\"value\":\"text/plain\"},{\"name\":\"Content-Length\",\"value\":\"18\"},{\"name\":\"Connection\",\"value\":\"close\"},{\"name\":\"Date\",\"value\":\"Thu, 28 Mar 2024 11:32:04 GMT\"},{\"name\":\"Cache-Control\",\"value\":\"no-store\"},{\"name\":\"Content-Security-Policy\",\"value\":\"frame-ancestors 'none'\"},{\"name\":\"X-Content-Type-Options\",\"value\":\"nosniff\"},{\"name\":\"X-Frame-Options\",\"value\":\"DENY\"},{\"name\":\"X-Xss-Protection\",\"value\":\"1; mode=block\"},{\"name\":\"X-Cache\",\"value\":\"Error from cloudfront\"},{\"name\":\"Via\",\"value\":\"1.1 68d3b838d5846e0e7d431f48798482f4.cloudfront.net (CloudFront)\"},{\"name\":\"X-Amz-Cf-Pop\",\"value\":\"SGN50-P2\"},{\"name\":\"X-Amz-Cf-Id\",\"value\":\"-35P35eWcSmb1SDsgYFKsmBo6Kly_wRlJDb36aNlxdVkB_MQx1hIpw==\"}]},\"_headers\":{\"_headersArray\":[{\"name\":\"Content-Type\",\"value\":\"text/plain\"},{\"name\":\"Content-Length\",\"value\":\"18\"},{\"name\":\"Connection\",\"value\":\"close\"},{\"name\":\"Date\",\"value\":\"Thu, 28 Mar 2024 11:32:04 GMT\"},{\"name\":\"Cache-Control\",\"value\":\"no-store\"},{\"name\":\"Content-Security-Policy\",\"value\":\"frame-ancestors 'none'\"},{\"name\":\"X-Content-Type-Options\",\"value\":\"nosniff\"},{\"name\":\"X-Frame-Options\",\"value\":\"DENY\"},{\"name\":\"X-Xss-Protection\",\"value\":\"1; mode=block\"},{\"name\":\"X-Cache\",\"value\":\"Error from cloudfront\"},{\"name\":\"Via\",\"value\":\"1.1 68d3b838d5846e0e7d431f48798482f4.cloudfront.net (CloudFront)\"},{\"name\":\"X-Amz-Cf-Pop\",\"value\":\"SGN50-P2\"},{\"name\":\"X-Amz-Cf-Id\",\"value\":\"-35P35eWcSmb1SDsgYFKsmBo6Kly_wRlJDb36aNlxdVkB_MQx1hIpw==\"}],\"_headersMap\":{\"_map\":{}}},\"_request\":{\"_type\":\"APIRequestContext\",\"_guid\":\"request-context@fcf49c36f9603ff898d2e0459be1bd10\"}}",
-                                    "type": "step",
-                                    "stepType": "test.step",
-                                    "duration": 0,
-                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
-                                },
-                                {
-                                    "id": "1vk0srgc4xeq175q86u9",
-                                    "title": "apiResponse.json",
-                                    "type": "step",
-                                    "stepType": "pw:api",
-                                    "duration": 1,
-                                    "location": "src/tests/endpoints/billings-endpoint.ts:39:65"
-                                },
-                                {
-                                    "id": "dgrwux43tx1bgbp1oxoe",
-                                    "title": "After Hooks",
-                                    "type": "step",
-                                    "stepType": "hook",
-                                    "duration": 1,
-                                    "location": ""
-                                }
-                            ],
-                            "errorNum": 1
-                        },
-                        {
-                            "id": "742ee2cec7f95e2acb10",
-                            "title": "C55312: @tc-07 Status code - Attach an Item into a Billing - Item id - accepted - valid item id - is 201",
-                            "type": "case",
-                            "caseType": "failed",
-                            "ok": false,
-                            "outcome": "unexpected",
-                            "expectedStatus": "passed",
-                            "location": "src/tests/scripts/invoice-flow.spec.ts:113:5",
-                            "logs": [
-                                "[18:32:06.491] [INFO] Request is using token #0\n"
-                            ],
-                            "timestamps": [
-                                1711625526478,
-                                1711625526698
-                            ],
-                            "duration": 220,
-                            "tags": [
-                                "@tc-07"
-                            ],
-                            "timeout": 60000,
-                            "errors": [
-                                "SyntaxError: Unexpected non-whitespace character after JSON at position 4\n\n\u001b[0m \u001b[90m 58 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 59 |\u001b[39m     \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mrequestSender(\u001b[33mHttpMethod\u001b[39m\u001b[33m.\u001b[39m\u001b[33mPOST\u001b[39m\u001b[33m,\u001b[39m \u001b[33mITEMS_EP\u001b[39m\u001b[33m,\u001b[39m { data\u001b[33m:\u001b[39m data })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 60 |\u001b[39m     sharedData\u001b[33m.\u001b[39msetContext(\u001b[33mAppId\u001b[39m\u001b[33m.\u001b[39m\u001b[33mAPP_ITEM_ID\u001b[39m\u001b[33m,\u001b[39m (\u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson())\u001b[33m.\u001b[39mid)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\n    at BillingsEndpoint.createItem (/Users/mfv-computer-0149/Documents/STML-Automation/qa-auto-pw-api/src/tests/endpoints/billings-endpoint.ts:60:47)\n    at /Users/mfv-computer-0149/Documents/STML-Automation/qa-auto-pw-api/src/tests/scripts/invoice-flow.spec.ts:115:22"
-                            ],
-                            "retry": 0,
-                            "status": "failed",
-                            "stepNum": 8,
-                            "stepFailed": 0,
-                            "stepSubs": false,
-                            "subs": [
-                                {
-                                    "id": "3azg0y8ukpuf1sodwl3t",
-                                    "title": "Before Hooks",
-                                    "type": "step",
-                                    "stepType": "hook",
-                                    "duration": 6,
-                                    "location": ""
-                                },
-                                {
-                                    "id": "helhs4kkfgdth49x8x84",
-                                    "title": "apiRequest.newContext",
-                                    "type": "step",
-                                    "stepType": "pw:api",
-                                    "duration": 22,
-                                    "location": "src/utils/request/request-context.ts:23:38"
-                                },
-                                {
-                                    "id": "w6wz1yp6wbx0axkqldlr",
-                                    "title": "apiRequestContext.post(api/v3/items)",
-                                    "type": "step",
-                                    "stepType": "pw:api",
-                                    "duration": 167,
-                                    "location": "src/utils/request/request-context.ts:51:51"
-                                },
-                                {
-                                    "id": "e1fbv8ybc2pax91nbsda",
-                                    "title": "Headers: {\"Authorization\":\"Bearer fw-svws1SZSbaq1VOZCEb2dbZRu6Sjk49dS4HiWc-QQ\",\"Content-Type\":\"application/json\"}",
-                                    "type": "step",
-                                    "stepType": "test.step",
-                                    "duration": 3,
-                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
-                                },
-                                {
-                                    "id": "psym9nhtev9qbbcezeti",
-                                    "title": "Options: {\"data\":{\"name\":\"name_FOGJnXmvFQ\",\"code\":\"code_FOGJnXmvFQ\",\"detail\":\"detail_FOGJnXmvFQ\",\"unit\":\"unit_FOGJnXmvFQ\",\"price\":\"10000\",\"quantity\":\"999.9\",\"is_deduct_withholding_tax\":true,\"excise\":\"eight_percent_as_reduced_tax_rate\"}}",
-                                    "type": "step",
-                                    "stepType": "test.step",
-                                    "duration": 0,
-                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
-                                },
-                                {
-                                    "id": "894j98vul3dqwo49qe43",
-                                    "title": "Request: {\"_initializer\":{\"fetchUid\":\"79bc496bde3ec368996509304fe2d85e\",\"url\":\"https://api.stampless.mfvn.dev/api/v3/items\",\"status\":404,\"statusText\":\"Not Found\",\"headers\":[{\"name\":\"Content-Type\",\"value\":\"text/plain\"},{\"name\":\"Content-Length\",\"value\":\"18\"},{\"name\":\"Connection\",\"value\":\"close\"},{\"name\":\"Date\",\"value\":\"Thu, 28 Mar 2024 11:32:06 GMT\"},{\"name\":\"Cache-Control\",\"value\":\"no-store\"},{\"name\":\"Content-Security-Policy\",\"value\":\"frame-ancestors 'none'\"},{\"name\":\"X-Content-Type-Options\",\"value\":\"nosniff\"},{\"name\":\"X-Frame-Options\",\"value\":\"DENY\"},{\"name\":\"X-Xss-Protection\",\"value\":\"1; mode=block\"},{\"name\":\"X-Cache\",\"value\":\"Error from cloudfront\"},{\"name\":\"Via\",\"value\":\"1.1 42be2f5c4171ea6403329c96869121be.cloudfront.net (CloudFront)\"},{\"name\":\"X-Amz-Cf-Pop\",\"value\":\"SGN50-P2\"},{\"name\":\"X-Amz-Cf-Id\",\"value\":\"pSspCdQehDu99NQefpWSN_THTqxc09Dse8V_xCo3oCs3oHXa-i8jZw==\"}]},\"_headers\":{\"_headersArray\":[{\"name\":\"Content-Type\",\"value\":\"text/plain\"},{\"name\":\"Content-Length\",\"value\":\"18\"},{\"name\":\"Connection\",\"value\":\"close\"},{\"name\":\"Date\",\"value\":\"Thu, 28 Mar 2024 11:32:06 GMT\"},{\"name\":\"Cache-Control\",\"value\":\"no-store\"},{\"name\":\"Content-Security-Policy\",\"value\":\"frame-ancestors 'none'\"},{\"name\":\"X-Content-Type-Options\",\"value\":\"nosniff\"},{\"name\":\"X-Frame-Options\",\"value\":\"DENY\"},{\"name\":\"X-Xss-Protection\",\"value\":\"1; mode=block\"},{\"name\":\"X-Cache\",\"value\":\"Error from cloudfront\"},{\"name\":\"Via\",\"value\":\"1.1 42be2f5c4171ea6403329c96869121be.cloudfront.net (CloudFront)\"},{\"name\":\"X-Amz-Cf-Pop\",\"value\":\"SGN50-P2\"},{\"name\":\"X-Amz-Cf-Id\",\"value\":\"pSspCdQehDu99NQefpWSN_THTqxc09Dse8V_xCo3oCs3oHXa-i8jZw==\"}],\"_headersMap\":{\"_map\":{}}},\"_request\":{\"_type\":\"APIRequestContext\",\"_guid\":\"request-context@4cfe80d8fd03970067848545fda5e7b4\"}}",
-                                    "type": "step",
-                                    "stepType": "test.step",
-                                    "duration": 1,
-                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
-                                },
-                                {
-                                    "id": "0uwlf6azjqdjckx4bf9l",
-                                    "title": "apiResponse.json",
-                                    "type": "step",
-                                    "stepType": "pw:api",
-                                    "duration": 1,
-                                    "location": "src/tests/endpoints/billings-endpoint.ts:60:62"
-                                },
-                                {
-                                    "id": "kaa0n2w9sq2mbpo1bx5d",
-                                    "title": "After Hooks",
-                                    "type": "step",
-                                    "stepType": "hook",
-                                    "duration": 1,
-                                    "location": ""
-                                }
-                            ],
-                            "errorNum": 1
-                        },
-                        {
-                            "id": "66dcd8cfb08d28ec7fb3",
-                            "title": "C55313: @tc-08 Clean test data - Delete Billing, Item, Department, Partner",
-                            "type": "case",
-                            "caseType": "failed",
-                            "ok": false,
-                            "outcome": "unexpected",
-                            "expectedStatus": "passed",
-                            "location": "src/tests/scripts/invoice-flow.spec.ts:130:5",
-                            "logs": [
-                                "[18:32:08.135] [INFO] Request is using token #0\n",
-                                "[18:32:08.167] [INFO] Request is using token #0\n"
-                            ],
-                            "timestamps": [
-                                1711625528126,
-                                1711625528566
-                            ],
-                            "duration": 440,
-                            "tags": [
-                                "@tc-08"
-                            ],
-                            "timeout": 60000,
-                            "retry": 0,
-                            "status": "failed",
-                            "stepNum": 8,
-                            "stepFailed": 1,
-                            "stepSubs": false,
-                            "subs": [
-                                {
-                                    "id": "2oehbdpqkmrcqwrr29bs",
-                                    "title": "Before Hooks",
-                                    "type": "step",
-                                    "stepType": "hook",
-                                    "duration": 8,
-                                    "location": ""
-                                },
-                                {
-                                    "id": "pmrbukzee3qddqb5bab3",
-                                    "title": "apiRequest.newContext",
-                                    "type": "step",
-                                    "stepType": "pw:api",
-                                    "duration": 26,
-                                    "location": "src/utils/request/request-context.ts:23:38",
-                                    "count": 2
-                                },
-                                {
-                                    "id": "opwigdrit0w7utwil9u9",
-                                    "title": "apiRequestContext.delete(/api/v3/billings/undefined)",
-                                    "type": "step",
-                                    "stepType": "pw:api",
-                                    "duration": 359,
-                                    "location": "src/utils/request/request-context.ts:71:47"
-                                },
-                                {
-                                    "id": "bbaqyr1ve3bxb0auve6s",
-                                    "title": "Headers: {\"Authorization\":\"Bearer fw-svws1SZSbaq1VOZCEb2dbZRu6Sjk49dS4HiWc-QQ\",\"Content-Type\":\"application/json\"}",
-                                    "type": "step",
-                                    "stepType": "test.step",
-                                    "duration": 2,
-                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
-                                },
-                                {
-                                    "id": "oz9yihxcu7rratpv0z39",
-                                    "title": "Request: {}",
-                                    "type": "step",
-                                    "stepType": "test.step",
-                                    "duration": 0,
-                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
-                                },
-                                {
-                                    "id": "ulighujvrhe6dbg52xmx",
-                                    "title": "expect.toBe",
-                                    "type": "step",
-                                    "stepType": "expect",
-                                    "duration": 34,
-                                    "location": "src/tests/scripts/invoice-flow.spec.ts:133:31",
-                                    "errors": [
-                                        "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m204\u001b[39m\nReceived: \u001b[31m404\u001b[39m\n\n\u001b[0m \u001b[90m 131 |\u001b[39m     \u001b[36mconst\u001b[39m billingInstance \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mBillingsEndpoint\u001b[39m()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 132 |\u001b[39m     \u001b[36mlet\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m billingInstance\u001b[33m.\u001b[39m\u001b[36mdelete\u001b[39m()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 133 |\u001b[39m     expect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBe(\u001b[35m204\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m     |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\n    at /Users/mfv-computer-0149/Documents/STML-Automation/qa-auto-pw-api/src/tests/scripts/invoice-flow.spec.ts:133:31"
-                                    ],
-                                    "errorNum": 1
-                                },
-                                {
-                                    "id": "pvdec8xgwe71mqwmbah1",
-                                    "title": "After Hooks",
-                                    "type": "step",
-                                    "stepType": "hook",
-                                    "duration": 1,
-                                    "location": ""
-                                }
-                            ],
-                            "errorNum": 1,
-                            "errorId": "ulighujvrhe6dbg52xmx"
-                        }
-                    ],
-                    "location": "src/tests/scripts/invoice-flow.spec.ts:0:0"
-                },
                 {
                     "id": "eb79f55ffc2531aa3ac0",
                     "title": "scripts/stml-contractType.spec.ts",
@@ -1319,53 +195,103 @@
                     "caseNum": 1,
                     "subs": [
                         {
-                            "id": "16157b5fedcff8557387",
-                            "title": "@Test1: Status code 401 - GetContractType (application templates) - Wrong Tennant UserID",
+                            "id": "904d017a5f2b22ab93e0",
+                            "title": "@CT01: Status code 403 - GetContractType (application templates) - Insufficient office plan",
                             "type": "case",
                             "caseType": "failed",
                             "ok": false,
                             "outcome": "unexpected",
                             "expectedStatus": "passed",
-                            "location": "src/tests/scripts/stml-contractType.spec.ts:8:5",
+                            "location": "src/tests/scripts/stml-contractType.spec.ts:10:5",
                             "logs": [
-                                "[18:31:36.976] [INFO] Token 1 is expired. Getting new token!\n"
+                                "[20:37:09.580] [INFO] Request is using token #0\n"
                             ],
                             "timestamps": [
-                                1711625496967,
-                                1711625497004
+                                1711892229573,
+                                1711892230109
                             ],
-                            "duration": 37,
+                            "duration": 536,
                             "tags": [
-                                "@Test1:"
+                                "@CT01:"
                             ],
                             "timeout": 60000,
-                            "errors": [
-                                "TypeError: Invalid initialization vector\n\n\u001b[0m \u001b[90m 115 |\u001b[39m     \u001b[36mconst\u001b[39m iv \u001b[33m=\u001b[39m \u001b[33mBuffer\u001b[39m\u001b[33m.\u001b[39m\u001b[36mfrom\u001b[39m(encryptedText\u001b[33m.\u001b[39mslice(\u001b[35m0\u001b[39m\u001b[33m,\u001b[39m \u001b[35m32\u001b[39m)\u001b[33m,\u001b[39m \u001b[32m'hex'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 116 |\u001b[39m     \u001b[36mconst\u001b[39m encryptedData \u001b[33m=\u001b[39m encryptedText\u001b[33m.\u001b[39mslice(\u001b[35m32\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 117 |\u001b[39m     \u001b[36mconst\u001b[39m decipher \u001b[33m=\u001b[39m crypto\u001b[33m.\u001b[39mcreateDecipheriv(\u001b[32m'aes-256-cbc'\u001b[39m\u001b[33m,\u001b[39m key\u001b[33m,\u001b[39m iv)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m     |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\n    at decrypt (/Users/mfv-computer-0149/Documents/STML-Automation/qa-auto-pw-api/src/utils/authenticator/secure-token.ts:117:29)\n    at getToken (/Users/mfv-computer-0149/Documents/STML-Automation/qa-auto-pw-api/src/utils/authenticator/secure-token.ts:63:30)\n    at contractTypesEnpoint.AuthedRequest.initContext (/Users/mfv-computer-0149/Documents/STML-Automation/qa-auto-pw-api/src/utils/request/authed-request.ts:18:23)\n    at contractTypesEnpoint.getContractTypes (/Users/mfv-computer-0149/Documents/STML-Automation/qa-auto-pw-api/src/tests/endpoints/contract_types.ts:12:5)\n    at /Users/mfv-computer-0149/Documents/STML-Automation/qa-auto-pw-api/src/tests/scripts/stml-contractType.spec.ts:11:22"
-                            ],
                             "retry": 0,
                             "status": "failed",
-                            "stepNum": 2,
-                            "stepFailed": 0,
+                            "stepNum": 8,
+                            "stepFailed": 1,
                             "stepSubs": false,
                             "subs": [
                                 {
-                                    "id": "x9n9lv8qt3sb8g4emd4c",
+                                    "id": "9oyaaz258uvuawkrgle6",
                                     "title": "Before Hooks",
                                     "type": "step",
                                     "stepType": "hook",
-                                    "duration": 7,
+                                    "duration": 5,
                                     "location": ""
                                 },
                                 {
-                                    "id": "srio330tktovpw9i8asf",
+                                    "id": "4killlx7jmpmxsnfze7d",
+                                    "title": "apiRequest.newContext",
+                                    "type": "step",
+                                    "stepType": "pw:api",
+                                    "duration": 19,
+                                    "location": "src/utils/request/request-context.ts:23:38"
+                                },
+                                {
+                                    "id": "9xq11r2q0soqlgp5geab",
+                                    "title": "apiRequestContext.get(/v1/contract_types)",
+                                    "type": "step",
+                                    "stepType": "pw:api",
+                                    "duration": 487,
+                                    "location": "src/utils/request/request-context.ts:40:47"
+                                },
+                                {
+                                    "id": "9ct3vr8ifjgp1nut0xt4",
+                                    "title": "Headers: {\"X-Email\":\"ly.hong.phat@moneyforward.co.jp\"}",
+                                    "type": "step",
+                                    "stepType": "test.step",
+                                    "duration": 3,
+                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
+                                },
+                                {
+                                    "id": "3pvwo4c24mywzt6ysuzk",
+                                    "title": "Request: {\"_initializer\":{\"fetchUid\":\"e2213c25a244073211578a0ec088b066\",\"url\":\"https://api.stampless.mfvn.dev/v1/contract_types\",\"status\":401,\"statusText\":\"Unauthorized\",\"headers\":[{\"name\":\"Content-Type\",\"value\":\"application/json; charset=utf-8\"},{\"name\":\"Content-Length\",\"value\":\"123\"},{\"name\":\"Connection\",\"value\":\"close\"},{\"name\":\"Date\",\"value\":\"Sun, 31 Mar 2024 13:37:10 GMT\"},{\"name\":\"Cache-Control\",\"value\":\"no-store\"},{\"name\":\"Content-Security-Policy\",\"value\":\"frame-ancestors 'none'\"},{\"name\":\"X-Content-Type-Options\",\"value\":\"nosniff\"},{\"name\":\"X-Frame-Options\",\"value\":\"DENY\"},{\"name\":\"X-Xss-Protection\",\"value\":\"1; mode=block\"},{\"name\":\"X-Cache\",\"value\":\"Error from cloudfront\"},{\"name\":\"Via\",\"value\":\"1.1 b4c13ac794010250b114d884adf431b6.cloudfront.net (CloudFront)\"},{\"name\":\"X-Amz-Cf-Pop\",\"value\":\"SGN50-P2\"},{\"name\":\"X-Amz-Cf-Id\",\"value\":\"0yU7ekahvHAT5shl9PoYYl0pq87YlZ9wNJUUUzuxVNptq1dFTpw2NQ==\"}]},\"_headers\":{\"_headersArray\":[{\"name\":\"Content-Type\",\"value\":\"application/json; charset=utf-8\"},{\"name\":\"Content-Length\",\"value\":\"123\"},{\"name\":\"Connection\",\"value\":\"close\"},{\"name\":\"Date\",\"value\":\"Sun, 31 Mar 2024 13:37:10 GMT\"},{\"name\":\"Cache-Control\",\"value\":\"no-store\"},{\"name\":\"Content-Security-Policy\",\"value\":\"frame-ancestors 'none'\"},{\"name\":\"X-Content-Type-Options\",\"value\":\"nosniff\"},{\"name\":\"X-Frame-Options\",\"value\":\"DENY\"},{\"name\":\"X-Xss-Protection\",\"value\":\"1; mode=block\"},{\"name\":\"X-Cache\",\"value\":\"Error from cloudfront\"},{\"name\":\"Via\",\"value\":\"1.1 b4c13ac794010250b114d884adf431b6.cloudfront.net (CloudFront)\"},{\"name\":\"X-Amz-Cf-Pop\",\"value\":\"SGN50-P2\"},{\"name\":\"X-Amz-Cf-Id\",\"value\":\"0yU7ekahvHAT5shl9PoYYl0pq87YlZ9wNJUUUzuxVNptq1dFTpw2NQ==\"}],\"_headersMap\":{\"_map\":{}}},\"_request\":{\"_type\":\"APIRequestContext\",\"_guid\":\"request-context@5f949bda756088aeaa0ae8f1ebd5bc83\"}}",
+                                    "type": "step",
+                                    "stepType": "test.step",
+                                    "duration": 1,
+                                    "location": "node_modules/allure-playwright/src/helpers.ts:21:17"
+                                },
+                                {
+                                    "id": "z9vcpwasi6zh8z5y861q",
+                                    "title": "apiResponse.json",
+                                    "type": "step",
+                                    "stepType": "pw:api",
+                                    "duration": 2,
+                                    "location": "src/tests/scripts/stml-contractType.spec.ts:14:41"
+                                },
+                                {
+                                    "id": "7ps26vnrbky0fry3swql",
+                                    "title": "expect.toBe",
+                                    "type": "step",
+                                    "stepType": "expect",
+                                    "duration": 3,
+                                    "location": "src/tests/scripts/stml-contractType.spec.ts:15:31",
+                                    "errors": [
+                                        "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m403\u001b[39m\nReceived: \u001b[31m401\u001b[39m\n\n\u001b[0m \u001b[90m 13 |\u001b[39m     \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m instance\u001b[33m.\u001b[39mgetContractTypes(header)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 14 |\u001b[39m     \u001b[36mconst\u001b[39m responseBody \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 15 |\u001b[39m     expect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBe(\u001b[35m403\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\n    at /Users/mfv-computer-0149/Documents/STML-Automation/qa-auto-pw-api/src/tests/scripts/stml-contractType.spec.ts:15:31"
+                                    ],
+                                    "errorNum": 1
+                                },
+                                {
+                                    "id": "6zvv079a4rbza6ftee7i",
                                     "title": "After Hooks",
                                     "type": "step",
                                     "stepType": "hook",
-                                    "duration": 1,
+                                    "duration": 2,
                                     "location": ""
                                 }
                             ],
-                            "errorNum": 1
+                            "errorNum": 1,
+                            "errorId": "7ps26vnrbky0fry3swql"
                         }
                     ],
                     "location": "src/tests/scripts/stml-contractType.spec.ts:0:0"
@@ -1389,38 +315,14 @@
     "traceViewerUrl": "https://trace.playwright.dev/?trace={traceUrl}",
     "mermaid": null,
     "tags": {
-        "tc-01": {
-            "value": 1
-        },
-        "tc-02": {
-            "value": 1
-        },
-        "tc-03": {
-            "value": 1
-        },
-        "tc-04": {
-            "value": 1
-        },
-        "tc-05": {
-            "value": 1
-        },
-        "tc-06": {
-            "value": 1
-        },
-        "tc-07": {
-            "value": 1
-        },
-        "tc-08": {
-            "value": 1
-        },
-        "Test1:": {
+        "CT01:": {
             "value": 1
         }
     },
     "summary": {
         "tests": {
             "name": "Tests",
-            "value": 9,
+            "value": 1,
             "nav": true,
             "id": "tests"
         },
@@ -1450,7 +352,7 @@
         },
         "failed": {
             "name": "Failed",
-            "value": 9,
+            "value": 1,
             "color": "#d00",
             "nav": true,
             "id": "failed",
@@ -1458,12 +360,12 @@
         },
         "steps": {
             "name": "Steps",
-            "value": 83,
+            "value": 8,
             "id": "steps"
         },
         "suites": {
             "name": "Suites",
-            "value": 2,
+            "value": 1,
             "id": "suites"
         },
         "projects": {
@@ -1475,7 +377,7 @@
         "files": {
             "name": "Files",
             "description": "Suite type is file",
-            "value": 2,
+            "value": 1,
             "id": "files"
         },
         "describes": {
@@ -1497,12 +399,12 @@
         },
         "errors": {
             "name": "Errors",
-            "value": 9,
+            "value": 1,
             "id": "errors"
         },
         "logs": {
             "name": "Logs",
-            "value": 11,
+            "value": 1,
             "id": "logs"
         },
         "attachments": {
@@ -1520,6 +422,6 @@
         "width": 360,
         "height": 150,
         "margin": 10,
-        "svg": "<svg viewBox=\"0 0 360 150\" width=\"100%\" height=\"100%\" xmlns=\"http://www.w3.org/2000/svg\"><g class=\"mcr-pie-path-passed\"><path d=\"\" fill=\"green\" opacity=\"0.8\" /><animateTransform from=\"0,0\" to=\"0,0\" pos=\"0,-10\" attributeName=\"transform\" type=\"translate\" dur=\"0.2s\" fill=\"freeze\" repeatCount=\"1\" restart=\"always\" /></g><g class=\"mcr-pie-path-flaky\"><path d=\"\" fill=\"orange\" opacity=\"0.8\" /><animateTransform from=\"0,0\" to=\"0,0\" pos=\"0,-10\" attributeName=\"transform\" type=\"translate\" dur=\"0.2s\" fill=\"freeze\" repeatCount=\"1\" restart=\"always\" /></g><g class=\"mcr-pie-path-skipped\"><path d=\"\" fill=\"gray\" opacity=\"0.8\" /><animateTransform from=\"0,0\" to=\"0,0\" pos=\"0,-10\" attributeName=\"transform\" type=\"translate\" dur=\"0.2s\" fill=\"freeze\" repeatCount=\"1\" restart=\"always\" /></g><g class=\"mcr-pie-path-failed\"><path d=\"M75,75 L75,10 A65,65 0 1 1 75,140 A65,65 0 1 1 75,10 z\" fill=\"#d00\" opacity=\"0.8\" /><animateTransform from=\"0,0\" to=\"0,0\" pos=\"0,10\" attributeName=\"transform\" type=\"translate\" dur=\"0.2s\" fill=\"freeze\" repeatCount=\"1\" restart=\"always\" /></g><g transform=\"translate(160 10)\"><g class=\"mcr-pie-legend-passed\" transform=\"translate(0 0)\"><circle cx=\"10\" cy=\"16\" r=\"10\" fill=\"green\" opacity=\"0.8\" /><text x=\"30\" y=\"16\" alignment-baseline=\"middle\">Passed</text><text x=\"115\" y=\"16\" alignment-baseline=\"middle\" text-anchor=\"middle\">0</text><text x=\"190\" y=\"16\" alignment-baseline=\"middle\" text-anchor=\"end\">0.0%</text></g><g class=\"mcr-pie-legend-flaky\" transform=\"translate(0 32)\"><circle cx=\"10\" cy=\"16\" r=\"10\" fill=\"orange\" opacity=\"0.8\" /><text x=\"30\" y=\"16\" alignment-baseline=\"middle\">Flaky</text><text x=\"115\" y=\"16\" alignment-baseline=\"middle\" text-anchor=\"middle\">0</text><text x=\"190\" y=\"16\" alignment-baseline=\"middle\" text-anchor=\"end\">0.0%</text></g><g class=\"mcr-pie-legend-skipped\" transform=\"translate(0 64)\"><circle cx=\"10\" cy=\"16\" r=\"10\" fill=\"gray\" opacity=\"0.8\" /><text x=\"30\" y=\"16\" alignment-baseline=\"middle\">Skipped</text><text x=\"115\" y=\"16\" alignment-baseline=\"middle\" text-anchor=\"middle\">0</text><text x=\"190\" y=\"16\" alignment-baseline=\"middle\" text-anchor=\"end\">0.0%</text></g><g class=\"mcr-pie-legend-failed\" transform=\"translate(0 96)\"><circle cx=\"10\" cy=\"16\" r=\"10\" fill=\"#d00\" opacity=\"0.8\" /><text x=\"30\" y=\"16\" alignment-baseline=\"middle\">Failed</text><text x=\"115\" y=\"16\" alignment-baseline=\"middle\" text-anchor=\"middle\">9</text><text x=\"190\" y=\"16\" alignment-baseline=\"middle\" text-anchor=\"end\">100.0%</text></g></g></svg>"
+        "svg": "<svg viewBox=\"0 0 360 150\" width=\"100%\" height=\"100%\" xmlns=\"http://www.w3.org/2000/svg\"><g class=\"mcr-pie-path-passed\"><path d=\"\" fill=\"green\" opacity=\"0.8\" /><animateTransform from=\"0,0\" to=\"0,0\" pos=\"0,-10\" attributeName=\"transform\" type=\"translate\" dur=\"0.2s\" fill=\"freeze\" repeatCount=\"1\" restart=\"always\" /></g><g class=\"mcr-pie-path-flaky\"><path d=\"\" fill=\"orange\" opacity=\"0.8\" /><animateTransform from=\"0,0\" to=\"0,0\" pos=\"0,-10\" attributeName=\"transform\" type=\"translate\" dur=\"0.2s\" fill=\"freeze\" repeatCount=\"1\" restart=\"always\" /></g><g class=\"mcr-pie-path-skipped\"><path d=\"\" fill=\"gray\" opacity=\"0.8\" /><animateTransform from=\"0,0\" to=\"0,0\" pos=\"0,-10\" attributeName=\"transform\" type=\"translate\" dur=\"0.2s\" fill=\"freeze\" repeatCount=\"1\" restart=\"always\" /></g><g class=\"mcr-pie-path-failed\"><path d=\"M75,75 L75,10 A65,65 0 1 1 75,140 A65,65 0 1 1 75,10 z\" fill=\"#d00\" opacity=\"0.8\" /><animateTransform from=\"0,0\" to=\"0,0\" pos=\"0,10\" attributeName=\"transform\" type=\"translate\" dur=\"0.2s\" fill=\"freeze\" repeatCount=\"1\" restart=\"always\" /></g><g transform=\"translate(160 10)\"><g class=\"mcr-pie-legend-passed\" transform=\"translate(0 0)\"><circle cx=\"10\" cy=\"16\" r=\"10\" fill=\"green\" opacity=\"0.8\" /><text x=\"30\" y=\"16\" alignment-baseline=\"middle\">Passed</text><text x=\"115\" y=\"16\" alignment-baseline=\"middle\" text-anchor=\"middle\">0</text><text x=\"190\" y=\"16\" alignment-baseline=\"middle\" text-anchor=\"end\">0.0%</text></g><g class=\"mcr-pie-legend-flaky\" transform=\"translate(0 32)\"><circle cx=\"10\" cy=\"16\" r=\"10\" fill=\"orange\" opacity=\"0.8\" /><text x=\"30\" y=\"16\" alignment-baseline=\"middle\">Flaky</text><text x=\"115\" y=\"16\" alignment-baseline=\"middle\" text-anchor=\"middle\">0</text><text x=\"190\" y=\"16\" alignment-baseline=\"middle\" text-anchor=\"end\">0.0%</text></g><g class=\"mcr-pie-legend-skipped\" transform=\"translate(0 64)\"><circle cx=\"10\" cy=\"16\" r=\"10\" fill=\"gray\" opacity=\"0.8\" /><text x=\"30\" y=\"16\" alignment-baseline=\"middle\">Skipped</text><text x=\"115\" y=\"16\" alignment-baseline=\"middle\" text-anchor=\"middle\">0</text><text x=\"190\" y=\"16\" alignment-baseline=\"middle\" text-anchor=\"end\">0.0%</text></g><g class=\"mcr-pie-legend-failed\" transform=\"translate(0 96)\"><circle cx=\"10\" cy=\"16\" r=\"10\" fill=\"#d00\" opacity=\"0.8\" /><text x=\"30\" y=\"16\" alignment-baseline=\"middle\">Failed</text><text x=\"115\" y=\"16\" alignment-baseline=\"middle\" text-anchor=\"middle\">1</text><text x=\"190\" y=\"16\" alignment-baseline=\"middle\" text-anchor=\"end\">100.0%</text></g></g></svg>"
     }
 }
