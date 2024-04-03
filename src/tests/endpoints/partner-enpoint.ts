@@ -8,9 +8,8 @@ const PARTNERS_EP = '/api/v3/partners'
 export default class PartnerEndpoint extends AuthedRequest {
   create = async () => {
     await this.initContext();
-    const sharedData = await this.sharedData;
     const randomString = Random.$(RandomType.STRING);
-    sharedData.setContext("randomString", randomString);
+    this.sharedData.setContext("randomString", randomString);
     const data = {
       "code": randomString,
       "name": "Auto test " + randomString,
@@ -19,14 +18,13 @@ export default class PartnerEndpoint extends AuthedRequest {
       "memo": randomString
     }
     const response = await this.requestSender(HttpMethod.POST, PARTNERS_EP, { data: data });
-    sharedData.setContext(AppId.APP_PARTNER_ID, (await response.json()).id);
+    this.sharedData.setContext(AppId.APP_PARTNER_ID, (await response.json()).id);
     return response;
   }
 
   get = async () => {
     await this.initContext();
-    const sharedData = await this.sharedData;
-    const id = sharedData.getContext(AppId.APP_PARTNER_ID)
+    const id = this.sharedData.getContext(AppId.APP_PARTNER_ID)
     const path = `${PARTNERS_EP}/${id}`;
     const params = {
       "page": 1,
@@ -37,8 +35,7 @@ export default class PartnerEndpoint extends AuthedRequest {
 
   delete = async () => {
     await this.initContext();
-    const sharedData = await this.sharedData;
-    const path = `${PARTNERS_EP}/${sharedData.getContext(AppId.APP_PARTNER_ID)}`;
+    const path = `${PARTNERS_EP}/${this.sharedData.getContext(AppId.APP_PARTNER_ID)}`;
     return await this.requestSender(HttpMethod.DELETE, path);
   }
 }

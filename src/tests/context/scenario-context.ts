@@ -1,25 +1,26 @@
-import { TestContext } from "./test-context";
+import {TestContext} from "./test-context";
 
 export class ScenarioContext {
     private testContext;
-    private static instance: ScenarioContext;
+    private static instance: { [id: string]: ScenarioContext } = {};
 
     private constructor() {
         this.testContext = new TestContext();
     }
 
-    public static async getInstance(): Promise<ScenarioContext> {
-        if (this.instance == null) {
-            this.instance = new ScenarioContext();
+    public static async getInstance(id: number | string | undefined) {
+        let idStr = String(id);
+        if (this.instance[idStr] == null || undefined) {
+            this.instance[idStr] = new ScenarioContext();
         }
-        return this.instance;
+        return this.instance[idStr];
     }
 
     public setContext(key: string, value: any): void {
         this.testContext.setData(key, value);
     }
 
-    public getContext(key: string): any {
+    public getContext(key: string): any | undefined {
         return this.testContext.getData(key);
     }
 

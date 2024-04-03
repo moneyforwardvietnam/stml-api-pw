@@ -1,7 +1,7 @@
 import {APIRequestContext, APIResponse, request} from '@playwright/test';
 import {allure} from "allure-playwright";
 import {HttpMethod} from './http-method';
-import {ScenarioContext} from '../../tests/context/scenario-context';
+import {ScenarioContext} from "../../tests/context/scenario-context";
 
 require('dotenv').config()
 
@@ -9,7 +9,7 @@ export default class RequestContext {
     public context!: APIRequestContext;
     public baseURL;
     public headers: any;
-    public sharedData = ScenarioContext.getInstance();
+    public sharedData!: ScenarioContext;
 
     constructor(baseURL: any) {
         this.baseURL = baseURL;
@@ -19,6 +19,10 @@ export default class RequestContext {
         this.headers = headers
     }
 
+    async setSharedData(sharedData: ScenarioContext) {
+        this.sharedData = sharedData;
+    }
+
     async initialize() {
         this.context = await request.newContext({
             baseURL: this.baseURL,
@@ -26,13 +30,30 @@ export default class RequestContext {
         });
     }
 
-    // async requestSender<T = unknown>(method: HttpMethod, path: string, options?: { data?: T, form?: any, params?: any }, header?: any): Promise<APIResponse> {
-    //     const response = await this.request(method, path, options, header);
-    //     allure.logStep("Response: " + response.json());
-    //     return response;
-    // }
+    async requestSender<T = unknown>(method: HttpMethod, path: string, options?: {
+        data?: T,
+        form?: any,
+        params?: any
+    }, header?: any): Promise<APIResponse> {
+        const response = await this.request(method, path, options, header);
+        try {
+            await allure.logStep("Headers: " + JSON.stringify(this.headers))
+            if (options) {
+                await allure.logStep("Options: " + JSON.stringify(options));
+            }
+            await allure.logStep("Status code: " + response.status() + " - " + response.statusText());
+            await allure.logStep("Response body: " + await response.body());
+        } catch {
+            //ignored
+        }
+        return response;
+    }
 
-    async requestSender<T = unknown>(method: HttpMethod, path: string, options?: { data?: T, form?: any, params?: any }, header?: any): Promise<APIResponse> {
+    async request<T = unknown>(method: HttpMethod, path: string, options?: {
+        data?: T,
+        form?: any,
+        params?: any
+    }, header?: any): Promise<APIResponse> {
         let response;
         const headers = header ? header : this.headers;
         switch (method) {
@@ -55,7 +76,7 @@ export default class RequestContext {
                     })
                 }
                 break;
-            case HttpMethod.PUT: ;
+            case HttpMethod.PUT:
                 if (options === undefined) {
                     response = await this.context.put(path, {
                         headers: headers
@@ -70,18 +91,9 @@ export default class RequestContext {
             case HttpMethod.DELETE:
                 response = this.context.delete(path);
                 break;
-            default: throw new Error('Method not implemented');
+            default:
+                throw new Error('Method not implemented');
         }
-
-        try {
-            await allure.logStep("Headers: " + JSON.stringify(headers))
-            if (options) {
-                await allure.logStep("Options: " + JSON.stringify(options));
-            }
-            await allure.logStep("Request: " + JSON.stringify(response));
-        } catch { }
-
-
         return response;
     }
 }

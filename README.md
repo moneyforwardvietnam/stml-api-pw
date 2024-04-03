@@ -14,6 +14,11 @@ After running your tests, you can generate and view HTML reports with the follow
 $ npx monocart show-report test-results/index.html
 ```
 
+**Encrypt the secret text**
+```sh
+$ npx ts-node src/utils/authenticator/encrypt.ts "TEXT_TO_ENCRYPT" "PRIVATE_KEY"
+```
+
 🔍 **Slack summary report: qa-auto-pw-api**
 
 🚀 *Branch:* dev
@@ -44,6 +49,3 @@ Total Test Cases: Note the total number of test cases executed in this test run.
 Test Results: Check the number of test cases that passed and failed.
 Details: Read any additional information provided, such as the trigger method (manual or automatic) and any action items suggested.
 Investigation Required: Pay attention to any indications of issues or failures that require investigation.
-
-# stml-api-pw
-# stml-api-pw

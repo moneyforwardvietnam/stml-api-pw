@@ -18,7 +18,10 @@ export async function getCode(clientId: string, username: string, password: stri
     if (await bio.isVisible({ timeout: 2 })) {
         await bio.click();
     }
-    await page.locator("//tr/td[text()='9382-9420']").click();
+
+    await page.locator("//tr/td[text()='5981-1807']").click();
+    // Modify the dynamic locator
+
     await page.locator("button.btn-primary").click();
     await page.locator("form input.btn-primary").click();
     await waitForURLContains(page, 'callback?code=', 60000);
@@ -26,7 +29,6 @@ export async function getCode(clientId: string, username: string, password: stri
     await browser.close();
     return await extractCode(url);
 }
-
 
 async function extractCode(url: string): Promise<string | null> {
     try {

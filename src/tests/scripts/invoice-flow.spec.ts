@@ -1,19 +1,19 @@
-import { expect, test } from "@playwright/test";
+import {expect, test} from "@playwright/test";
 import OfficeEndpoint from "../endpoints/office-endpoint";
-import { expectResponse, validateApiResponse } from "../../utils/validation";
+import {expectResponse, validateApiResponse} from "../../utils/validation";
 import BillingsEndpoint from "../endpoints/billings-endpoint";
 import PartnerEndpoint from "../endpoints/partner-enpoint";
-import { BILLINGS_INFO, CREATE_BILLINGS } from "../resources/schema/contractTypes.schema";
-import { PARTNER_INFO } from "../resources/schema/partner.schema";
+import {BILLINGS_INFO, CREATE_BILLINGS} from "../resources/schema/billings.schema";
+import {PARTNER_INFO} from "../resources/schema/partner.schema";
 import DepartmentEndpoint from "../endpoints/department-enpoint";
-import { AppId } from "../endpoints/app-id.enum";
-import { DEPARTMENT_INFO } from "../resources/schema/department.schema";
-import { Random, RandomType } from "../../utils/random";
-import { HttpMethod } from "../../utils/request/http-method";
+import {AppId} from "../endpoints/app-id.enum";
+import {DEPARTMENT_INFO} from "../resources/schema/department.schema";
+import {Random, RandomType} from "../../utils/random";
+import {HttpMethod} from "../../utils/request/http-method";
 import AuthedRequest from "../../utils/request/authed-request";
 
 
-test.describe.configure({ mode: 'default' });
+test.describe.configure({mode: 'default'});
 test('C55306: @tc-01 Verify token - get office - status code', async () => {
     const instance = new OfficeEndpoint();
     const response = await instance.getOffice();
@@ -34,7 +34,7 @@ test('C55308: @tc-03 Status code - Create partner - valid values - is 201', asyn
     expect(response.status()).toBe(201);
     const responseBody = await response.json()
 
-    const randomString = (await instance.sharedData).getContext("randomString");
+    const randomString = instance.sharedData.getContext("randomString");
 
     const expectedData = {
         code: randomString,
@@ -63,17 +63,17 @@ test('C55310: @tc-05 Status code - Create billing - Department id - accepted - v
     expect(response.status()).toBe(201);
 
     const responseBody = await response.json();
-    expect(responseBody.department_id).toBe((await billingInstance.sharedData).getContext(AppId.APP_DEPARTMENT_ID));
+    expect(responseBody.department_id).toBe(billingInstance.sharedData.getContext(AppId.APP_DEPARTMENT_ID));
     validateApiResponse(responseBody, DEPARTMENT_INFO);
 });
 
 test('C55311: @tc-06 Status code - Create billing - Department id - accepted - valid id - is 201', async () => {
     const billingInstance = new BillingsEndpoint();
-
+    await billingInstance.initContext();
     const random_StringID = Random.$(RandomType.STRING);
 
     const data = {
-        department_id: (await billingInstance.sharedData).getContext(AppId.APP_DEPARTMENT_ID),
+        department_id: billingInstance.sharedData.getContext(AppId.APP_DEPARTMENT_ID),
         title: `create billing_${random_StringID}`,
         memo: "memo_" + random_StringID,
         payment_condition: "payment_condition_" + random_StringID,
@@ -115,14 +115,14 @@ test('C55312: @tc-07 Status code - Attach an Item into a Billing - Item id - acc
     const response = await billingInstance.createItem();
     expect(response.status()).toBe(201);
 
-    const item_id = (await billingInstance.sharedData).getContext(AppId.APP_ITEM_ID);
-    const billing_id = (await billingInstance.sharedData).getContext(AppId.APP_BILLING_ID);
+    const item_id = billingInstance.sharedData.getContext(AppId.APP_ITEM_ID);
+    const billing_id = billingInstance.sharedData.getContext(AppId.APP_BILLING_ID);
     const path = `/api/v3/billings/${billing_id}/items`
-    const data = { item_id: item_id }
+    const data = {item_id: item_id}
 
     const authed = new AuthedRequest();
     await authed.initContext()
-    const response2 = await authed.requestSender(HttpMethod.POST, path, { data: data })
+    const response2 = await authed.requestSender(HttpMethod.POST, path, {data: data})
     expect(response2.status()).toBe(201);
     expect(response2.statusText()).toBe('Created');
 });

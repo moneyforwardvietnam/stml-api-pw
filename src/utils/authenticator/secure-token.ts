@@ -1,14 +1,14 @@
-import { Buffer } from 'buffer';
-import { readFileSync, writeFileSync } from 'fs';
+import {Buffer} from 'buffer';
+import * as fs from 'fs';
+import {readFileSync, writeFileSync} from 'fs';
 import * as path from 'path';
-import { Logger } from '../logger';
-import { HttpMethod } from '../request/http-method';
+import {Logger} from '../logger';
+import {HttpMethod} from '../request/http-method';
 import RequestContext from '../request/request-context';
 import * as crypto from 'crypto';
-import { getCode } from './web-apps';
-import { credentials } from './credentials';
+import {getCode} from './web-apps';
+import {credentials} from './credentials';
 import * as dotenv from 'dotenv';
-import * as fs from 'fs';
 
 const TOKENS_DIRECTORY = path.join(__dirname, '/token');
 
@@ -32,7 +32,7 @@ class GetToken extends RequestContext {
                 'grant_type': 'authorization_code',
                 'redirect_uri': process.env.REDIRECT_URI
             }
-            const response = await this.requestSender(HttpMethod.POST, "/token", { form: form });
+            const response = await this.requestSender(HttpMethod.POST, "/token", {form: form});
             const jsonData = await response.json();
             const token: string = jsonData.access_token;
             const expires_in: string = (await convertExpiration(jsonData.expires_in)).toString();
@@ -78,7 +78,11 @@ const isTokenExpired = async (id: string) => {
     const currentTimestamp = Math.floor(Date.now() / 1000);
     try {
         const expiration = parseInt(readFileSync(getTokenFilePath(id)).toString('utf-8').split('\n')[1]);
-        return expiration < currentTimestamp;
+        if (!isNaN(expiration)){
+            return expiration < currentTimestamp;
+        } else {
+            return true;
+        }
     } catch {
         return true;
     }
@@ -110,7 +114,7 @@ function getTokenFilePath(id: any) {
 //     return iv.toString('hex') + encrypted;
 // }
 
-function decrypt(encryptedText: string, privateKeyHex: string): string {
+function decrypt(encryptedText: string, privateKeyHex:string): string {
     const key = Buffer.from(privateKeyHex, 'hex');
     const iv = Buffer.from(encryptedText.slice(0, 32), 'hex');
     const encryptedData = encryptedText.slice(32);

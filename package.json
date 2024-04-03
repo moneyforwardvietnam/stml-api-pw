@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "npx playwright test",
+    "test:stag": "cross-env test_env=stag npx playwright test",
+    "test:prod": "cross-env test_env=prod npx playwright test",
+    "report": "npx monocart show-report test-results/index.html",
     "generate": "allure generate allure-results -o allure-report --clean",
-    "report": "allure generate allure-results -o allure-report --clean && allure open allure-report",
-    "serve": "npx allure serve",
-    "allure": "npx allure serve allure-results"
+    "report:allure": "allure generate allure-results -o allure-report --clean && allure open allure-report"
   },
   "keywords": [],
   "author": "tiet.xuan.sang@moneyforward.vn",
@@ -19,6 +20,7 @@
     "@types/node": "^20.3.1",
     "allure-js-commons": "^2.4.0",
     "allure-playwright": "^2.10.0",
+    "cross-env": "^7.0.3",
     "dotenv": "^16.3.1",
     "fs": "^0.0.1-security",
     "fs-extra": "^11.1.1",

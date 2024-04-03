@@ -48,12 +48,12 @@ export const CONTRACT_TYPE_ERROR_InvalidXEmail = {
 
 export const CONTRACT_TYPE_ERROR_Unauthenticated = {
     'type': 'object',
-    'properties': {
+        'properties': {
         'errors': {
             'type': 'array',
-            'items': {
+                'items': {
                 'type': 'object',
-                'properties': {
+                    'properties': {
                     'type': { 'type': 'string' },
                     'code': { 'type': 'string' },
                     'message': { 'type': 'string' },
