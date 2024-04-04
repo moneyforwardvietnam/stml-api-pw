@@ -3,10 +3,8 @@ import * as contractTypes from "../resources/schema/contractTypes.schema";
 import { DataTest } from "../resources/data/data";
 import contractTypesEnpoint from "../endpoints/contract_types"
 import { expectResponse, validateApiResponse } from "../../utils/validation";
-import { credentials } from "../../utils/authenticator/credentials";
 
-
-// test.describe.configure({ mode: 'default' });
+test.describe.configure({ mode: 'default' });
 test('@CT01: Status code 403 - GetContractType (application templates) - Insufficient office plan', async () => {
     const instance = new contractTypesEnpoint();
     const header = { 'X-Email': "ly.hong.phat@moneyforward.co.jp" }
@@ -95,6 +93,7 @@ test('@CT06: Status code 200 - GetContractType (application templates) - Success
     }
     await expectResponse(responseBody.data[0], expectedSuccess);
 });
+
 
 
 

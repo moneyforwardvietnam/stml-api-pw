@@ -19,7 +19,7 @@ export async function getCode(clientId: string, username: string, password: stri
         await bio.click();
     }
 
-    await page.locator("//tr/td[text()='5981-1807']").click();
+    await page.locator("//tr/td[text()='9382-9420']").click();
     // Modify the dynamic locator
 
     await page.locator("button.btn-primary").click();

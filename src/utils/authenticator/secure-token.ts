@@ -37,7 +37,6 @@ class GetToken extends RequestContext {
             const token: string = jsonData.access_token;
             const expires_in: string = (await convertExpiration(jsonData.expires_in)).toString();
             const data: string = token + '\n' + expires_in;
-
             writeFileSync(tokenFilePath, data, {
                 flag: 'w',
             });
