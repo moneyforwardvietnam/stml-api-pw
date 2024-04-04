@@ -1,7 +1,8 @@
 import {getToken} from '../authenticator/secure-token';
 import RequestContext from './request-context';
 import {test} from "@playwright/test";
-import {ScenarioContext} from "../../tests/context/scenario-context";
+import { ScenarioContext } from "../../tests/context/scenario-context";
+
 
 export default class AuthedRequest extends RequestContext {
     public id: number | string | undefined
@@ -19,9 +20,13 @@ export default class AuthedRequest extends RequestContext {
 
         const token = await getToken(id);
         const headers = {
-            'Authorization': `Bearer ${token}`,
+            'X-Token': token,
             'Content-Type': 'application/json'
         }
+        // const headers = {
+        //     'Authorization': `Bearer ${token}`,
+        //     'Content-Type': 'application/json'
+        // }
         await this.setSharedData(await ScenarioContext.getInstance(this.id));
         await this.setHeader(headers);
         return await this.initialize();

@@ -13,6 +13,6 @@ export default class contractTypesEnpoint extends AuthedRequest {
     } else {
       await this.initContext();
     }
-      return await this.requestSender(HttpMethod.GET, CONTRACT_TYPES, undefined, header);
-    }
+    return await this.requestSender(HttpMethod.GET, CONTRACT_TYPES, undefined, header);
+  }
 }

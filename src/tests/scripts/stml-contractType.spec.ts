@@ -1,8 +1,9 @@
 import { expect, test } from "@playwright/test";
 import * as contractTypes from "../resources/schema/contractTypes.schema";
-import { TestData } from "../resources/data/data";
+import { DataTest } from "../resources/data/data";
 import contractTypesEnpoint from "../endpoints/contract_types"
 import { expectResponse, validateApiResponse } from "../../utils/validation";
+import { credentials } from "../../utils/authenticator/credentials";
 
 
 // test.describe.configure({ mode: 'default' });
@@ -17,8 +18,8 @@ test('@CT01: Status code 403 - GetContractType (application templates) - Insuffi
 
 test('@CT02: Status code 401 - GetContractType (application templates) - Invalid X-Email', async () => {
     const instance = new contractTypesEnpoint();
-    const header = { 'X-Email': process.env.INVALID_EMAIL }
-    const response = await instance.getContractTypes(header);
+    const header = { 'X-Email': DataTest.INVALID_EMAIL }
+    const response = await instance.getContractTypes(header, '0');
     const responseBody = await response.json()
     expect(response.status()).toBe(401);
     validateApiResponse(responseBody, contractTypes.CONTRACT_TYPE_ERROR_InvalidXEmail);
@@ -26,7 +27,7 @@ test('@CT02: Status code 401 - GetContractType (application templates) - Invalid
         type: "TYPE_UNAUTHORIZED",
         code: "CODE_INTERNAL_PARTNER_UNAUTHORIZED",
         message: "invalid email address",
-        param: process.env.INVALID_EMAIL
+        param: DataTest.INVALID_EMAIL
     }
     await expectResponse(responseBody.errors[0], expectedErrorInvalidXEmail)
 
@@ -34,8 +35,8 @@ test('@CT02: Status code 401 - GetContractType (application templates) - Invalid
 
 test('@CT03: Status code 401 - GetContractType (application templates) - Unauthenticated', async () => {
     const instance = new contractTypesEnpoint();
-    const header = { 'X-Email': TestData.Email }
-    const response = await instance.getContractTypes(header);
+    const header = { 'X-Email': DataTest.UNAUTHENTICATED_EMAIL }
+    const response = await instance.getContractTypes(header, '0');
     const responseBody = await response.json()
     expect(response.status()).toBe(401);
     validateApiResponse(responseBody, contractTypes.CONTRACT_TYPE_ERROR_Unauthenticated);
@@ -43,7 +44,7 @@ test('@CT03: Status code 401 - GetContractType (application templates) - Unauthe
         type: "TYPE_UNAUTHORIZED",
         code: "CODE_INTERNAL_PARTNER_UNAUTHORIZED",
         message: "get mfid user by email",
-        param: TestData.Email
+        param: DataTest.UNAUTHENTICATED_EMAIL
     }
     await expectResponse(responseBody.errors[0], expectedErrorUnauthenticated)
 
@@ -51,8 +52,8 @@ test('@CT03: Status code 401 - GetContractType (application templates) - Unauthe
 
 test('@CT04: Status code 401 - GetContractType (application templates) - Wrong Tennant UserID', async () => {
     const instance = new contractTypesEnpoint();
-    const header = { 'X-Email': "ly.hong.phat@moneyforward.co.jp" }
-    const response = await instance.getContractTypes(header);
+    const header = { 'X-Email': DataTest.WRONGTENANTUSER_EMAIL }
+    const response = await instance.getContractTypes(header, '0');
     const responseBody = await response.json()
     expect(response.status()).toBe(401);
     validateApiResponse(responseBody, contractTypes.CONTRACT_TYPES_ERROR_WrongTennantUserID);
@@ -66,8 +67,8 @@ test('@CT04: Status code 401 - GetContractType (application templates) - Wrong T
 
 test('@CT05: Status code 403 - GetContractType (application templates) - Unauthorized', async () => {
     const instance = new contractTypesEnpoint();
-    const header = { 'X-Email': "ly.hong.phat+111@moneyforward.vn" }
-    const response = await instance.getContractTypes(header);
+    const header = { 'X-Email': DataTest.UNAUTHORIZED_EMAIL }
+    const response = await instance.getContractTypes(header, '0');
     const responseBody = await response.json()
     expect(response.status()).toBe(403);
     validateApiResponse(responseBody, contractTypes.CONTRACT_TYPE_ERROR_Unauthorized);
@@ -82,7 +83,7 @@ test('@CT05: Status code 403 - GetContractType (application templates) - Unautho
 test('@CT06: Status code 200 - GetContractType (application templates) - Success', async () => {
     const instance = new contractTypesEnpoint();
     const header = { 'X-Email': "ly.hong.phat@moneyforward.vn" }
-    const response = await instance.getContractTypes(header);
+    const response = await instance.getContractTypes(header, '0');
     const responseBody = await response.json()
     expect(response.status()).toBe(200);
     validateApiResponse(responseBody, contractTypes.CONTRACT_TYPE_SUCCESS_ShowList);
