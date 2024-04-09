@@ -48,13 +48,13 @@ test('@CT03: Status code 401 - GetContractType (application templates) - Unauthe
 
 });
 
-test('@CT04: Status code 401 - GetContractType (application templates) - Wrong Tennant UserID', async () => {
+test('@CT04: Status code 401 - GetContractType (application templates) - Wrong Tennant', async () => {
     const instance = new contractTypesEnpoint();
     const header = { 'X-Email': DataTest.WRONGTENANTUSER_EMAIL }
     const response = await instance.getContractTypes(header, '0');
     const responseBody = await response.json()
     expect(response.status()).toBe(401);
-    validateApiResponse(responseBody, contractTypes.CONTRACT_TYPES_ERROR_WrongTennantUserID);
+    validateApiResponse(responseBody, contractTypes.CONTRACT_TYPES_ERROR_WrongTennant);
     const expectedErrorWrongTennantUserID = {
         type: "TYPE_UNAUTHORIZED",
         code: "CODE_INTERNAL_PARTNER_UNAUTHORIZED",
