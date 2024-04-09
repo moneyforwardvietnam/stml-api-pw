@@ -70,7 +70,7 @@ export const CONTRACT_TYPE_ERROR_Unauthenticated = {
     'required': ['errors']
 };
 
-export const CONTRACT_TYPES_ERROR_WrongTennantUserID = {
+export const CONTRACT_TYPES_ERROR_WrongTennant = {
     'type': 'object',
     'properties': {
         'errors': {
