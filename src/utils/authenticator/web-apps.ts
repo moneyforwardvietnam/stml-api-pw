@@ -1,7 +1,7 @@
-import { chromium } from '@playwright/test';
-import { Logger } from '../logger';
+import {chromium} from '@playwright/test';
+import {Logger} from '../logger';
 
-export async function getCode(clientId: string, username: string, password: string): Promise<string | null> {
+export async function getCode(clientId: string, username: string, password: string, officeId: string): Promise<string | null> {
     const browser = await chromium.launch({
         headless: false,
     });
@@ -19,7 +19,7 @@ export async function getCode(clientId: string, username: string, password: stri
         await bio.click();
     }
 
-    await page.locator("//tr/td[text()='9382-9420']").click();
+    await page.locator(`//tr/td[text()='${officeId}']`).click();
     // Modify the dynamic locator
 
     await page.locator("button.btn-primary").click();

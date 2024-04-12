@@ -60,7 +60,7 @@ export async function getToken(id: string) {
         Logger.info(`Token ${id} is expired. Getting new token!`)
         const key = getPrivateKey();
         const codePassword = decrypt(credential.codePassword, key);
-        const appCode = await getCode(credential.clientId, credential.codeUsername, codePassword);
+        const appCode = await getCode(credential.clientId, credential.codeUsername, codePassword, credential.officeId);
         const instance = new GetToken(id);
         return await instance.post(appCode, credential.clientId, credential.clientSecret);
     } else {

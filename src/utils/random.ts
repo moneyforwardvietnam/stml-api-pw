@@ -2,7 +2,7 @@ import {faker} from '@faker-js/faker';
 
 export class Random {
 
-    static $(type: RandomType) {
+    static $(type: RandomType): string | number | boolean {
         switch (type) {
             case RandomType.ZIP_CODE:
                 return faker.string.numeric(3) + "-" + faker.string.numeric(4);
@@ -19,19 +19,26 @@ export class Random {
             case RandomType.PHONE:
                 return faker.string.numeric(7);
             case RandomType.INT:
-                return faker.number.int({ min: 1, max: 999999 });
+                return faker.number.int({min: 1, max: 999999});
             case RandomType.INT_STR:
                 return faker.string.numeric(6);
+            case RandomType.BOOL:
+                const value = faker.number.int({min: 0, max: 1});
+                return value === 1;
             default:
-                throw new TypeError("Invalid radom type!")
+                throw new TypeError("Invalid random type!")
         }
     }
 
-    static ZIP_CODE = ()=>{
+    static ZIP_CODE = () => {
         return faker.string.numeric(3) + "-" + faker.string.numeric(4);
     }
-    static STRING = () =>{
+    static STRING = (): string => {
         return faker.string.alpha(10);
+    }
+
+    static NUMBER = (min: number, max: number): number => {
+        return faker.number.int({min, max})
     }
 }
 
@@ -44,5 +51,6 @@ export enum RandomType {
     STRING,
     ID,
     INT,
-    INT_STR
+    INT_STR,
+    BOOL
 }

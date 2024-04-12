@@ -33,9 +33,30 @@ export default class RequestContext {
     async requestSender<T = unknown>(method: HttpMethod, path: string, options?: {
         data?: T,
         form?: any,
-        params?: any
+        params?: any,
+        multipart?: T;
     }, header?: any): Promise<APIResponse> {
         const response = await this.request(method, path, options, header);
+        try {
+            await allure.logStep("Headers: " + JSON.stringify(this.headers))
+            if (options) {
+                await allure.logStep("Options: " + JSON.stringify(options));
+            }
+            await allure.logStep("Status code: " + response.status() + " - " + response.statusText());
+            await allure.logStep("Response body: " + await response.body());
+        } catch {
+            //ignored
+        }
+        return response;
+    }
+
+    async requestFetch<T = unknown>(method: string, path: string, options?: {
+        data?: T,
+        form?: any,
+        params?: any,
+        multipart?: T;
+    }, header?: any): Promise<APIResponse> {
+        const response = await this.fetch(method, path, options, header);
         try {
             await allure.logStep("Headers: " + JSON.stringify(this.headers))
             if (options) {
@@ -52,10 +73,11 @@ export default class RequestContext {
     async request<T = unknown>(method: HttpMethod, path: string, options?: {
         data?: T,
         form?: any,
-        params?: any
+        params?: any,
+        multipart?: any;
     }, header?: any): Promise<APIResponse> {
         let response;
-        const headers = header ? header : this.headers;
+        const headers = {...this.headers, ...header};
         switch (method) {
             case HttpMethod.GET:
                 response = await this.context.get(path, {
@@ -71,6 +93,7 @@ export default class RequestContext {
                 } else {
                     response = await this.context.post(path, {
                         data: options.data,
+                        multipart: options.multipart,
                         form: options.form,
                         headers: headers
                     })
@@ -79,7 +102,7 @@ export default class RequestContext {
             case HttpMethod.PUT:
                 if (options === undefined) {
                     response = await this.context.put(path, {
-                        headers: headers
+                        headers: headers,
                     })
                 } else {
                     response = await this.context.put(path, {
@@ -93,6 +116,30 @@ export default class RequestContext {
                 break;
             default:
                 throw new Error('Method not implemented');
+        }
+        return response;
+    }
+
+    async fetch<T = unknown>(method: string, path: string, options?: {
+        data?: T,
+        form?: any,
+        params?: any,
+        multipart?: any;
+    }, header?: any): Promise<APIResponse> {
+        let response;
+        const headers = {...this.headers, ...header};
+
+        if (options === undefined) {
+            response = await this.context.fetch(path, {
+                method: method.toLowerCase(),
+                headers: headers,
+            })
+        } else {
+            response = await this.context.fetch(path, {
+                method: method.toLowerCase(),
+                headers: headers,
+                multipart: options.multipart
+            })
         }
         return response;
     }
