@@ -20,8 +20,9 @@ export async function getCode(clientId: string, username: string, password: stri
     }
 
     await page.locator(`//tr/td[text()='${officeId}']`).click();
-    // Modify the dynamic locator
-
+    
+TODO:"Modify the dynamic locator"
+    
     await page.locator("button.btn-primary").click();
     await page.locator("form input.btn-primary").click();
     await waitForURLContains(page, 'callback?code=', 60000);

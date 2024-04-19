@@ -22,6 +22,31 @@ export const CONTRACT_TYPES_ERROR_InsufficientOfficePlan = {
     'required': ['errors']
 };
 
+
+export const CONTRACT_TYPE_ERROR_InvalidXToken = {
+    'type': 'object',
+    'properties': {
+        'errors': {
+            'type': 'array',
+            'items': {
+                'type': 'object',
+                'properties': {
+                    'type': { 'type': 'string' },
+                    'code': { 'type': 'string' },
+                    'message': { 'type': 'string' },
+                    'param': { 'type': 'boolean' }
+                },
+                'required': [
+                    'code',
+                    'message',
+                    'param'
+                ]
+            }
+        }
+    },
+    'required': ['errors']
+};
+
 export const CONTRACT_TYPE_ERROR_InvalidXEmail = {
     'type': 'object',
     'properties': {
