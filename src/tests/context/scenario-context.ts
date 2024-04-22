@@ -1,4 +1,5 @@
 import {TestContext} from "./test-context";
+import {Logger} from "../../utils/logger";
 
 export class ScenarioContext {
     private testContext;
@@ -12,6 +13,7 @@ export class ScenarioContext {
         let idStr = String(id);
         if (this.instance[idStr] == null || undefined) {
             this.instance[idStr] = new ScenarioContext();
+            Logger.info('Initialize new test data context')
         }
         return this.instance[idStr];
     }
