@@ -13,8 +13,8 @@ import DocumentTypesEndpoint from "../endpoints/document-types.endpoint";
 import {Random, RandomType} from "../../utils/random";
 import ContractEndpoints from "../endpoints/contract.endpoints";
 import {fillContractFieldsData} from "../../utils/contract-fields-helper";
-import {SAVE_PARTNER_SUCCESS} from "../resources/schema/contracts.schema";
 import * as path from 'path';
+import {FileHelper} from "../../utils/file-helper";
 
 test.describe.configure({mode: 'default'});
 test('@apply-concluded-01: GetContractTypes - Success', async () => {
@@ -23,8 +23,8 @@ test('@apply-concluded-01: GetContractTypes - Success', async () => {
     expect(response.status()).toBe(200);
     const responseBody = await response.json()
     validateApiResponse(responseBody, contractTypes.CONTRACT_TYPE_SUCCESS_ShowList);
-    // const id = getDataFromJSONArray(responseBody.data, {key: 'name', value: '契約種別なし'}, 'id');
-    const id = responseBody.data[0].id;
+    const id = getDataFromJSONArray(responseBody.data, {key: 'name', value: '契約種別なし'}, 'id');
+    // const id = responseBody.data[0].id;
     instance.sharedData.setContext('contract_type_id', id);
 });
 
@@ -90,7 +90,12 @@ test('@apply-concluded-06: PostUpdatePDFDocument - Success - Valid PDF file', as
     const instance = new ContractEndpoints();
     await instance.initContext();
     const file = path.resolve("src/tests/resources/", "upload.pdf");
-    const response = await instance.uploadDocument(file, 'wPVvb15jEgdlVPgoW0QGyRmX');
+
+    const payload = {
+        file: FileHelper.readPDFFileAsMultipart(file),
+    }
+
+    const response = await instance.uploadDocument(payload);
     expect(response.status()).toBe(200);
 });
 
@@ -110,10 +115,10 @@ test('@apply-concluded-08: SavePartnerCompanies - Success - Single Partner compa
     const partner = [
         {
             "name": "Partner company name 1 - Automation team core",
-            "representative_name": "Anthony",
+            "representative_name": "Brice",
             "approvers": [
                 {
-                    "email": "tiet.xuan.sang+stml01@moneyforward.vn",
+                    "email": "ly.hong.phat+stml01@moneyforward.vn",
                     "name": "approver 1",
                     "company_name": "company name 1",
                     "access_key": "000001",
@@ -147,7 +152,8 @@ test('@apply-concluded-08: PostSubmitContract - Success', async () => {
     const response = await instance.submit();
     expect(response.status()).toBe(200);
     const responseBody = await response.json();
-    await expect(responseBody).toBeEmpty();
+    const expected = {}
+    expect(responseBody).toStrictEqual(expected)
 });
 
 
