@@ -27,7 +27,10 @@ export function fillContractFieldsData(data: ContractField[]): ContractField[] {
                 field.value.data = Random.$(RandomType.BOOL);
                 break;
             case 'datetime':
-                field.value.data = getCurrentDate();
+                if (field.name === "契約終了日（契約の終期）") {
+                    value = getCurrentDateTimeWithOffset(30)
+                }
+                field.value.data = getCurrentDateTimeWithOffset();
                 break;
             case 'number':
                 field.value.data = Random.$(RandomType.INT);
@@ -54,12 +57,34 @@ export function fillContractFieldsData(data: ContractField[]): ContractField[] {
     return data;
 }
 
-function getCurrentDate(): string {
-    const date = new Date();
-    const year = date.getFullYear().toString();
-    const month = (date.getMonth() + 1).toString().padStart(2, '0');
-    const day = date.getDate().toString().padStart(2, '0');
-    return `${year}/${month}/${day}`;
+// function getCurrentDate(): string {
+//     const date = new Date();
+//     const year = date.getFullYear().toString();
+//     const month = (date.getMonth() + 1).toString().padStart(2, '0');
+//     const day = date.getDate().toString().padStart(2, '0');
+//     return `${year}/${month}/${day}`;
+// }
+
+
+function getCurrentDateTimeWithOffset(dayOffset: number = 0): string {
+    const now = new Date();
+    now.setDate(now.getDate() + dayOffset);
+
+    const offset = -now.getTimezoneOffset();
+    const offsetHours = Math.floor(Math.abs(offset) / 60);
+    const offsetMinutes = Math.abs(offset) % 60;
+    const offsetSign = offset >= 0 ? '+' : '-';
+
+    const isoString = now.toISOString().slice(0, -5); // Remove milliseconds and 'Z' (UTC indicator)
+    const offsetString =
+        offsetSign +
+        (offsetHours < 10 ? '0' : '') +
+        offsetHours +
+        ':' +
+        (offsetMinutes < 10 ? '0' : '') +
+        offsetMinutes;
+
+    return isoString + offsetString;
 }
 
 function randomDuration(name: string): string | null {
