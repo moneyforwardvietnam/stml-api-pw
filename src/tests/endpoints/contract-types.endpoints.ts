@@ -17,7 +17,7 @@ export default class ContractTypesEndpoint extends AuthedRequest {
     }
 
 
-    testContractTypes = async (method: HttpMethod, header?: any, id?: string) => {
+    requestMethodsContracTypes = async (method: HttpMethod, header?: any, id?: string) => {
         if (id) {
             await this.initContext({ id: id });
         } else {
