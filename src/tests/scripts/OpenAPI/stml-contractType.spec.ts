@@ -9,7 +9,7 @@ import { HttpMethod } from "../../../utils/request/http-method";
 test.describe.configure({ mode: 'default' });
 test('C151148: Status code 403 - GetContractType (application templates) - Insufficient office plan', async () => {
     const instance = new ContractTypesEndpoint();
-    const header = { 'X-Email': process.env.EMAIL_1}
+    const header = { 'X-Email': process.env.EMAIL_1 }
     const response = await instance.getContractTypes(header, '1');
     const responseBody = await response.json()
     expect(response.status()).toBe(403);
@@ -122,7 +122,7 @@ test('C152223: Status code 200 - GetContractType (application templates) - Succe
     const response = await instance.getContractTypes(header, '0');
     const responseBody = await response.json()
     expect(response.status()).toBe(200);
-    validateApiResponse(responseBody, contractTypesSchema.CONTRACT_TYPE_SUCCESS_ShowList);
+    validateApiResponse(responseBody, contractTypesSchema.CONTRACT_TYPE_SUCCESS);
     const expectedSuccess = {
         id: "AOqMpDlByNza059kmQdx8VE3",
         name: "契約種別なし",

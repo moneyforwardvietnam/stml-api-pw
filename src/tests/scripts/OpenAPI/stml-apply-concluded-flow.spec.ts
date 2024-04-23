@@ -13,20 +13,19 @@ import DocumentTypesEndpoint from "../../endpoints/document-types.endpoint";
 import { Random, RandomType } from "../../../utils/random";
 import ContractEndpoints from "../../endpoints/contract.endpoints";
 import { fillContractFieldsData } from "../../../utils/contract-fields-helper";
-import { SAVE_PARTNER_SUCCESS } from "../../resources/schema/contracts.schema";
 import * as path from 'path';
 import { FileHelper } from "../../../utils/file-helper";
 
 test.describe.configure({ mode: 'default' });
-test.describe('abc', { tag: "@apply" }, () => {
-    test('@apply-concluded-01: GetContractTypes - Success', async () => {
+test.describe('Scenario#1 - Submit the contract with Internal Workflow (Approver) - Single Partner (01 Assingee)', { tag: "@Scenario#1" }, () => {
+    test('GetContractTypes - Success', async () => {
         const instance = new ContractTypesEndpoint();
         const response = await instance.getContractTypes();
         expect(response.status()).toBe(200);
         const responseBody = await response.json()
-        validateApiResponse(responseBody, contractTypesSchema.CONTRACT_TYPE_SUCCESS_ShowList);
-        // const id = getDataFromJSONArray(responseBody.data, {key: 'name', value: '契約種別なし'}, 'id');
-        const id = responseBody.data[0].id;
+        validateApiResponse(responseBody, contractTypesSchema.CONTRACT_TYPE_SUCCESS);
+        const id = getDataFromJSONArray(responseBody.data, { key: 'name', value: '契約種別なし' }, 'id');
+        // const id = responseBody.data[0].id;
         instance.sharedData.setContext('contract_type_id', id);
     });
 })
@@ -36,7 +35,7 @@ test('@apply-concluded-01: GetContractTypes - Success', async () => {
     const response = await instance.getContractTypes();
     expect(response.status()).toBe(200);
     const responseBody = await response.json()
-    validateApiResponse(responseBody, contractTypesSchema.CONTRACT_TYPE_SUCCESS_ShowList);
+    validateApiResponse(responseBody, contractTypesSchema.CONTRACT_TYPE_SUCCESS);
     // const id = getDataFromJSONArray(responseBody.data, {key: 'name', value: '契約種別なし'}, 'id');
     const id = responseBody.data[0].id;
     instance.sharedData.setContext('contract_type_id', id);
@@ -47,7 +46,7 @@ test('@apply-concluded-02: GetDocumentTypes - Success', async () => {
     const response = await instance.getDocumentTypes();
     expect(response.status()).toBe(200);
     const responseBody = await response.json()
-    validateApiResponse(responseBody, documentTypesSchema.GET_SUCCESS);
+    validateApiResponse(responseBody, documentTypesSchema.DOCUMENT_TYPES_SUCCESS);
     // const id = getDataFromJSONArray(responseBody.data, {key: 'value', value: 'Full application template edited on Sep 14th'}, 'id');
     const id = responseBody.data[0].id;
     instance.sharedData.setContext('document_type_id', id);
@@ -59,8 +58,8 @@ test('@apply-concluded-03: GetUserList - Success - Show correct list', async () 
     expect(response.status()).toBe(200);
     const responseBody = await response.json()
     validateApiResponse(responseBody, usersSchema.USER_GET_SUCCESS);
-    // const id = getDataFromJSONArray(responseBody.data, {key: 'email', value: 'nguyen.ha.nhan@moneyforward.vn'}, 'id');
-    const id = responseBody.data[0].id;
+    const id = getDataFromJSONArray(responseBody.data, {key: 'email', value: 'tiet.xuan.sang@moneyforward.vn'}, 'id');
+    // const id = responseBody.data[0].id;
     instance.sharedData.setContext('person_in_charge_id', id);
 });
 
@@ -69,9 +68,9 @@ test('@apply-concluded-04: GetWorkflowTemplates - Success - Show correct list', 
     const response = await instance.get();
     expect(response.status()).toBe(200);
     const responseBody = await response.json()
-    validateApiResponse(responseBody, workflowTemplateSchema.GET_SUCCESS);
+    validateApiResponse(responseBody, workflowTemplateSchema.WORKFLOW_TEMPLATE_SUCCESS);
     // const id = getDataFromJSONArray(responseBody.data, {key: 'name', value: '1 approver'}, 'id');
-    const id = responseBody.data[4].id;
+    const id = responseBody.data[3].id;
     instance.sharedData.setContext('workflow_template_id', id);
 });
 
@@ -93,7 +92,7 @@ test('@apply-concluded-05: PostCreateDraftContract - Success - Internal Workflow
     const response = await instance.createDraft(body);
     expect(response.status()).toBe(200);
     const responseBody = await response.json()
-    validateApiResponse(responseBody, contractsSchema.POST_SUCCESS);
+    validateApiResponse(responseBody, contractsSchema.DRAFT_CONTRACT_SUCCESS);
     const expected = delete body['workflow_template_id'];
     await expectResponse(responseBody.data, expected);
     instance.sharedData.setContext('contract_fields', responseBody.data.contract_fields);
@@ -103,12 +102,11 @@ test('@apply-concluded-05: PostCreateDraftContract - Success - Internal Workflow
 test('@apply-concluded-06: PostUpdatePDFDocument - Success - Valid PDF file', async () => {
     const instance = new ContractEndpoints();
     await instance.initContext();
-    const file = path.resolve("src/tests/resources/", "upload.pdf");
+    const file = path.resolve("src/tests/resources/", "ilovepdf_merged copy.pdf");
 
     const payload = {
         file: FileHelper.readPDFFileAsMultipart(file),
     }
-
     const response = await instance.uploadDocument(payload);
     expect(response.status()).toBe(200);
 });
@@ -152,7 +150,7 @@ test('@apply-concluded-08: SavePartnerCompanies - Success - Single Partner compa
     const response = await instance.savePartner(partner);
     expect(response.status()).toBe(200);
     const responseBody = await response.json();
-    validateApiResponse(responseBody, .SAVE_PARTNER_SUCCESS);
+    validateApiResponse(responseBody, contractsSchema.SAVE_PARTNER_SUCCESS);
     const actual = responseBody.data;
     delete actual[0].id;
     delete actual[0].approvers[0].id;

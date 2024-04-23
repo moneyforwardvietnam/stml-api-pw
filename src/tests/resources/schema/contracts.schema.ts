@@ -1,4 +1,4 @@
-export const POST_SUCCESS = {
+export const DRAFT_CONTRACT_SUCCESS = {
     "type": "object",
     "properties": {
         "data": {
