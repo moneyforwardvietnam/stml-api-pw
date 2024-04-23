@@ -1,30 +1,44 @@
 import { expect, test } from "@playwright/test";
-import * as contractTypes from "../resources/schema/contract-types.schema";
-import * as documentTypesSC from "../resources/schema/document-types.schema";
-import * as usersSC from "../resources/schema/users.schema";
-import * as wflTemplatesSC from "../resources/schema/workflow-templates.schema";
-import * as contractsSC from "../resources/schema/contracts.schema";
-import ContractTypesEndpoint from "../endpoints/contract-types.endpoints"
-import { expectResponse, validateApiResponse } from "../../utils/validation";
-import { getDataFromJSONArray } from "../../utils/response-helper";
-import UsersEndpoint from "../endpoints/users.endpoint";
-import WorkflowTemplatesEndpoint from "../endpoints/workflow-templates.endpoint";
-import DocumentTypesEndpoint from "../endpoints/document-types.endpoint";
-import { Random, RandomType } from "../../utils/random";
-import ContractEndpoints from "../endpoints/contract.endpoints";
-import { fillContractFieldsData } from "../../utils/contract-fields-helper";
+import * as contractTypesSchema from "../../resources/schema/contract-types.schema";
+import * as documentTypesSchema from "../../resources/schema/document-types.schema";
+import * as usersSchema from "../../resources/schema/users.schema";
+import * as workflowTemplateSchema from "../../resources/schema/workflow-templates.schema";
+import * as contractsSchema from "../../resources/schema/contracts.schema";
+import ContractTypesEndpoint from "../../endpoints/contract-types.endpoints"
+import { expectResponse, validateApiResponse } from "../../../utils/validation";
+import { getDataFromJSONArray } from "../../../utils/response-helper";
+import UsersEndpoint from "../../endpoints/users.endpoint";
+import WorkflowTemplatesEndpoint from "../../endpoints/workflow-templates.endpoint";
+import DocumentTypesEndpoint from "../../endpoints/document-types.endpoint";
+import { Random, RandomType } from "../../../utils/random";
+import ContractEndpoints from "../../endpoints/contract.endpoints";
+import { fillContractFieldsData } from "../../../utils/contract-fields-helper";
+import { SAVE_PARTNER_SUCCESS } from "../../resources/schema/contracts.schema";
 import * as path from 'path';
-import { FileHelper } from "../../utils/file-helper";
+import { FileHelper } from "../../../utils/file-helper";
 
 test.describe.configure({ mode: 'default' });
+test.describe('abc', { tag: "@apply" }, () => {
+    test('@apply-concluded-01: GetContractTypes - Success', async () => {
+        const instance = new ContractTypesEndpoint();
+        const response = await instance.getContractTypes();
+        expect(response.status()).toBe(200);
+        const responseBody = await response.json()
+        validateApiResponse(responseBody, contractTypesSchema.CONTRACT_TYPE_SUCCESS_ShowList);
+        // const id = getDataFromJSONArray(responseBody.data, {key: 'name', value: '契約種別なし'}, 'id');
+        const id = responseBody.data[0].id;
+        instance.sharedData.setContext('contract_type_id', id);
+    });
+})
+
 test('@apply-concluded-01: GetContractTypes - Success', async () => {
     const instance = new ContractTypesEndpoint();
     const response = await instance.getContractTypes();
     expect(response.status()).toBe(200);
     const responseBody = await response.json()
-    validateApiResponse(responseBody, contractTypes.CONTRACT_TYPE_SUCCESS_ShowList);
-    const id = getDataFromJSONArray(responseBody.data, { key: 'name', value: '契約種別なし' }, 'id');
-    // const id = responseBody.data[0].id;
+    validateApiResponse(responseBody, contractTypesSchema.CONTRACT_TYPE_SUCCESS_ShowList);
+    // const id = getDataFromJSONArray(responseBody.data, {key: 'name', value: '契約種別なし'}, 'id');
+    const id = responseBody.data[0].id;
     instance.sharedData.setContext('contract_type_id', id);
 });
 
@@ -33,7 +47,7 @@ test('@apply-concluded-02: GetDocumentTypes - Success', async () => {
     const response = await instance.getDocumentTypes();
     expect(response.status()).toBe(200);
     const responseBody = await response.json()
-    validateApiResponse(responseBody, documentTypesSC.GET_SUCCESS);
+    validateApiResponse(responseBody, documentTypesSchema.GET_SUCCESS);
     // const id = getDataFromJSONArray(responseBody.data, {key: 'value', value: 'Full application template edited on Sep 14th'}, 'id');
     const id = responseBody.data[0].id;
     instance.sharedData.setContext('document_type_id', id);
@@ -44,7 +58,7 @@ test('@apply-concluded-03: GetUserList - Success - Show correct list', async () 
     const response = await instance.get();
     expect(response.status()).toBe(200);
     const responseBody = await response.json()
-    validateApiResponse(responseBody, usersSC.USER_GET_SUCCESS);
+    validateApiResponse(responseBody, usersSchema.USER_GET_SUCCESS);
     // const id = getDataFromJSONArray(responseBody.data, {key: 'email', value: 'nguyen.ha.nhan@moneyforward.vn'}, 'id');
     const id = responseBody.data[0].id;
     instance.sharedData.setContext('person_in_charge_id', id);
@@ -55,7 +69,7 @@ test('@apply-concluded-04: GetWorkflowTemplates - Success - Show correct list', 
     const response = await instance.get();
     expect(response.status()).toBe(200);
     const responseBody = await response.json()
-    validateApiResponse(responseBody, wflTemplatesSC.GET_SUCCESS);
+    validateApiResponse(responseBody, workflowTemplateSchema.GET_SUCCESS);
     // const id = getDataFromJSONArray(responseBody.data, {key: 'name', value: '1 approver'}, 'id');
     const id = responseBody.data[4].id;
     instance.sharedData.setContext('workflow_template_id', id);
@@ -79,7 +93,7 @@ test('@apply-concluded-05: PostCreateDraftContract - Success - Internal Workflow
     const response = await instance.createDraft(body);
     expect(response.status()).toBe(200);
     const responseBody = await response.json()
-    validateApiResponse(responseBody, contractsSC.POST_SUCCESS);
+    validateApiResponse(responseBody, contractsSchema.POST_SUCCESS);
     const expected = delete body['workflow_template_id'];
     await expectResponse(responseBody.data, expected);
     instance.sharedData.setContext('contract_fields', responseBody.data.contract_fields);
@@ -115,10 +129,10 @@ test('@apply-concluded-08: SavePartnerCompanies - Success - Single Partner compa
     const partner = [
         {
             "name": "Partner company name 1 - Automation team core",
-            "representative_name": "Brice",
+            "representative_name": "Anthony",
             "approvers": [
                 {
-                    "email": "ly.hong.phat+stml01@moneyforward.vn",
+                    "email": "tiet.xuan.sang+stml01@moneyforward.vn",
                     "name": "approver 1",
                     "company_name": "company name 1",
                     "access_key": "000001",
@@ -138,7 +152,7 @@ test('@apply-concluded-08: SavePartnerCompanies - Success - Single Partner compa
     const response = await instance.savePartner(partner);
     expect(response.status()).toBe(200);
     const responseBody = await response.json();
-    validateApiResponse(responseBody, contractsSC.SAVE_PARTNER_SUCCESS);
+    validateApiResponse(responseBody, .SAVE_PARTNER_SUCCESS);
     const actual = responseBody.data;
     delete actual[0].id;
     delete actual[0].approvers[0].id;
