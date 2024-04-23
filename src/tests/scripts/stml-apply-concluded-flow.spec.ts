@@ -1,36 +1,36 @@
-import {expect, test} from "@playwright/test";
+import { expect, test } from "@playwright/test";
 import * as contractTypes from "../resources/schema/contract-types.schema";
 import * as documentTypesSC from "../resources/schema/document-types.schema";
 import * as usersSC from "../resources/schema/users.schema";
 import * as wflTemplatesSC from "../resources/schema/workflow-templates.schema";
 import * as contractsSC from "../resources/schema/contracts.schema";
 import ContractTypesEndpoint from "../endpoints/contract-types.endpoints"
-import {expectResponse, validateApiResponse} from "../../utils/validation";
-import {getDataFromJSONArray} from "../../utils/response-helper";
+import { expectResponse, validateApiResponse } from "../../utils/validation";
+import { getDataFromJSONArray } from "../../utils/response-helper";
 import UsersEndpoint from "../endpoints/users.endpoint";
 import WorkflowTemplatesEndpoint from "../endpoints/workflow-templates.endpoint";
 import DocumentTypesEndpoint from "../endpoints/document-types.endpoint";
-import {Random, RandomType} from "../../utils/random";
+import { Random, RandomType } from "../../utils/random";
 import ContractEndpoints from "../endpoints/contract.endpoints";
-import {fillContractFieldsData} from "../../utils/contract-fields-helper";
-import {SAVE_PARTNER_SUCCESS} from "../resources/schema/contracts.schema";
+import { fillContractFieldsData } from "../../utils/contract-fields-helper";
 import * as path from 'path';
+import { FileHelper } from "../../utils/file-helper";
 
-test.describe.configure({mode: 'default'});
+test.describe.configure({ mode: 'default' });
 test('@apply-concluded-01: GetContractTypes - Success', async () => {
     const instance = new ContractTypesEndpoint();
     const response = await instance.getContractTypes();
     expect(response.status()).toBe(200);
     const responseBody = await response.json()
     validateApiResponse(responseBody, contractTypes.CONTRACT_TYPE_SUCCESS_ShowList);
-    // const id = getDataFromJSONArray(responseBody.data, {key: 'name', value: '契約種別なし'}, 'id');
-    const id = responseBody.data[0].id;
+    const id = getDataFromJSONArray(responseBody.data, { key: 'name', value: '契約種別なし' }, 'id');
+    // const id = responseBody.data[0].id;
     instance.sharedData.setContext('contract_type_id', id);
 });
 
 test('@apply-concluded-02: GetDocumentTypes - Success', async () => {
     const instance = new DocumentTypesEndpoint();
-    const response = await instance.get();
+    const response = await instance.getDocumentTypes();
     expect(response.status()).toBe(200);
     const responseBody = await response.json()
     validateApiResponse(responseBody, documentTypesSC.GET_SUCCESS);
@@ -90,7 +90,12 @@ test('@apply-concluded-06: PostUpdatePDFDocument - Success - Valid PDF file', as
     const instance = new ContractEndpoints();
     await instance.initContext();
     const file = path.resolve("src/tests/resources/", "upload.pdf");
-    const response = await instance.uploadDocument(file, 'wPVvb15jEgdlVPgoW0QGyRmX');
+
+    const payload = {
+        file: FileHelper.readPDFFileAsMultipart(file),
+    }
+
+    const response = await instance.uploadDocument(payload);
     expect(response.status()).toBe(200);
 });
 
@@ -110,10 +115,10 @@ test('@apply-concluded-08: SavePartnerCompanies - Success - Single Partner compa
     const partner = [
         {
             "name": "Partner company name 1 - Automation team core",
-            "representative_name": "Anthony",
+            "representative_name": "Brice",
             "approvers": [
                 {
-                    "email": "tiet.xuan.sang+stml01@moneyforward.vn",
+                    "email": "ly.hong.phat+stml01@moneyforward.vn",
                     "name": "approver 1",
                     "company_name": "company name 1",
                     "access_key": "000001",
@@ -147,7 +152,8 @@ test('@apply-concluded-08: PostSubmitContract - Success', async () => {
     const response = await instance.submit();
     expect(response.status()).toBe(200);
     const responseBody = await response.json();
-    await expect(responseBody).toBeEmpty();
+    const expected = {}
+    expect(responseBody).toStrictEqual(expected)
 });
 
 

@@ -1,22 +1,36 @@
-import {expect, test} from "@playwright/test";
+import { expect, test } from "@playwright/test";
 import * as contractTypesSchema from "../../resources/schema/contract-types.schema";
 import * as documentTypesSchema from "../../resources/schema/document-types.schema";
 import * as usersSchema from "../../resources/schema/users.schema";
 import * as workflowTemplateSchema from "../../resources/schema/workflow-templates.schema";
 import * as contractsSchema from "../../resources/schema/contracts.schema";
 import ContractTypesEndpoint from "../../endpoints/contract-types.endpoints"
-import {expectResponse, validateApiResponse} from "../../../utils/validation";
-import {getDataFromJSONArray} from "../../../utils/response-helper";
+import { expectResponse, validateApiResponse } from "../../../utils/validation";
+import { getDataFromJSONArray } from "../../../utils/response-helper";
 import UsersEndpoint from "../../endpoints/users.endpoint";
 import WorkflowTemplatesEndpoint from "../../endpoints/workflow-templates.endpoint";
 import DocumentTypesEndpoint from "../../endpoints/document-types.endpoint";
-import {Random, RandomType} from "../../../utils/random";
+import { Random, RandomType } from "../../../utils/random";
 import ContractEndpoints from "../../endpoints/contract.endpoints";
-import {fillContractFieldsData} from "../../../utils/contract-fields-helper";
-import {SAVE_PARTNER_SUCCESS} from "../../resources/schema/contracts.schema";
+import { fillContractFieldsData } from "../../../utils/contract-fields-helper";
+import { SAVE_PARTNER_SUCCESS } from "../../resources/schema/contracts.schema";
 import * as path from 'path';
+import { FileHelper } from "../../../utils/file-helper";
 
-test.describe.configure({mode: 'default'});
+test.describe.configure({ mode: 'default' });
+test.describe('abc', { tag: "@apply" }, () => {
+    test('@apply-concluded-01: GetContractTypes - Success', async () => {
+        const instance = new ContractTypesEndpoint();
+        const response = await instance.getContractTypes();
+        expect(response.status()).toBe(200);
+        const responseBody = await response.json()
+        validateApiResponse(responseBody, contractTypesSchema.CONTRACT_TYPE_SUCCESS_ShowList);
+        // const id = getDataFromJSONArray(responseBody.data, {key: 'name', value: '契約種別なし'}, 'id');
+        const id = responseBody.data[0].id;
+        instance.sharedData.setContext('contract_type_id', id);
+    });
+})
+
 test('@apply-concluded-01: GetContractTypes - Success', async () => {
     const instance = new ContractTypesEndpoint();
     const response = await instance.getContractTypes();
@@ -90,7 +104,12 @@ test('@apply-concluded-06: PostUpdatePDFDocument - Success - Valid PDF file', as
     const instance = new ContractEndpoints();
     await instance.initContext();
     const file = path.resolve("src/tests/resources/", "upload.pdf");
-    const response = await instance.uploadDocument(file);
+
+    const payload = {
+        file: FileHelper.readPDFFileAsMultipart(file),
+    }
+
+    const response = await instance.uploadDocument(payload);
     expect(response.status()).toBe(200);
 });
 
@@ -147,7 +166,8 @@ test('@apply-concluded-08: PostSubmitContract - Success', async () => {
     const response = await instance.submit();
     expect(response.status()).toBe(200);
     const responseBody = await response.json();
-    await expect(responseBody).toBeEmpty();
+    const expected = {}
+    expect(responseBody).toStrictEqual(expected)
 });
 
 
