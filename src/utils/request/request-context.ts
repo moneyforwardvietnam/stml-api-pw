@@ -16,7 +16,11 @@ export default class RequestContext {
     }
 
     async setHeader(headers: any) {
-        this.headers = headers
+        this.headers = headers;
+    }
+
+    async setExtraHeader(headers: any) {
+        this.headers = {...this.headers, ...headers};
     }
 
     async setSharedData(sharedData: ScenarioContext) {
@@ -36,9 +40,10 @@ export default class RequestContext {
         params?: any,
         multipart?: T;
     }, header?: any): Promise<APIResponse> {
-        const response = await this.request(method, path, options, header);
+        const headers = {...this.headers, ...header};
+        const response = await this.request(method, path, options, headers);
         try {
-            await allure.logStep("Headers: " + JSON.stringify(this.headers))
+            await allure.logStep("Headers: " + JSON.stringify(headers));
             if (options) {
                 await allure.logStep("Options: " + JSON.stringify(options));
             }
@@ -56,9 +61,10 @@ export default class RequestContext {
         params?: any,
         multipart?: T;
     }, header?: any): Promise<APIResponse> {
-        const response = await this.fetch(method, path, options, header);
+        const headers = {...this.headers, ...header};
+        const response = await this.fetch(method, path, options, headers);
         try {
-            await allure.logStep("Headers: " + JSON.stringify(this.headers))
+            await allure.logStep("Headers: " + JSON.stringify(headers));
             if (options) {
                 await allure.logStep("Options: " + JSON.stringify(options));
             }
@@ -127,18 +133,18 @@ export default class RequestContext {
         multipart?: any;
     }, header?: any): Promise<APIResponse> {
         let response;
-        const headers = {...this.headers, ...header};
 
         if (options === undefined) {
             response = await this.context.fetch(path, {
                 method: method.toLowerCase(),
-                headers: headers,
+                headers: header,
             })
         } else {
             response = await this.context.fetch(path, {
                 method: method.toLowerCase(),
-                headers: headers,
-                multipart: options.multipart
+                headers: header,
+                multipart: options.multipart,
+                data: options.data
             })
         }
         return response;

@@ -7,6 +7,7 @@ import {credentials} from "../authenticator/credentials";
 
 export default class AuthedRequest extends RequestContext {
     public id: number | string | undefined
+    public extraHeaders: any
 
     constructor() {
         super(process.env.OPEN_API_HOST);
@@ -27,10 +28,19 @@ export default class AuthedRequest extends RequestContext {
         }
         await this.setSharedData(await ScenarioContext.getInstance(this.id));
         await this.setHeader(headers);
+
+        if (this.extraHeaders != undefined) {
+            await super.setExtraHeader(this.extraHeaders)
+        }
+
         return await this.initialize();
     }
 
     setId = async (id: number | string) => {
         this.id = id
+    }
+
+    async setExtraHeader(headers: any) {
+        this.extraHeaders = headers;
     }
 }
