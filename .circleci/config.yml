@@ -61,10 +61,6 @@ commands:
                           "type": "mrkdwn",
                           "text": "*Test Suite:* `<< parameters.test_suite >>`"
                         }
-#                       ,{
-#                          "type": "mrkdwn",
-#                          "text": "*Dev Branch:* `<< parameters.branch_name >>`"
-#                        }
                       ]
                     },
                     {
