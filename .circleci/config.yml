@@ -3,7 +3,7 @@ version: 2.1
 orbs:
   slack: circleci/slack@4.12.5
   node: circleci/node@5.1.0
-  
+
 commands:
   notify-slack:
     parameters:
@@ -35,7 +35,7 @@ commands:
                 fi
           when: on_fail
       - slack/notify:
-          channel: C067094ULTC
+          channel: C03NTS0JX6V
           custom: |
             {
               "attachments": [
@@ -60,11 +60,11 @@ commands:
                         {
                           "type": "mrkdwn",
                           "text": "*Test Suite:* `<< parameters.test_suite >>`"
-                        },
-                        {
-                          "type": "mrkdwn",
-                          "text": "*Dev Branch:* `<< parameters.branch_name >>`"
                         }
+#                       ,{
+#                          "type": "mrkdwn",
+#                          "text": "*Dev Branch:* `<< parameters.branch_name >>`"
+#                        }
                       ]
                     },
                     {
@@ -121,7 +121,7 @@ parameters:
   tagsName:
     type: string
     default: "All"
-jobs: 
+jobs:
   pw-automation-test:
     machine: true
     resource_class: moneyforwardvietnam/qa-runner
@@ -199,10 +199,10 @@ jobs:
           condition: << pipeline.parameters.slack >>
           steps:
             - notify-slack:
-                title: "[IV] API Automation Test Run"
+                title: "[STML] API Automation Test Run"
                 branch_name: "<< pipeline.parameters.branch_name >>"
                 test_suite: "<< pipeline.parameters.tagsName >>"
-      
+
 workflows:
   pw-workflow:
     jobs:
