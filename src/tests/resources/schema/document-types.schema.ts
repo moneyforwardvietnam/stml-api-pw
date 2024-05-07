@@ -1,4 +1,9 @@
-export const GET_SUCCESS = {
+
+
+
+
+
+export const DOCUMENT_TYPES_SUCCESS = {
     "type": "object",
     "properties": {
         "data": {

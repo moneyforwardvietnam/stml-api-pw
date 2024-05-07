@@ -3,7 +3,7 @@ import * as contractTypes from "../../resources/schema/document-types.schema";
 import { DataTest } from "../../resources/data/data";
 import ContractTypesEndpoint from "../../endpoints/document-types.endpoint"
 import { expectResponse, validateApiResponse } from "../../../utils/validation";
-import { todo } from "node:test";
+import * as documentTypesSchema from "../../resources/schema/contract-types.schema";
 
 test.describe.configure({ mode: 'default' });
 test('@C151148: Status code 403 - GetContractType (application templates) - Insufficient office plan', async () => {
@@ -12,7 +12,7 @@ test('@C151148: Status code 403 - GetContractType (application templates) - Insu
     const response = await instance.getDocumentTypes(header, '0');
     const responseBody = await response.json()
     expect(response.status()).toBe(403);
-    validateApiResponse(responseBody, contractTypes.CONTRACT_TYPES_ERROR_InsufficientOfficePlan);
+    validateApiResponse(responseBody, documentTypesSchema.CONTRACT_TYPES_ERROR_InsufficientOfficePlan);
 });
 
 test('@C151149: Status code 401 - GetContractType (application templates) - Invalid X-Token', async () => {
@@ -21,7 +21,7 @@ test('@C151149: Status code 401 - GetContractType (application templates) - Inva
     const response = await instance.getDocumentTypes(header, '1');
     const responseBody = await response.json()
     expect(response.status()).toBe(401);
-    validateApiResponse(responseBody, contractTypes.CONTRACT_TYPE_ERROR_InvalidXToken);
+    validateApiResponse(responseBody, documentTypesSchema.CONTRACT_TYPE_ERROR_InvalidXToken);
     const expectedErrorInvalidXToken = {
         type: "TYPE_UNAUTHORIZED",
         code: "CODE_INTERNAL_PARTNER_UNAUTHORIZED",
@@ -35,10 +35,10 @@ test('@C151149: Status code 401 - GetContractType (application templates) - Inva
 test('@C152218: Status code 401 - GetContractType (application templates) - Invalid X-Email', async () => {
     const instance = new ContractTypesEndpoint();
     const header = { 'X-Email': DataTest.INVALID_EMAIL }
-    const response = await instance.getContractTypes(header, '1');
+    const response = await instance.getDocumentTypes(header, '1');
     const responseBody = await response.json()
     expect(response.status()).toBe(401);
-    validateApiResponse(responseBody, contractTypes.CONTRACT_TYPE_ERROR_InvalidXEmail);
+    validateApiResponse(responseBody, documentTypesSchema.CONTRACT_TYPE_ERROR_InvalidXEmail);
     const expectedErrorInvalidXEmail = {
         type: "TYPE_UNAUTHORIZED",
         code: "CODE_INTERNAL_PARTNER_UNAUTHORIZED",
@@ -52,10 +52,10 @@ test('@C152218: Status code 401 - GetContractType (application templates) - Inva
 test('@C152219: Status code 401 - GetContractType (application templates) - Unauthenticated', async () => {
     const instance = new ContractTypesEndpoint();
     const header = { 'X-Email': DataTest.UNAUTHENTICATED_EMAIL }
-    const response = await instance.getContractTypes(header, '1');
+    const response = await instance.getDocumentTypes(header, '1');
     const responseBody = await response.json()
     expect(response.status()).toBe(401);
-    validateApiResponse(responseBody, contractTypes.CONTRACT_TYPE_ERROR_Unauthenticated);
+    validateApiResponse(responseBody, documentTypesSchema.CONTRACT_TYPE_ERROR_Unauthenticated);
     const expectedErrorUnauthenticated = {
         type: "TYPE_UNAUTHORIZED",
         code: "CODE_INTERNAL_PARTNER_UNAUTHORIZED",
@@ -69,10 +69,10 @@ test('@C152219: Status code 401 - GetContractType (application templates) - Unau
 test('@C152220: Status code 401 - GetContractType (application templates) - Wrong Tennant', async () => {
     const instance = new ContractTypesEndpoint();
     const header = { 'X-Email': DataTest.WRONGTENANTUSER_EMAIL }
-    const response = await instance.getContractTypes(header, '1');
+    const response = await instance.getDocumentTypes(header, '1');
     const responseBody = await response.json()
     expect(response.status()).toBe(401);
-    validateApiResponse(responseBody, contractTypes.CONTRACT_TYPES_ERROR_WrongTennant);
+    validateApiResponse(responseBody, documentTypesSchema.CONTRACT_TYPES_ERROR_WrongTennant);
     const expectedErrorWrongTennantUserID = {
         type: "TYPE_UNAUTHORIZED",
         code: "CODE_INTERNAL_PARTNER_UNAUTHORIZED",
@@ -84,10 +84,10 @@ test('@C152220: Status code 401 - GetContractType (application templates) - Wron
 test('@C152221: Status code 403 - GetContractType (application templates) - Unauthorized', async () => {
     const instance = new ContractTypesEndpoint();
     const header = { 'X-Email': DataTest.UNAUTHORIZED_EMAIL }
-    const response = await instance.getContractTypes(header, '1');
+    const response = await instance.getDocumentTypes(header, '1');
     const responseBody = await response.json()
     expect(response.status()).toBe(403);
-    validateApiResponse(responseBody, contractTypes.CONTRACT_TYPE_ERROR_Unauthorized);
+    validateApiResponse(responseBody, documentTypesSchema.CONTRACT_TYPE_ERROR_Unauthorized);
     const expectedErrorUnauthorized = {
         type: "TYPE_FORBIDDEN",
         code: "CODE_USER_INSUFFICIENT_AUTHORIZATION",
@@ -100,18 +100,18 @@ TODO:
 test('@C152222: Status code 404 - GetContractType (application templates) - Insufficient methods', async () => {
     const instance = new ContractTypesEndpoint();
     const header = { 'X-Email': DataTest.VALID_EMAIL }
-    const response = await instance.getContractTypes(header, '1');
+    const response = await instance.getDocumentTypes(header, '1');
     expect(response.status()).toBe(404);
 });
 
 
-test('@C152223: Status code 200 - GetContractType (application templates) - Success', async () => {
+test('C1xxxx: Status code 200 - GetDocumentType (application templates) - Success', async () => {
     const instance = new ContractTypesEndpoint();
     const header = { 'X-Email': DataTest.VALID_EMAIL }
     const response = await instance.getDocumentTypes(header, '1');
     const responseBody = await response.json()
     expect(response.status()).toBe(200);
-    validateApiResponse(responseBody, contractTypes.CONTRACT_TYPE_SUCCESS_ShowList);
+    validateApiResponse(responseBody, documentTypesSchema.CONTRACT_TYPE_SUCCESS);
     const expectedSuccess = {
         id: "AOqMpDlByNza059kmQdx8VE3",
         name: "契約種別なし",

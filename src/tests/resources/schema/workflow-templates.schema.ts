@@ -1,4 +1,4 @@
-export const GET_SUCCESS = {
+export const WORKFLOW_TEMPLATE_SUCCESS = {
     "type": "object",
     "properties": {
         "data": {

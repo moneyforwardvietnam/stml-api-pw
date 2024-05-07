@@ -19,7 +19,7 @@ export class Random {
             case RandomType.PHONE:
                 return faker.string.numeric(7);
             case RandomType.INT:
-                return faker.number.int({min: 1, max: 999999});
+                return faker.number.int({ min: 1, max: 999999999999 });
             case RandomType.INT_STR:
                 return faker.string.numeric(6);
             case RandomType.BOOL:

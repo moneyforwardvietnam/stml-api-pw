@@ -1,4 +1,4 @@
-import {Random, RandomType} from "./random";
+import { Random, RandomType } from "./random";
 
 interface ContractField {
     id: string;
@@ -13,20 +13,28 @@ interface ContractField {
 
 export function fillContractFieldsData(data: ContractField[]): ContractField[] {
     data.forEach(field => {
+        let value: string | number | boolean | null;
         switch (field.data_type) {
+            case 'boolean':
+                field.value.data = Random.$(RandomType.BOOL);
+                break;
             case 'string':
-                let value;
                 if (field.name === "自動更新の解約期限" || field.name === "更新期間") {
                     value = randomDuration(field.name);
+                    console.log("自動更新の解約期限: " + value)
+                    console.log("更新期間: " + value)
                 } else {
                     value = Random.$(RandomType.STRING);
                 }
                 field.value.data = value;
                 break;
-            case 'boolean':
-                field.value.data = Random.$(RandomType.BOOL);
-                break;
             case 'datetime':
+                if (field.name === "契約締結日s") {
+                    value = getCurrentDateTimeWithOffset()
+                }
+                if (field.name === "契約開始日（契約の始期）") {
+                    value = getCurrentDateTimeWithOffset(7)
+                }
                 if (field.name === "契約終了日（契約の終期）") {
                     value = getCurrentDateTimeWithOffset(30)
                 }

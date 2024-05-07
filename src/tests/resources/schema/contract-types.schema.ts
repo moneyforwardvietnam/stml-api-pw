@@ -73,12 +73,12 @@ export const CONTRACT_TYPE_ERROR_InvalidXEmail = {
 
 export const CONTRACT_TYPE_ERROR_Unauthenticated = {
     'type': 'object',
-        'properties': {
+    'properties': {
         'errors': {
             'type': 'array',
-                'items': {
+            'items': {
                 'type': 'object',
-                    'properties': {
+                'properties': {
                     'type': { 'type': 'string' },
                     'code': { 'type': 'string' },
                     'message': { 'type': 'string' },
@@ -139,7 +139,7 @@ export const CONTRACT_TYPE_ERROR_Unauthorized = {
     'required': ['errors']
 };
 
-export const CONTRACT_TYPE_SUCCESS_ShowList = {
+export const CONTRACT_TYPE_SUCCESS = {
     "type": "object",
     "properties": {
         "data": {
