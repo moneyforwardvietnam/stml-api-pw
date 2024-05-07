@@ -3,7 +3,7 @@ import {Logger} from '../logger';
 
 export async function getCode(clientId: string, username: string, password: string, officeId: string): Promise<string | null> {
     const browser = await chromium.launch({
-        headless: false,
+        headless: true,
     });
     const page = await browser.newPage();
     const redirect_uri = process.env.REDIRECT_URI;
