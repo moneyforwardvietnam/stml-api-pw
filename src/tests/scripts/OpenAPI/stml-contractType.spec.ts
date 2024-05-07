@@ -7,7 +7,7 @@ import { HttpMethod } from "../../../utils/request/http-method";
 
 // This command to trigger the test in order
 test.describe.configure({ mode: 'default' });
-test('C151148: Status code 403 - GetContractType (application templates) - Insufficient office plan', async () => {
+test("C151148: Status code 403 - GetContractType (application templates) - Insufficient office plan", async () => {
     const instance = new ContractTypesEndpoint();
     const header = { 'X-Email': process.env.EMAIL_1 }
     const response = await instance.getContractTypes(header, '1');
@@ -16,7 +16,7 @@ test('C151148: Status code 403 - GetContractType (application templates) - Insuf
     validateApiResponse(responseBody, contractTypesSchema.CONTRACT_TYPES_ERROR_InsufficientOfficePlan);
 });
 
-test('C151149: Status code 401 - GetContractType (application templates) - Invalid X-Token', async () => {
+test("C151149: Status code 401 - GetContractType (application templates) - Invalid X-Token", async () => {
     const instance = new ContractTypesEndpoint();
     const header = { 'X-Email': DataTest.INVALID_TOKEN }
     const response = await instance.getContractTypes(header, '0');
@@ -33,7 +33,7 @@ test('C151149: Status code 401 - GetContractType (application templates) - Inval
 });
 
 
-test('C152218: Status code 401 - GetContractType (application templates) - Invalid X-Email', async () => {
+test("C152218: Status code 401 - GetContractType (application templates) - Invalid X-Email", async () => {
     const instance = new ContractTypesEndpoint();
     const header = { 'X-Email': DataTest.INVALID_EMAIL }
     const response = await instance.getContractTypes(header, '0');
@@ -50,7 +50,7 @@ test('C152218: Status code 401 - GetContractType (application templates) - Inval
 
 });
 
-test('C152219: Status code 401 - GetContractType (application templates) - Unauthenticated', async () => {
+test("C152219: Status code 401 - GetContractType (application templates) - Unauthenticated", async () => {
     const instance = new ContractTypesEndpoint();
     const header = { 'X-Email': DataTest.UNAUTHENTICATED_EMAIL }
     const response = await instance.getContractTypes(header, '0');
@@ -67,7 +67,7 @@ test('C152219: Status code 401 - GetContractType (application templates) - Unaut
 
 });
 
-test('C152220: Status code 401 - GetContractType (application templates) - Wrong Tennant', async () => {
+test("C152220: Status code 401 - GetContractType (application templates) - Wrong Tennant", async () => {
     const instance = new ContractTypesEndpoint();
     const header = { 'X-Email': DataTest.WRONGTENANTUSER_EMAIL }
     const response = await instance.getContractTypes(header, '0');
@@ -82,7 +82,7 @@ test('C152220: Status code 401 - GetContractType (application templates) - Wrong
     await expectResponse(responseBody.errors[0], expectedErrorWrongTennantUserID)
 });
 
-test('C152221: Status code 403 - GetContractType (application templates) - Unauthorized', async () => {
+test("C152221: Status code 403 - GetContractType (application templates) - Unauthorized", async () => {
     const instance = new ContractTypesEndpoint();
     const header = { 'X-Email': DataTest.UNAUTHORIZED_EMAIL }
     const response = await instance.getContractTypes(header, '0');
@@ -98,7 +98,7 @@ test('C152221: Status code 403 - GetContractType (application templates) - Unaut
 });
 
 
-test('C152222: Status code 404 - GetContractType (application templates) - Insufficient methods', async () => {
+test("C152222: Status code 404 - GetContractType (application templates) - Insufficient methods", async () => {
     const instance = new ContractTypesEndpoint();
     const invalidMethods = [
         HttpMethod.DELETE,
@@ -116,7 +116,7 @@ test('C152222: Status code 404 - GetContractType (application templates) - Insuf
 });
 
 
-test('C152223: Status code 200 - GetContractType (application templates) - Success', async () => {
+test("C152223: Status code 200 - GetContractType (application templates) - Success", async () => {
     const instance = new ContractTypesEndpoint();
     const header = { 'X-Email': DataTest.VALID_EMAIL }
     const response = await instance.getContractTypes(header, '0');
