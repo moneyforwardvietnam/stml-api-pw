@@ -127,7 +127,7 @@ jobs:
       - run: node --version
       - run: npm i -D @playwright/test
       - run: npx playwright install --with-deps
-      - run: npx playwright install chrome
+      # - run: npx playwright install chrome
       - when:
           condition:
             and:
