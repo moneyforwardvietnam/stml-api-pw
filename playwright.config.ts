@@ -61,6 +61,9 @@ export default defineConfig({
         screenshot: "only-on-failure",
         video: "retain-on-failure",
         /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-        trace: 'retain-on-failure'
+        trace: 'retain-on-failure',
+        proxy: {
+            server: '27.71.207.82:3128',
+        }
     }
 });
