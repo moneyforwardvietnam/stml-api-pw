@@ -47,5 +47,13 @@ export const credentials: { [id: string]: Credentials } = {
         codePassword: process.env.CODE_PASSWORD_5 ?? "",
         email: process.env.EMAIL_5 ?? "",
         officeId: process.env.OFFICE_ID_5 ?? ""
+    },
+    "INVALID": {
+        clientId: process.env.CLIENT_ID_INVALID ?? "",
+        clientSecret: process.env.CLIENT_SECRET_INVALID ?? "",
+        codeUsername: process.env.CODE_USERNAME_INVALID ?? "",
+        codePassword: process.env.CODE_PASSWORD_INVALID ?? "",
+        email: process.env.EMAIL_INVALID ?? "",
+        officeId: process.env.OFFICE_ID_INVALID ?? ""
     }
 };

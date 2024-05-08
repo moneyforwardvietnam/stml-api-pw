@@ -9,7 +9,6 @@ export async function getCode(clientId: string, username: string, password: stri
     const redirect_uri = process.env.REDIRECT_URI;
     const URL: string = `https://api.biz.test.mfw.work/authorize?client_id=${clientId}&redirect_uri=${redirect_uri}&response_type=code&scope=mfc/contract/contract.read mfc/contract/contract.write`;
     await page.goto(URL);
-
     await page.locator("[name='mfid_user[email]']").fill(username);
     await page.locator("#submitto").click();
     await page.locator("[name='mfid_user[password]']").fill(password);
@@ -18,8 +17,8 @@ export async function getCode(clientId: string, username: string, password: stri
     if (await bio.isVisible({ timeout: 2 })) {
         await bio.click();
     }
-
-    await page.locator(`//tr/td[text()='${officeId}']`).click();
+    
+    await page.locator(`//tr/td[text()="${officeId}"]`).click();
     
 TODO:"Modify the dynamic locator"
     
