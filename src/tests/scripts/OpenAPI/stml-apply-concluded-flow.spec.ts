@@ -17,7 +17,7 @@ import * as path from 'path';
 import { FileHelper } from "../../../utils/file-helper";
 
 test.describe.configure({ mode: 'default' });
-test.describe("@OpenAPI, @E2E-Scenarios: Scenario-01 - Submit the contract with Internal Workflow (Approver) - Single Partner (01 Assingee)", { tag: "@Scenario-01" }, () => {
+test.describe("@OpenAPI, @E2E-Scenarios, @Scenario-01: Scenario-01 - Submit the contract with Internal Workflow (Approver) - Single Partner (01 Assingee)", { tag: "@Scenario-01" }, () => {
     test("@Scenario-01: [C152377] GetContractTypes - Success", async () => {
         const instance = new ContractTypesEndpoint();
         const response = await instance.getContractTypes();
@@ -46,8 +46,8 @@ test.describe("@OpenAPI, @E2E-Scenarios: Scenario-01 - Submit the contract with 
         expect(response.status()).toBe(200);
         const responseBody = await response.json()
         validateApiResponse(responseBody, usersSchema.USER_GET_SUCCESS);
-        const id = getDataFromJSONArray(responseBody.data, { key: 'email', value: 'tiet.xuan.sang@moneyforward.vn' }, 'id');
-        // const id = responseBody.data[0].id;
+        // const id = getDataFromJSONArray(responseBody.data, { key: 'email', value: 'ly.hong.phat+2@moneyforward.vn' }, 'id');
+        const id = responseBody.data[0].id;
         instance.sharedData.setContext('person_in_charge_id', id);
     });
 
@@ -57,8 +57,8 @@ test.describe("@OpenAPI, @E2E-Scenarios: Scenario-01 - Submit the contract with 
         expect(response.status()).toBe(200);
         const responseBody = await response.json()
         validateApiResponse(responseBody, workflowTemplateSchema.WORKFLOW_TEMPLATE_SUCCESS);
-        // const id = getDataFromJSONArray(responseBody.data, {key: 'name', value: '1 approver'}, 'id');
-        const id = responseBody.data[3].id;
+        const id = getDataFromJSONArray(responseBody.data, {key: 'name', value: '1 approver'}, 'id');
+        // const id = responseBody.data[3].id;
         instance.sharedData.setContext('workflow_template_id', id);
     });
 
@@ -114,7 +114,7 @@ test.describe("@OpenAPI, @E2E-Scenarios: Scenario-01 - Submit the contract with 
         const instance = new ContractEndpoints();
         const partner = [
             {
-                "name": "Partner company name 1 - ",
+                "name": "Partner company name 1",
                 "representative_name": "Partner-808",
                 "approvers": [
                     {
@@ -145,12 +145,13 @@ test.describe("@OpenAPI, @E2E-Scenarios: Scenario-01 - Submit the contract with 
         const responseBody = await response.json();
         const expected = {}
         expect(responseBody).toStrictEqual(expected)
+        console.log("Scenario-01: Contract ID " + responseBody.data.param)
     });
 
 });
 
 
-test.describe("@OpenAPI, @E2E-Scenarios: Scenario-02 - Scenario#2 - Verify the contract has been submitted and concluded successfully with Internal Authorizer & Single Partner (Multiple Assignees) ", { tag: "@Scenario-02" }, () => {
+test.describe("@OpenAPI, @E2E-Scenarios, @Scenario-02: Verify the contract has been submitted and concluded successfully with Internal Authorizer & Single Partner (Multiple Assignees) ", { tag: "@Scenario-02" }, () => {
     test("@Scenario-02: [C152742] GetContractTypes - Success", async () => {
         const instance = new ContractTypesEndpoint();
         const response = await instance.getContractTypes();
@@ -179,8 +180,8 @@ test.describe("@OpenAPI, @E2E-Scenarios: Scenario-02 - Scenario#2 - Verify the c
         expect(response.status()).toBe(200);
         const responseBody = await response.json()
         validateApiResponse(responseBody, workflowTemplateSchema.WORKFLOW_TEMPLATE_SUCCESS);
-        // const id = getDataFromJSONArray(responseBody.data, {key: 'name', value: '1 approver'}, 'id');
-        const id = responseBody.data[3].id;
+        const id = getDataFromJSONArray(responseBody.data, { key: 'name', value: 'Multiple authorizer'}, 'id');
+        // const id = responseBody.data[3].id;
         instance.sharedData.setContext('workflow_template_id', id);
     });
 
@@ -190,7 +191,7 @@ test.describe("@OpenAPI, @E2E-Scenarios: Scenario-02 - Scenario#2 - Verify the c
         expect(response.status()).toBe(200);
         const responseBody = await response.json()
         validateApiResponse(responseBody, usersSchema.USER_GET_SUCCESS);
-        const id = getDataFromJSONArray(responseBody.data, { key: 'email', value: 'tiet.xuan.sang@moneyforward.vn' }, 'id');
+        const id = getDataFromJSONArray(responseBody.data, { key: 'email', value: 'ly.hong.phat+2@moneyforward.vn' }, 'id');
         // const id = responseBody.data[0].id;
         instance.sharedData.setContext('person_in_charge_id', id);
     });
@@ -247,7 +248,7 @@ test.describe("@OpenAPI, @E2E-Scenarios: Scenario-02 - Scenario#2 - Verify the c
         const instance = new ContractEndpoints();
         const partner = [
             {
-                "name": "Partner company name 1 - ",
+                "name": "Partner company name 1",
                 "representative_name": "Partner-808",
                 "approvers": [
                     {

@@ -7,7 +7,7 @@ import { HttpMethod } from "../../../utils/request/http-method";
 
 // This command to trigger the test in order
 test.describe.configure({ mode: 'default' });
-test.describe("@FunctionalTest, @OpenAPI: GET - ContractTypes 契約種別 (application_template)", { tag: "@Scenario#1" }, () => {
+test.describe("@OpenAPI, @FunctionalTest: GET - ContractTypes 契約種別 (application_template)", { tag: "@GET-ContractTypes" }, () => {
     test("@GET-ContractTypes: [C151148] Status code 403 - GetContractType (application templates) - Insufficient office plan", async () => {
         const instance = new ContractTypesEndpoint();
         const header = { 'X-Email': process.env.EMAIL_1 }
